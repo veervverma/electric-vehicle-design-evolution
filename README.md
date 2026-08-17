@@ -4,7 +4,7 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 
 ## Explore the project
 
-- **Interactive browser gallery:** open the GitHub Pages site for this repository after Pages is enabled. It can display both GLB and STL models, play available glTF animations, and expose every viewable model through a searchable catalog.
+- **[Interactive browser gallery](https://veervverma.github.io/electric-vehicle-design-evolution/):** displays both GLB and STL models, plays available glTF animations, and exposes every viewable model through a searchable catalog.
 - **[Version history](VERSIONS.md):** what changed from the first chassis sketches through Formula EV V6.
 - **[Model catalog](MODEL_CATALOG.md):** recommended assembled files and direct repository links.
 - **[Complete file manifest](FILE_MANIFEST.csv):** path, size, type, and SHA-256 digest for the preserved project artifacts.
@@ -46,4 +46,3 @@ This repository documents an educational design study—not a road-safe vehicle,
 ## License
 
 No open-source or fabrication license has been selected. The repository is provided as a portfolio record; copyright and reuse permission remain with the author unless a license is added later.
-
