@@ -1,0 +1,18 @@
+FORMULA EV PROTOTYPE — PRINT AND ASSEMBLY GUIDE
+
+A completely new open-wheel electric formula-car study model. Overall assembled envelope: approximately 210 x 153 x 65 mm.
+
+PRINT MATERIALS
+PETG or PLA+ for body, wings, floor, suspension and rims. TPU 95A for slick tires. Transparent or colored PETG may be used for display accents.
+
+SETTINGS
+0.20 mm layer height, 4 walls, 20-25% gyroid infill. Use build-plate supports for wings, halo and suspension. Print the monocoque and floor separately.
+
+ASSEMBLY
+1. Glue battery, motor and inverter to the floor/chassis before fitting the monocoque.
+2. Fit sidepods, cockpit and halo.
+3. Install front and rear suspension modules at x=-68 and x=67 mm.
+4. Assemble each wheel: rotor, rim, TPU tire and center-lock nut. Glue only the center-lock nut to the axle tip.
+5. Attach nose, front wing and rear wing last.
+
+The assembled STL is intended for viewing and static printing. Use separate STLs for functional rotating wheels and clearer multi-material printing. This is an educational scale prototype, not a road-safe design.

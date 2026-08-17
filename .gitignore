@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Exact duplicate created by a file-copy operation. The canonical copy is
+# outputs/V6_PRINT_READY_5_TO_8_INCH/.
+outputs/V6_PRINT_READY_5_TO_8_INCH 2/
+

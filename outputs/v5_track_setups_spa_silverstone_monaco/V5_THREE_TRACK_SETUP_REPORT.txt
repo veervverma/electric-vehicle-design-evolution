@@ -1,0 +1,60 @@
+V5 FORMULA EV — SPA, SILVERSTONE AND MONACO SETUP STUDY
+
+All values are conceptual starting points for the V5 full-size interpretation. Downforce uncertainty is at least +/-25%.
+
+SPA-FRANCORCHAMPS
+Predicted qualifying / race pace: 1:41.263 / 1:47.845
+Ride height F/R: 28 / 40 mm
+Front flaps: L1 4°, L2 7°, L3 10°
+Rear wing: 10° closed; 28° DRS opening
+Springs: Stiff heave; medium roll; extra compression margin at Eau Rouge
+Anti-roll bars: Medium front / medium rear
+Alignment: Front -3.0°, rear -2.0°; Front 0.05° out; rear 0.10° in
+Gearing: Long final drive; 345 km/h target
+Brakes: Medium ducts; bias ~56.5% front
+Active-aero strategy: Use active front flaps and rear DRS on all long designated straights
+Downforce points:
+  La Source               25.00 m/s    1.34 kN (137 kgf), range 1.01-1.68 kN
+  Eau Rouge/Raidillon     78.00 m/s   13.08 kN (1334 kgf), range 9.81-16.35 kN
+  Pouhon                  70.00 m/s   10.53 kN (1074 kgf), range 7.90-13.17 kN
+  Blanchimont             82.00 m/s   14.46 kN (1474 kgf), range 10.84-18.07 kN
+  Kemmel straight         83.33 m/s   10.72 kN (1093 kgf), range 8.04-13.40 kN
+
+SILVERSTONE
+Predicted qualifying / race pace: 1:24.830 / 1:29.496
+Ride height F/R: 27 / 38 mm
+Front flaps: L1 7°, L2 11°, L3 15°
+Rear wing: 14° closed; 28° DRS opening
+Springs: Stiff heave and roll platform for rapid direction changes
+Anti-roll bars: Medium-stiff front / medium rear
+Alignment: Front -3.2°, rear -2.2°; Front 0.08° out; rear 0.12° in
+Gearing: Medium-long final drive; 330 km/h target
+Brakes: Medium-small ducts; bias ~56.0% front
+Active-aero strategy: High-load corner mode through Copse and Maggotts/Becketts; active aero on straights
+Downforce points:
+  Village                 30.00 m/s    2.28 kN (233 kgf), range 1.71-2.85 kN
+  Copse                   75.00 m/s   14.26 kN (1454 kgf), range 10.70-17.83 kN
+  Maggotts/Becketts       68.00 m/s   11.73 kN (1196 kgf), range 8.79-14.66 kN
+  Stowe                   65.00 m/s   10.71 kN (1092 kgf), range 8.04-13.39 kN
+  Hangar straight         83.33 m/s   12.13 kN (1237 kgf), range 9.10-15.16 kN
+
+MONACO
+Predicted qualifying / race pace: 1:09.041 / 1:14.565
+Ride height F/R: 36 / 48 mm
+Front flaps: L1 12°, L2 16°, L3 20°
+Rear wing: 20° maximum-load setting; DRS disabled
+Springs: Soft springs and heave; compliant bump/kerb setup
+Anti-roll bars: Soft front / soft-medium rear
+Alignment: Front -3.5°, rear -2.5°; Front 0.15° out; rear 0.18° in
+Gearing: Short final drive; 295 km/h target; aggressive low-speed regen
+Brakes: Large ducts; bias ~57.5% front
+Active-aero strategy: Keep every flap closed in maximum-downforce position; prioritize stability and traction
+Downforce points:
+  Fairmont hairpin        13.50 m/s    0.49 kN (50 kgf), range 0.37-0.61 kN
+  Casino Square           48.00 m/s    6.21 kN (633 kgf), range 4.66-7.76 kN
+  Tabac                   52.00 m/s    7.29 kN (743 kgf), range 5.47-9.11 kN
+  Swimming Pool           55.60 m/s    8.33 kN (850 kgf), range 6.25-10.41 kN
+  Tunnel                  72.00 m/s   13.97 kN (1425 kgf), range 10.48-17.46 kN
+
+LIMITATIONS
+Not CFD or a seven-post/driver-in-loop model. Tire compound, temperatures, damping curves, steering geometry, exact mass distribution, battery state, motor torque map, wind, wet weather and track evolution are not solved. The alignment and ride-height numbers are starting hypotheses, not safe real-car instructions.

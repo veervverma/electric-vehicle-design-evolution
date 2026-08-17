@@ -1,0 +1,11 @@
+FORMULA EV V4 — DUAL ACTIVE AERO
+
+The complete GLB contains two independent glTF animations:
+1. REAR DRS OPEN CLOSE: rear flap rotates +28 degrees.
+2. FRONT ACTIVE AERO LOW DRAG: left and right front flaps rotate -14 degrees together.
+
+In Blender, import the GLB, open the Animation workspace, select an animation/action and press Play. Some basic GLB viewers display the components but do not play multiple animation tracks.
+
+The front active-aero design is an educational concept. Current 2022-2025 Formula 1 regulations do not use this exact active front-wing arrangement.
+
+All major car, underfloor and active-aero systems are provided as individual numbered GLBs.

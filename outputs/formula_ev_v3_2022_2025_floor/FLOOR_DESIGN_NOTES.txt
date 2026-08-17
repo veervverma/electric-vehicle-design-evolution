@@ -1,0 +1,20 @@
+FORMULA EV V3 — 2022-2025 GROUND-EFFECT FLOOR STUDY
+
+This is an original educational scale interpretation of publicly documented 2022-2025 Formula 1 ground-effect concepts, not a scan or exact copy of any team car.
+
+SYSTEMS MODELED
+- Twin Venturi inlets, descending ramps, narrow throats and progressive rear expansion
+- Four inlet fences per side
+- Raised floor-edge ramp and curl
+- Floor-edge vortex-generator row and rear cut-in wing
+- Central plank with inspection holes and separate titanium skid set
+- Bib/tea-tray element and floor stays
+- Left/right multi-stage diffuser shells
+- Six diffuser strakes and narrowed boat-tail center keel
+- Rear-wheel wake/tire-squirt fences
+
+FILES
+FORMULA_EV_V3_COMPLETE_2022_2025_FLOOR.glb: whole car with animated DRS.
+FORMULA_EV_V3_COMPLETE_UNDERFLOOR.glb: floor system only, assembled.
+FORMULA_EV_V3_EXPLODED_UNDERFLOOR.glb: floor elements separated for study.
+Numbered GLBs: every major car and floor component individually.

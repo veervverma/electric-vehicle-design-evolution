@@ -1,0 +1,8 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class volScalarField;
+ object omega;
+}
+dimensions [0 0 -1 0 0 0 0]; internalField uniform 12.4; boundaryField {inlet {type fixedValue; value uniform 12.4;} outlet {type zeroGradient;} ground {type omegaWallFunction; value uniform 12.4;} sides {type symmetryPlane;} top {type symmetryPlane;} "(body|nose|sidepods|canopy|halo|floor|venturi|plank|skids|diffuser|frontWing|frontFlaps|rearWing|rearFlap|suspension|cooling)" {type omegaWallFunction; value uniform 12.4;} "(wheelFL|wheelFR|wheelRL|wheelRR)" {type omegaWallFunction; value uniform 12.4;}}

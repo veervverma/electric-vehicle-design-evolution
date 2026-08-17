@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive GLB and STL gallery for the Electric Vehicle Design Evolution repository.">
+  <title>Electric Vehicle Design Evolution — 3D Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">ENGINEERING DESIGN ARCHIVE</p>
+    <h1>Electric Vehicle Design Evolution</h1>
+    <p>Browse the major sedan and Formula EV releases, individual systems, print meshes, and animated aero models directly in your browser.</p>
+  </header>
+
+  <main>
+    <aside class="panel controls">
+      <label for="search">Find a model</label>
+      <input id="search" type="search" placeholder="Search V5, floor, wing, suspension…" autocomplete="off">
+
+      <label for="family">Design family</label>
+      <select id="family"><option value="all">All families</option></select>
+
+      <label for="model">Model file</label>
+      <select id="model" size="14" aria-label="Model file"></select>
+
+      <div class="button-row">
+        <button id="reset" type="button">Reset view</button>
+        <button id="animation" type="button">Pause animation</button>
+      </div>
+      <a id="download" class="download" href="#" download>Download selected file</a>
+    </aside>
+
+    <section class="viewer-card">
+      <div id="viewer" aria-label="Interactive 3D model viewer"></div>
+      <div id="loading" role="status">Loading model…</div>
+      <div class="model-info">
+        <div>
+          <p class="eyebrow" id="version">SELECT A MODEL</p>
+          <h2 id="title">3D model viewer</h2>
+        </div>
+        <p id="path">Use a mouse or touch to orbit, zoom, and pan.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Educational design study. Print and aerodynamic files require independent validation. GLB animations play together when present; STL colors are assigned by the viewer.</p>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+

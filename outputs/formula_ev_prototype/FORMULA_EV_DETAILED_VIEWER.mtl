@@ -1,0 +1,45 @@
+newmtl White_Carbon
+Kd 0.9 0.9 0.87
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Black_Carbon
+Kd 0.035 0.045 0.06
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Tire
+Kd 0.012 0.012 0.012
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Aluminum
+Kd 0.55 0.6 0.65
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Brake
+Kd 0.3 0.33 0.36
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Red
+Kd 0.75 0.02 0.02
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Battery
+Kd 0.03 0.3 0.65
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl HV_Orange
+Kd 0.95 0.28 0.0
+Ks 0.35 0.35 0.35
+Ns 80
+
+newmtl Cockpit
+Kd 0.08 0.11 0.15
+Ks 0.35 0.35 0.35
+Ns 80
+

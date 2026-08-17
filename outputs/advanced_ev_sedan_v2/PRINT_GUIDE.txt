@@ -1,0 +1,27 @@
+ADVANCED EV SEDAN V2 — PRINT GUIDE
+
+FEATURES
+Fastback aero body, removable vented hood, four-seat interior, dashboard and steering wheel, swan-neck wing, splitter, canards, skirts, diffuser, front steering rack, double-wishbone-style suspension, separate TPU tires, detailed ten-spoke rims, brake rotors/calipers, light inserts, mirrors, battery tray and 130-size motor cradle.
+
+RECOMMENDED MATERIALS
+Rigid parts: PETG (preferred) or PLA+. Tires: TPU 95A. Light inserts: transparent PETG optional.
+
+SLICER STARTING POINT
+0.20 mm layers; 4 walls; 5 top/bottom layers; 20-25% gyroid infill. Use build-plate supports for suspension, mirrors and wing. Print the monocoque separately.
+
+QUANTITIES
+1 each: body, cabin, hood, interior, wing, front suspension, rear suspension, front light, rear light.
+4 each: tire, rim, brake rotor, wheel cap.
+2 mirrors.
+Total final pieces: 29.
+
+ASSEMBLY ORDER
+1. Install interior and glue cabin to body pegs.
+2. Fit removable hood; lightly sand tabs if tight.
+3. Glue suspension bridges under body at x +/-65 mm. Keep arms/flexure clear of glue.
+4. Insert brake rotor, rim and TPU tire onto each axle. Glue cap to axle tip only.
+5. Glue wing, mirrors and lights.
+6. Fit a 130 motor in the 44 x 26 mm front cradle. Motor-to-wheel gearing remains a custom drivetrain step.
+
+ASSEMBLED ENVELOPE
+Approx. 195 x 105 x 70 mm; fits a 220 x 220 x 250 mm printer. Always print a small tolerance test before committing to the complete kit.

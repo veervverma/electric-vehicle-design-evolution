@@ -1,0 +1,25 @@
+V6 PRINT-READY MESH VALIDATION
+
+Source full-scale length before scaling: 5450.000 mm
+Repair operations: {'removed_degenerate': 8, 'removed_duplicate': 0, 'boundary_loops_capped': 108, 'cap_triangles': 1728}
+Full-scale repaired audit: {'triangles': 10514, 'vertices': 5440, 'boundary_edges': 0, 'nonmanifold_edges': 40, 'degenerate_triangles': 0, 'closed_shells': 111}
+
+5-inch version
+  scale factor: 0.023302752
+  smooth dimensions: 127.000 x 46.839 x 24.985 mm
+  solid dimensions: 126.900 x 46.800 x 24.900 mm
+  solidification: {'pitch_mm': 0.3, 'grid': [426, 159, 86], 'filled_voxels': 1355656, 'input_shell_groups': 111, 'ray_events': 55332, 'bad_winding_lines': 1107, 'regularized_voxels': 1900}
+  solid audit: {'triangles': 631684, 'vertices': 315759, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0, 'closed_shells': 10}
+  recommended files: V6_5IN_PRINT_READY_SOLID_MM.stl, V6_5IN_PRINT_READY_SOLID_MM.3mf
+  smooth alternative: V6_5IN_SMOOTH_REPAIRED_MM.stl
+
+8-inch version
+  scale factor: 0.037284404
+  smooth dimensions: 203.200 x 74.942 x 39.977 mm
+  solid dimensions: 203.200 x 74.800 x 40.000 mm
+  solidification: {'pitch_mm': 0.4, 'grid': [510, 190, 102], 'filled_voxels': 2376493, 'input_shell_groups': 111, 'ray_events': 78846, 'bad_winding_lines': 1592, 'regularized_voxels': 1463}
+  solid audit: {'triangles': 913760, 'vertices': 456776, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0, 'closed_shells': 4}
+  recommended files: V6_8IN_PRINT_READY_SOLID_MM.stl, V6_8IN_PRINT_READY_SOLID_MM.3mf
+  smooth alternative: V6_8IN_SMOOTH_REPAIRED_MM.stl
+
+Acceptance for recommended SOLID files: zero boundary edges, zero non-manifold edges, and zero degenerate triangles.

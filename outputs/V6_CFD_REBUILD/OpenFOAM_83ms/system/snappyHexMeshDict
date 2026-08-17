@@ -1,0 +1,57 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class dictionary;
+ object snappyHexMeshDict;
+}
+castellatedMesh true; snap true; addLayers true;
+geometry
+{
+ body.stl {type triSurfaceMesh; name body;}
+ nose.stl {type triSurfaceMesh; name nose;}
+ sidepods.stl {type triSurfaceMesh; name sidepods;}
+ canopy.stl {type triSurfaceMesh; name canopy;}
+ halo.stl {type triSurfaceMesh; name halo;}
+ floor.stl {type triSurfaceMesh; name floor;}
+ venturi.stl {type triSurfaceMesh; name venturi;}
+ plank.stl {type triSurfaceMesh; name plank;}
+ skids.stl {type triSurfaceMesh; name skids;}
+ diffuser.stl {type triSurfaceMesh; name diffuser;}
+ frontWing.stl {type triSurfaceMesh; name frontWing;}
+ frontFlaps.stl {type triSurfaceMesh; name frontFlaps;}
+ rearWing.stl {type triSurfaceMesh; name rearWing;}
+ rearFlap.stl {type triSurfaceMesh; name rearFlap;}
+ suspension.stl {type triSurfaceMesh; name suspension;}
+ cooling.stl {type triSurfaceMesh; name cooling;}
+ wheelFL.stl {type triSurfaceMesh; name wheelFL;}
+ wheelFR.stl {type triSurfaceMesh; name wheelFR;}
+ wheelRL.stl {type triSurfaceMesh; name wheelRL;}
+ wheelRR.stl {type triSurfaceMesh; name wheelRR;}
+ carZone {type searchableBox; min (-3 -1.5 0); max (3 1.5 1.5);}
+}
+castellatedMeshControls
+{maxLocalCells 4000000; maxGlobalCells 30000000; minRefinementCells 10; nCellsBetweenLevels 3; features (); refinementSurfaces { body {level (4 5); patchInfo {type wall;}}
+ nose {level (4 5); patchInfo {type wall;}}
+ sidepods {level (4 5); patchInfo {type wall;}}
+ canopy {level (4 5); patchInfo {type wall;}}
+ halo {level (4 5); patchInfo {type wall;}}
+ floor {level (4 5); patchInfo {type wall;}}
+ venturi {level (5 6); patchInfo {type wall;}}
+ plank {level (4 5); patchInfo {type wall;}}
+ skids {level (4 5); patchInfo {type wall;}}
+ diffuser {level (5 6); patchInfo {type wall;}}
+ frontWing {level (5 5); patchInfo {type wall;}}
+ frontFlaps {level (5 5); patchInfo {type wall;}}
+ rearWing {level (5 5); patchInfo {type wall;}}
+ rearFlap {level (5 5); patchInfo {type wall;}}
+ suspension {level (4 5); patchInfo {type wall;}}
+ cooling {level (4 5); patchInfo {type wall;}}
+ wheelFL {level (4 5); patchInfo {type wall;}}
+ wheelFR {level (4 5); patchInfo {type wall;}}
+ wheelRL {level (4 5); patchInfo {type wall;}}
+ wheelRR {level (4 5); patchInfo {type wall;}}} refinementRegions {carZone {mode inside; levels ((1E15 3));}} resolveFeatureAngle 30; locationInMesh (-10 0 2); allowFreeStandingZoneFaces true;}
+snapControls {nSmoothPatch 5; tolerance 2.0; nSolveIter 50; nRelaxIter 8; nFeatureSnapIter 15; implicitFeatureSnap true; explicitFeatureSnap false; multiRegionFeatureSnap false;}
+addLayersControls {relativeSizes true; layers {"(body|nose|sidepods|floor|venturi|diffuser|frontWing|frontFlaps|rearWing|rearFlap)" {nSurfaceLayers 5;}} expansionRatio 1.22; finalLayerThickness 0.35; minThickness 0.08; nGrow 0; featureAngle 55; nRelaxIter 5; nSmoothSurfaceNormals 3; nSmoothNormals 5; nSmoothThickness 10; maxFaceThicknessRatio 0.5; maxThicknessToMedialRatio 0.3; minMedianAxisAngle 90; nBufferCellsNoExtrude 0; nLayerIter 50;}
+meshQualityControls {maxNonOrtho 65; maxBoundarySkewness 20; maxInternalSkewness 4; maxConcave 80; minVol 1e-15; minTetQuality 1e-12; minArea -1; minTwist 0.02; minDeterminant 0.001; minFaceWeight 0.02; minVolRatio 0.01; minTriangleTwist -1; nSmoothScale 4; errorReduction 0.75;}
+debug 0; mergeTolerance 1e-6;

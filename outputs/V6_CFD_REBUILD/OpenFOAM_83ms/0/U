@@ -1,0 +1,8 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class volVectorField;
+ object U;
+}
+dimensions [0 1 -1 0 0 0 0]; internalField uniform (83.333 0 0); boundaryField {inlet {type fixedValue; value uniform (83.333 0 0);} outlet {type zeroGradient;} ground {type fixedValue; value uniform (83.333 0 0);} sides {type symmetryPlane;} top {type symmetryPlane;} "(body|nose|sidepods|canopy|halo|floor|venturi|plank|skids|diffuser|frontWing|frontFlaps|rearWing|rearFlap|suspension|cooling)" {type noSlip;} wheelFL {type rotatingWallVelocity; origin (-1.8 -0.845 0.36); axis (0 -1 0); omega 231.48; value uniform (0 0 0);} wheelFR {type rotatingWallVelocity; origin (-1.8 0.845 0.36); axis (0 -1 0); omega 231.48; value uniform (0 0 0);} wheelRL {type rotatingWallVelocity; origin (1.8 -0.845 0.36); axis (0 -1 0); omega 231.48; value uniform (0 0 0);} wheelRR {type rotatingWallVelocity; origin (1.8 0.845 0.36); axis (0 -1 0); omega 231.48; value uniform (0 0 0);}}

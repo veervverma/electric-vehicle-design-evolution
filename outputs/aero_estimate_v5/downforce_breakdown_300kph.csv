@@ -1,0 +1,9 @@
+mode,component,fraction,downforce_n
+corner_closed,Underfloor + diffuser,0.58,10440.402777777776
+corner_closed,Front wing,0.18,3240.1249999999995
+corner_closed,Rear wing,0.17,3060.118055555555
+corner_closed,Body/other,0.07,1260.048611111111
+straight_active,Underfloor + diffuser,0.78,10616.666666666666
+straight_active,Front active wing,0.08,1088.8888888888887
+straight_active,Rear DRS wing,0.08,1088.8888888888887
+straight_active,Body/other,0.06,816.6666666666665

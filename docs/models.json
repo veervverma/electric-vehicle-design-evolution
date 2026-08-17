@@ -1,0 +1,1870 @@
+{
+  "models": [
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Advanced Sedan Assembled Reference",
+      "path": "../outputs/advanced_ev_sedan/advanced_sedan_assembled_reference.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Advanced Body",
+      "path": "../outputs/advanced_ev_sedan/advanced_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Fastback Cabin",
+      "path": "../outputs/advanced_ev_sedan/fastback_cabin.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Rear Wing",
+      "path": "../outputs/advanced_ev_sedan/rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Sport Wheel X4",
+      "path": "../outputs/advanced_ev_sedan/sport_wheel_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Suspension Axle Module X2",
+      "path": "../outputs/advanced_ev_sedan/suspension_axle_module_x2.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V1",
+      "label": "Wheel Retainer Cap X4",
+      "path": "../outputs/advanced_ev_sedan/wheel_retainer_cap_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "Advanced Sedan V2 Assembled Reference",
+      "path": "../outputs/advanced_ev_sedan_v2/advanced_sedan_v2_assembled_reference.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "01 Monocoque Body",
+      "path": "../outputs/advanced_ev_sedan_v2/01_monocoque_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "02 Fastback Cabin",
+      "path": "../outputs/advanced_ev_sedan_v2/02_fastback_cabin.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "03 Removable Vented Hood",
+      "path": "../outputs/advanced_ev_sedan_v2/03_removable_vented_hood.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "04 Interior Tub",
+      "path": "../outputs/advanced_ev_sedan_v2/04_interior_tub.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "05 Swan Neck Rear Wing",
+      "path": "../outputs/advanced_ev_sedan_v2/05_swan_neck_rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "06 Front Steering Suspension",
+      "path": "../outputs/advanced_ev_sedan_v2/06_front_steering_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "07 Rear Suspension",
+      "path": "../outputs/advanced_ev_sedan_v2/07_rear_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "08 Tpu Tire X4",
+      "path": "../outputs/advanced_ev_sedan_v2/08_tpu_tire_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "09 Sport Rim X4",
+      "path": "../outputs/advanced_ev_sedan_v2/09_sport_rim_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "10 Brake Rotor X4",
+      "path": "../outputs/advanced_ev_sedan_v2/10_brake_rotor_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "11 Wheel Cap X4",
+      "path": "../outputs/advanced_ev_sedan_v2/11_wheel_cap_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "12 Front Light Insert",
+      "path": "../outputs/advanced_ev_sedan_v2/12_front_light_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "13 Rear Light Insert",
+      "path": "../outputs/advanced_ev_sedan_v2/13_rear_light_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Advanced EV sedan V2",
+      "label": "14 Mirror X2",
+      "path": "../outputs/advanced_ev_sedan_v2/14_mirror_x2.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "Ev Sedan V3 Complete Assembled",
+      "path": "../outputs/portfolio_ev_sedan_v3/EV_SEDAN_V3_COMPLETE_ASSEMBLED.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "01 Monocoque Body",
+      "path": "../outputs/portfolio_ev_sedan_v3/01_monocoque_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "02 Fastback Cabin",
+      "path": "../outputs/portfolio_ev_sedan_v3/02_fastback_cabin.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "03 Removable Vented Hood",
+      "path": "../outputs/portfolio_ev_sedan_v3/03_removable_vented_hood.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "04 Interior Tub",
+      "path": "../outputs/portfolio_ev_sedan_v3/04_interior_tub.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "05 Swan Neck Rear Wing",
+      "path": "../outputs/portfolio_ev_sedan_v3/05_swan_neck_rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "06 Front Steering Suspension",
+      "path": "../outputs/portfolio_ev_sedan_v3/06_front_steering_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "07 Rear Suspension",
+      "path": "../outputs/portfolio_ev_sedan_v3/07_rear_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "08 Tpu Tire X4",
+      "path": "../outputs/portfolio_ev_sedan_v3/08_tpu_tire_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "09 Sport Rim X4",
+      "path": "../outputs/portfolio_ev_sedan_v3/09_sport_rim_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "10 Brake Rotor X4",
+      "path": "../outputs/portfolio_ev_sedan_v3/10_brake_rotor_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "11 Wheel Cap X4",
+      "path": "../outputs/portfolio_ev_sedan_v3/11_wheel_cap_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "12 Front Light Insert",
+      "path": "../outputs/portfolio_ev_sedan_v3/12_front_light_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "13 Rear Light Insert",
+      "path": "../outputs/portfolio_ev_sedan_v3/13_rear_light_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "14 Mirror X2",
+      "path": "../outputs/portfolio_ev_sedan_v3/14_mirror_x2.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "15 Skateboard Battery Pack",
+      "path": "../outputs/portfolio_ev_sedan_v3/15_skateboard_battery_pack.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "16 Rear Motor Gearbox",
+      "path": "../outputs/portfolio_ev_sedan_v3/16_rear_motor_gearbox.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "17 Inverter Controller",
+      "path": "../outputs/portfolio_ev_sedan_v3/17_inverter_controller.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "18 Charging Service Unit",
+      "path": "../outputs/portfolio_ev_sedan_v3/18_charging_service_unit.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Portfolio EV sedan V3",
+      "label": "Ev Sedan V3 Exploded Reference",
+      "path": "../outputs/portfolio_ev_sedan_v3/EV_SEDAN_V3_EXPLODED_REFERENCE.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "Formula Ev Complete Assembled",
+      "path": "../outputs/formula_ev_prototype/FORMULA_EV_COMPLETE_ASSEMBLED.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "Formula Ev Detailed Viewer",
+      "path": "../outputs/formula_ev_prototype/FORMULA_EV_DETAILED_VIEWER.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "01 Carbon Monocoque",
+      "path": "../outputs/formula_ev_prototype/01_carbon_monocoque.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "02 Detachable Nose",
+      "path": "../outputs/formula_ev_prototype/02_detachable_nose.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "03 Ground Effect Floor",
+      "path": "../outputs/formula_ev_prototype/03_ground_effect_floor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "04 Sidepods Radiator Ducts",
+      "path": "../outputs/formula_ev_prototype/04_sidepods_radiator_ducts.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "05 Front Wing",
+      "path": "../outputs/formula_ev_prototype/05_front_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "06 Rear Wing",
+      "path": "../outputs/formula_ev_prototype/06_rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "07 Halo",
+      "path": "../outputs/formula_ev_prototype/07_halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "08 Cockpit Insert",
+      "path": "../outputs/formula_ev_prototype/08_cockpit_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "09 Front Pushrod Suspension",
+      "path": "../outputs/formula_ev_prototype/09_front_pushrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "10 Rear Pushrod Suspension",
+      "path": "../outputs/formula_ev_prototype/10_rear_pushrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "11 Slick Tire X4",
+      "path": "../outputs/formula_ev_prototype/11_slick_tire_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "12 Centerlock Rim X4",
+      "path": "../outputs/formula_ev_prototype/12_centerlock_rim_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "13 Brake Rotor X4",
+      "path": "../outputs/formula_ev_prototype/13_brake_rotor_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "14 Centerlock Nut X4",
+      "path": "../outputs/formula_ev_prototype/14_centerlock_nut_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "15 Battery Pack",
+      "path": "../outputs/formula_ev_prototype/15_battery_pack.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "16 Motor Gearbox",
+      "path": "../outputs/formula_ev_prototype/16_motor_gearbox.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV prototype / V1",
+      "label": "17 Inverter",
+      "path": "../outputs/formula_ev_prototype/17_inverter.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "Formula Ev V2 Complete Animated Drs",
+      "path": "../outputs/formula_ev_v2_detailed/FORMULA_EV_V2_COMPLETE_ANIMATED_DRS.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "01 Enhanced Monocoque",
+      "path": "../outputs/formula_ev_v2_detailed/01_enhanced_monocoque.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "02 Sensor Nose Cone",
+      "path": "../outputs/formula_ev_v2_detailed/02_sensor_nose_cone.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "03 Venturi Floor Diffuser",
+      "path": "../outputs/formula_ev_v2_detailed/03_venturi_floor_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "04 Sculpted Sidepods Radiators",
+      "path": "../outputs/formula_ev_v2_detailed/04_sculpted_sidepods_radiators.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "05 Four Element Front Wing",
+      "path": "../outputs/formula_ev_v2_detailed/05_four_element_front_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "06 Rear Wing Mainplane",
+      "path": "../outputs/formula_ev_v2_detailed/06_rear_wing_mainplane.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "07 Animated Drs Flap",
+      "path": "../outputs/formula_ev_v2_detailed/07_animated_drs_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "08 Drs Actuator",
+      "path": "../outputs/formula_ev_v2_detailed/08_drs_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "09 Enhanced Halo",
+      "path": "../outputs/formula_ev_v2_detailed/09_enhanced_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "10 Detailed Cockpit",
+      "path": "../outputs/formula_ev_v2_detailed/10_detailed_cockpit.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "11 Front Pushrod Suspension",
+      "path": "../outputs/formula_ev_v2_detailed/11_front_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "12 Rear Pushrod Suspension",
+      "path": "../outputs/formula_ev_v2_detailed/12_rear_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "13 Slick Tire",
+      "path": "../outputs/formula_ev_v2_detailed/13_slick_tire.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "14 Centerlock Rim",
+      "path": "../outputs/formula_ev_v2_detailed/14_centerlock_rim.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "15 Drilled Brake Rotor",
+      "path": "../outputs/formula_ev_v2_detailed/15_drilled_brake_rotor.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "16 Centerlock Nut",
+      "path": "../outputs/formula_ev_v2_detailed/16_centerlock_nut.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "17 Battery Pack Busbars",
+      "path": "../outputs/formula_ev_v2_detailed/17_battery_pack_busbars.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "18 Motor Gearbox Cooling",
+      "path": "../outputs/formula_ev_v2_detailed/18_motor_gearbox_cooling.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "19 Inverter Connectors",
+      "path": "../outputs/formula_ev_v2_detailed/19_inverter_connectors.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "20 Radiator Cooling System",
+      "path": "../outputs/formula_ev_v2_detailed/20_radiator_cooling_system.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V2 \u2014 detailed GLB and rear DRS",
+      "label": "21 Telemetry Antennas",
+      "path": "../outputs/formula_ev_v2_detailed/21_telemetry_antennas.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "Formula Ev V3 Complete 2022 2025 Floor",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_COMPLETE_2022_2025_FLOOR.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "Formula Ev V3 Complete Underfloor",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_COMPLETE_UNDERFLOOR.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "Formula Ev V3 Exploded Underfloor",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_EXPLODED_UNDERFLOOR.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "01 Enhanced Monocoque",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/01_enhanced_monocoque.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "02 Sensor Nose Cone",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/02_sensor_nose_cone.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "04 Sculpted Sidepods Radiators",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/04_sculpted_sidepods_radiators.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "05 Four Element Front Wing",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/05_four_element_front_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "06 Rear Wing Mainplane",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/06_rear_wing_mainplane.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "07 Animated Drs Flap",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/07_animated_drs_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "08 Drs Actuator",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/08_drs_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "09 Enhanced Halo",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/09_enhanced_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "10 Detailed Cockpit",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/10_detailed_cockpit.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "11 Front Pushrod Suspension",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/11_front_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "12 Rear Pushrod Suspension",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/12_rear_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "13 Slick Tire",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/13_slick_tire.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "14 Centerlock Rim",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/14_centerlock_rim.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "15 Drilled Brake Rotor",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/15_drilled_brake_rotor.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "16 Centerlock Nut",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/16_centerlock_nut.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "17 Battery Pack Busbars",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/17_battery_pack_busbars.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "18 Motor Gearbox Cooling",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/18_motor_gearbox_cooling.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "19 Inverter Connectors",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/19_inverter_connectors.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "20 Radiator Cooling System",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/20_radiator_cooling_system.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "21 Telemetry Antennas",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/21_telemetry_antennas.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "22 Upper Floor Body",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/22_upper_floor_body.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "23 Left Venturi Tunnel",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/23_left_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "24 Right Venturi Tunnel",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/24_right_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "25 Left Inlet Fences X4",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/25_left_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "26 Right Inlet Fences X4",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/26_right_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "27 Left Floor Edge Wing",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/27_left_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "28 Right Floor Edge Wing",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/28_right_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "29 Central Plank",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/29_central_plank.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "30 Titanium Skid Set",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/30_titanium_skid_set.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "31 Bib Tea Tray",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/31_bib_tea_tray.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "32 Left Diffuser",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/32_left_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "33 Right Diffuser",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/33_right_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "34 Diffuser Strakes",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/34_diffuser_strakes.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "35 Boat Tail Keel",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/35_boat_tail_keel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "36 Rear Wake Fences",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/36_rear_wake_fences.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V3 \u2014 2022\u20132025-inspired floor study",
+      "label": "37 Floor Stays",
+      "path": "../outputs/formula_ev_v3_2022_2025_floor/37_floor_stays.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "Formula Ev V4 Complete Dual Active Aero",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/FORMULA_EV_V4_COMPLETE_DUAL_ACTIVE_AERO.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "01 Enhanced Monocoque",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/01_enhanced_monocoque.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "02 Sensor Nose Cone",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/02_sensor_nose_cone.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "04 Sculpted Sidepods Radiators",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/04_sculpted_sidepods_radiators.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "05 Three Element Front Wing Base",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/05_three_element_front_wing_base.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "06 Rear Wing Mainplane",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/06_rear_wing_mainplane.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "07 Animated Drs Flap",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/07_animated_drs_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "08 Drs Actuator",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/08_drs_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "09 Enhanced Halo",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/09_enhanced_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "10 Detailed Cockpit",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/10_detailed_cockpit.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "11 Front Pushrod Suspension",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/11_front_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "12 Rear Pushrod Suspension",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/12_rear_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "13 Slick Tire",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/13_slick_tire.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "14 Centerlock Rim",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/14_centerlock_rim.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "15 Drilled Brake Rotor",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/15_drilled_brake_rotor.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "16 Centerlock Nut",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/16_centerlock_nut.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "17 Battery Pack Busbars",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/17_battery_pack_busbars.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "18 Motor Gearbox Cooling",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/18_motor_gearbox_cooling.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "19 Inverter Connectors",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/19_inverter_connectors.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "20 Radiator Cooling System",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/20_radiator_cooling_system.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "21 Telemetry Antennas",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/21_telemetry_antennas.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "22 Upper Floor Body",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/22_upper_floor_body.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "23 Left Venturi Tunnel",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/23_left_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "24 Right Venturi Tunnel",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/24_right_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "25 Left Inlet Fences X4",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/25_left_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "26 Right Inlet Fences X4",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/26_right_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "27 Left Floor Edge Wing",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/27_left_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "28 Right Floor Edge Wing",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/28_right_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "29 Central Plank",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/29_central_plank.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "30 Titanium Skid Set",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/30_titanium_skid_set.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "31 Bib Tea Tray",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/31_bib_tea_tray.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "32 Left Diffuser",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/32_left_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "33 Right Diffuser",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/33_right_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "34 Diffuser Strakes",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/34_diffuser_strakes.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "35 Boat Tail Keel",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/35_boat_tail_keel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "36 Rear Wake Fences",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/36_rear_wake_fences.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "37 Floor Stays",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/37_floor_stays.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "38 Left Active Front Flap",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/38_left_active_front_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "39 Right Active Front Flap",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/39_right_active_front_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "40 Front Active Aero Actuator",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/40_front_active_aero_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V4 \u2014 dual active aero",
+      "label": "Formula Ev V4 Front Active Aero System",
+      "path": "../outputs/formula_ev_v4_dual_active_aero/FORMULA_EV_V4_FRONT_ACTIVE_AERO_SYSTEM.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "Formula Ev V5 Complete Active Front Wing",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_ACTIVE_FRONT_WING.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "Formula Ev V5 Complete All Active Flaps",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_ALL_ACTIVE_FLAPS.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "Formula Ev V5 Complete Synced Aero Fixed",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_SYNCED_AERO_FIXED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "01 Enhanced Monocoque",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/01_enhanced_monocoque.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "02 Sensor Nose Cone",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/02_sensor_nose_cone.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "04 Sculpted Sidepods Radiators",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/04_sculpted_sidepods_radiators.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "05 Fixed Front Wing Mainplane",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/05_fixed_front_wing_mainplane.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "06 Rear Wing Mainplane",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/06_rear_wing_mainplane.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "07 Animated Drs Flap",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/07_animated_drs_flap.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "08 Drs Actuator",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/08_drs_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "09 Enhanced Halo",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/09_enhanced_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "10 Detailed Cockpit",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/10_detailed_cockpit.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "11 Front Pushrod Suspension",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/11_front_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "12 Rear Pushrod Suspension",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/12_rear_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "13 Slick Tire",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/13_slick_tire.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "14 Centerlock Rim",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/14_centerlock_rim.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "15 Drilled Brake Rotor",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/15_drilled_brake_rotor.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "16 Centerlock Nut",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/16_centerlock_nut.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "17 Battery Pack Busbars",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/17_battery_pack_busbars.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "18 Motor Gearbox Cooling",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/18_motor_gearbox_cooling.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "19 Inverter Connectors",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/19_inverter_connectors.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "20 Radiator Cooling System",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/20_radiator_cooling_system.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "21 Telemetry Antennas",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/21_telemetry_antennas.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "22 Upper Floor Body",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/22_upper_floor_body.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "23 Left Venturi Tunnel",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/23_left_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "24 Right Venturi Tunnel",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/24_right_venturi_tunnel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "25 Left Inlet Fences X4",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/25_left_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "26 Right Inlet Fences X4",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/26_right_inlet_fences_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "27 Left Floor Edge Wing",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/27_left_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "28 Right Floor Edge Wing",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/28_right_floor_edge_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "29 Central Plank",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/29_central_plank.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "30 Titanium Skid Set",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/30_titanium_skid_set.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "31 Bib Tea Tray",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/31_bib_tea_tray.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "32 Left Diffuser",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/32_left_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "33 Right Diffuser",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/33_right_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "34 Diffuser Strakes",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/34_diffuser_strakes.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "35 Boat Tail Keel",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/35_boat_tail_keel.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "36 Rear Wake Fences",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/36_rear_wake_fences.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "37 Floor Stays",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/37_floor_stays.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "38 Left Active Flap Level 1",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/38_left_active_flap_level_1.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "39 Left Active Flap Level 2",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/39_left_active_flap_level_2.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "40 Left Active Flap Level 3",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/40_left_active_flap_level_3.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "41 Right Active Flap Level 1",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/41_right_active_flap_level_1.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "42 Right Active Flap Level 2",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/42_right_active_flap_level_2.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "43 Right Active Flap Level 3",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/43_right_active_flap_level_3.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 six active front flaps and synchronized assembly",
+      "label": "44 Six Channel Front Wing Actuator",
+      "path": "../outputs/formula_ev_v5_all_active_flaps/44_six_channel_front_wing_actuator.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "01 Enhanced Monocoque",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/01_enhanced_monocoque.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "02 Sensor Nose Cone",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/02_sensor_nose_cone.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "03 Sculpted Sidepods And Radiator Ducts",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/03_sculpted_sidepods_and_radiator_ducts.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "04 Rear Wing Mainplane",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/04_rear_wing_mainplane.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "05 Drs Flap Animated",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/05_drs_flap_animated.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "06 Drs Actuator",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/06_drs_actuator.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "07 Enhanced Halo",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/07_enhanced_halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "08 Detailed Cockpit",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/08_detailed_cockpit.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "09 Front Pushrod Suspension",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/09_front_pushrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "10 Rear Pushrod Suspension",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/10_rear_pushrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "11 Battery Modules And Busbars",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/11_battery_modules_and_busbars.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "12 Motor Gearbox And Cooling",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/12_motor_gearbox_and_cooling.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "13 Inverter And Hv Connectors",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/13_inverter_and_hv_connectors.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "14 Radiator Cooling System",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/14_radiator_cooling_system.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "15 Telemetry Antennas",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/15_telemetry_antennas.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "16 Front Left Slick Tire",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/16_front_left_slick_tire.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "17 Front Left Detailed Rim",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/17_front_left_detailed_rim.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "18 Front Left Drilled Brake Rotor",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/18_front_left_drilled_brake_rotor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "19 Front Left Center Lock",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/19_front_left_center_lock.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "20 Front Right Slick Tire",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/20_front_right_slick_tire.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "21 Front Right Detailed Rim",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/21_front_right_detailed_rim.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "22 Front Right Drilled Brake Rotor",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/22_front_right_drilled_brake_rotor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "23 Front Right Center Lock",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/23_front_right_center_lock.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "24 Rear Left Slick Tire",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/24_rear_left_slick_tire.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "25 Rear Left Detailed Rim",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/25_rear_left_detailed_rim.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "26 Rear Left Drilled Brake Rotor",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/26_rear_left_drilled_brake_rotor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "27 Rear Left Center Lock",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/27_rear_left_center_lock.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "28 Rear Right Slick Tire",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/28_rear_right_slick_tire.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "29 Rear Right Detailed Rim",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/29_rear_right_detailed_rim.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "30 Rear Right Drilled Brake Rotor",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/30_rear_right_drilled_brake_rotor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "31 Rear Right Center Lock",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/31_rear_right_center_lock.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "32 22 Upper Floor Body",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/32_22_upper_floor_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "33 23 Left Venturi Tunnel",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/33_23_left_venturi_tunnel.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "34 24 Right Venturi Tunnel",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/34_24_right_venturi_tunnel.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "35 25 Left Inlet Fences X4",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/35_25_left_inlet_fences_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "36 26 Right Inlet Fences X4",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/36_26_right_inlet_fences_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "37 27 Left Floor Edge Wing",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/37_27_left_floor_edge_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "38 28 Right Floor Edge Wing",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/38_28_right_floor_edge_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "39 29 Central Plank",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/39_29_central_plank.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "40 30 Titanium Skid Set",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/40_30_titanium_skid_set.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "41 31 Bib Tea Tray",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/41_31_bib_tea_tray.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "42 32 Left Diffuser",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/42_32_left_diffuser.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "43 33 Right Diffuser",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/43_33_right_diffuser.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "44 34 Diffuser Strakes",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/44_34_diffuser_strakes.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "45 35 Boat Tail Keel",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/45_35_boat_tail_keel.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "46 36 Rear Wake Fences",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/46_36_rear_wake_fences.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "47 37 Floor Stays",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/47_37_floor_stays.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "48 Fixed Front Wing Mainplane",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/48_fixed_front_wing_mainplane.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "49 Left Active Flap Level 1",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/49_left_active_flap_level_1.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "50 Left Active Flap Level 2",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/50_left_active_flap_level_2.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "51 Left Active Flap Level 3",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/51_left_active_flap_level_3.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "52 Right Active Flap Level 1",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/52_right_active_flap_level_1.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "53 Right Active Flap Level 2",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/53_right_active_flap_level_2.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "54 Right Active Flap Level 3",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/54_right_active_flap_level_3.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 separate 55-part STL print release",
+      "label": "55 Six Channel Front Wing Actuator",
+      "path": "../outputs/FORMULA_EV_V5_PRINT_PARTS/55_six_channel_front_wing_actuator.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V5 \u2014 wind-tunnel animation and reduced-order track study",
+      "label": "V5 Venturi Wind Tunnel Animation",
+      "path": "../outputs/v5_wind_tunnel_and_track_sim/V5_VENTURI_WIND_TUNNEL_ANIMATION.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "V6 Full Scale Cfd Preview",
+      "path": "../outputs/V6_CFD_REBUILD/V6_FULL_SCALE_CFD_PREVIEW.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "V6 Full Scale Cfd Surfaces",
+      "path": "../outputs/V6_CFD_REBUILD/V6_FULL_SCALE_CFD_SURFACES.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Body",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Body",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Canopy",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/canopy.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Canopy",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/canopy.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Cooling",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/cooling.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Cooling",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/cooling.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Diffuser",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/diffuser.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Diffuser",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/diffuser.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Floor",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/floor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Floor",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/floor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Frontflaps",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/frontFlaps.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Frontflaps",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/frontFlaps.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Frontwing",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/frontWing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Frontwing",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/frontWing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Halo",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Halo",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Nose",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/nose.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Nose",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/nose.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Plank",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/plank.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Plank",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/plank.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Rearflap",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/rearFlap.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Rearflap",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/rearFlap.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Rearwing",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/rearWing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Rearwing",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/rearWing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Sidepods",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/sidepods.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Sidepods",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/sidepods.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Skids",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/skids.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Skids",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/skids.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Suspension",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Suspension",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Venturi",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/venturi.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Venturi",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/venturi.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelfl",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/wheelFL.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelfl",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/wheelFL.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelfr",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/wheelFR.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelfr",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/wheelFR.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelrl",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/wheelRL.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelrl",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/wheelRL.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelrr",
+      "path": "../outputs/V6_CFD_REBUILD/geometry/wheelRR.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 full-scale CFD-preparation rebuild",
+      "label": "Wheelrr",
+      "path": "../outputs/V6_CFD_REBUILD/OpenFOAM_83ms/constant/triSurface/wheelRR.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 repaired 5-inch and 8-inch print release",
+      "label": "V6 5In Print Ready Solid Mm",
+      "path": "../outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_PRINT_READY_SOLID_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 repaired 5-inch and 8-inch print release",
+      "label": "V6 8In Print Ready Solid Mm",
+      "path": "../outputs/V6_PRINT_READY_5_TO_8_INCH/V6_8IN_PRINT_READY_SOLID_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 repaired 5-inch and 8-inch print release",
+      "label": "V6 5In Smooth Repaired Mm",
+      "path": "../outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_SMOOTH_REPAIRED_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "Formula EV V6 \u2014 repaired 5-inch and 8-inch print release",
+      "label": "V6 8In Smooth Repaired Mm",
+      "path": "../outputs/V6_PRINT_READY_5_TO_8_INCH/V6_8IN_SMOOTH_REPAIRED_MM.stl",
+      "ext": "stl"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+FORMULA EV V5 — ALL FRONT FLAPS ACTIVE
+
+The front wing now contains one fixed structural mainplane and six moving flaps: three left and three right.
+
+Animation ALL SIX FRONT FLAPS OPEN CLOSE:
+- Level 1 flaps rotate 7 degrees.
+- Level 2 flaps rotate 11 degrees.
+- Level 3 flaps rotate 16 degrees.
+
+The rear DRS remains a separate 28-degree animation. In Blender, import the complete GLB, open the Animation workspace, choose an action and press Play.
+
+This is an educational active-aero concept, not a regulation-compliant 2022-2025 Formula 1 system.

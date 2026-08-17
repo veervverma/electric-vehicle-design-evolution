@@ -1,0 +1,23 @@
+ADVANCED EV SEDAN PRINTING KIT
+
+PARTS
+1x advanced_body.stl
+1x fastback_cabin.stl
+1x rear_wing.stl
+2x suspension_axle_module_x2.stl
+4x sport_wheel_x4.stl
+4x wheel_retainer_cap_x4.stl
+
+Recommended material: PETG. Use TPU only for optional tires if you later separate the tire geometry.
+Layer height: 0.20 mm; walls: 4; infill: 20-25%; supports: build plate only for suspension modules and wing.
+
+ASSEMBLY
+1. Glue cabin to the four deck pegs.
+2. Glue axle-module bridges into the underside mounting areas at x = +/-65 mm. Keep arms free.
+3. Slide wheels onto 7.6 mm diameter axle stubs; gently sand bores if needed.
+4. Glue retainer caps only to axle ends; do not glue wheels.
+5. Glue wing on the rear deck.
+6. Install a 130-size DC motor or N20 gearmotor in the front cradle; final drivetrain coupling depends on your motor/gearbox.
+
+Overall assembled envelope: about 192 x 101 x 59 mm. Fits a 220 x 220 x 250 mm printer.
+The 3MF contains the entire kit as individually selectable objects.

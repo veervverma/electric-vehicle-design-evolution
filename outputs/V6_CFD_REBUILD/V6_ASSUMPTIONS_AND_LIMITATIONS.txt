@@ -1,0 +1,10 @@
+V6 FULL-SCALE CFD REBUILD
+
+Target envelope: 5.6 m length, 2.0 m width, approximately 1.05 m height. Wheelbase 3.6 m; track 1.69 m; tire radius 0.36 m; tire width 0.31 m. Ground-clearance/plank region approximately 25–55 mm.
+
+The car was rebuilt parametrically as a Formula-style EV concept with separate closed component meshes, NACA 0012 wing sections, front and rear active-aero surfaces, exposed suspension, cooling elements, a twin-Venturi floor, throat sections, plank/skids and a progressive diffuser.
+
+The OpenFOAM triSurface copies are in metres; the geometry folder and combined STL are in millimetres. The preview GLB preserves separately named parts for inspection.
+
+LIMITATIONS
+The components have not been boolean-unioned. OpenFOAM and a production mesher were unavailable in this environment, so surfaceCheck, snappyHexMesh, checkMesh and a CFD solve were not executed. Physical wind-tunnel and track validation also remain external tasks. Treat this as CFD preparation and an improved geometry baseline—not validated aerodynamic data.

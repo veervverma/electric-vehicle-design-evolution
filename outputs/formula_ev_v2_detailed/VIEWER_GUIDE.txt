@@ -1,0 +1,9 @@
+FORMULA EV V2 GLB VIEWER GUIDE
+
+Open FORMULA_EV_V2_COMPLETE_ANIMATED_DRS.glb in Blender for the best inspection. The model has separately named components. Select and hide body parts to inspect suspension, battery, motor and cooling systems.
+
+DRS ANIMATION
+In Blender, switch to the Animation workspace and press Play. The rear flap opens to 28 degrees and closes over a 3-second loop. If a viewer does not support glTF animations, the flap remains visible as a separate selectable object.
+
+INDIVIDUAL FILES
+The numbered GLBs contain each major system by itself, centered at the origin for easy rotation and inspection. Wheel component files are intended to be reused four times.

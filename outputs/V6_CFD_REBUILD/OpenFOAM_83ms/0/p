@@ -1,0 +1,8 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class volScalarField;
+ object p;
+}
+dimensions [0 2 -2 0 0 0 0]; internalField uniform 0; boundaryField {inlet {type zeroGradient;} outlet {type fixedValue; value uniform 0;} ground {type zeroGradient;} sides {type symmetryPlane;} top {type symmetryPlane;} "(body|nose|sidepods|canopy|halo|floor|venturi|plank|skids|diffuser|frontWing|frontFlaps|rearWing|rearFlap|suspension|cooling)" {type zeroGradient;} "(wheelFL|wheelFR|wheelRL|wheelRR)" {type zeroGradient;}}

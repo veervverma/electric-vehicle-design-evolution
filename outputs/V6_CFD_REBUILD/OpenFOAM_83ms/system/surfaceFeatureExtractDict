@@ -1,0 +1,27 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class dictionary;
+ object surfaceFeatureExtractDict;
+}
+body.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+nose.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+sidepods.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+canopy.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+halo.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+floor.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+venturi.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+plank.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+skids.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+diffuser.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+frontWing.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+frontFlaps.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+rearWing.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+rearFlap.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+suspension.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+cooling.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+wheelFL.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+wheelFR.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+wheelRL.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}
+wheelRR.stl {extractionMethod extractFromSurface; extractFromSurfaceCoeffs {includedAngle 150;} writeObj yes;}

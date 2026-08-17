@@ -1,0 +1,19 @@
+EV SEDAN V3 — COLLEGE PORTFOLIO NOTES
+
+DESIGN INTENT
+A printable electric performance sedan study combining industrial design, mechanical packaging and design-for-additive-manufacturing. The exterior is a low fastback with functional aero cues; the technical model includes a skateboard battery, rear e-axle motor and reduction gearbox, power electronics, suspension, steering rack, brakes and a four-seat interior.
+
+WHAT TO SHOW
+1. Open EV_SEDAN_V3_ASSEMBLED_SHOWCASE.3mf for the complete color-coded vehicle.
+2. Open EV_SEDAN_V3_EXPLODED_TECHNICAL.3mf to explain how systems fit together.
+3. Use assembled_showcase.svg and exploded_technical.svg as portfolio images.
+4. Photograph your printed prototype next to design sketches and failed/test parts.
+
+ENGINEERING STORY
+- Packaging: flat battery pack low between axles; e-axle and inverter positioned near rear drive unit.
+- Dynamics: low center of gravity, wide track, double-wishbone-style arms and visible brake rotors.
+- Manufacturing: body split into printable modules; TPU tires and rigid PETG structural parts; alignment pegs and wheel retainers simplify assembly.
+- Iteration: evolved from a bare skateboard chassis to a sedan, then to a modular suspension model and finally a system-level portfolio prototype.
+
+IMPORTANT
+This is an educational scale prototype, not a road-safe vehicle design. Validate tolerances and motor temperatures before powered testing.

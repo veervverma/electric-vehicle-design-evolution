@@ -1,0 +1,25 @@
+# Model catalog
+
+The GitHub Pages gallery reads `docs/models.json` and can display every GLB and STL below the `outputs/` tree. This shorter table highlights assembled models and major study views. Click an STL in the GitHub repository for GitHub's native 3D viewer, or use the Pages gallery for searchable GLB/STL viewing and glTF animation playback.
+
+| Design family | Model | Format | Purpose |
+|---|---|---:|---|
+| Advanced EV sedan V1 | [`advanced_sedan_assembled_reference.stl`](outputs/advanced_ev_sedan/advanced_sedan_assembled_reference.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| Advanced EV sedan V2 | [`advanced_sedan_v2_assembled_reference.stl`](outputs/advanced_ev_sedan_v2/advanced_sedan_v2_assembled_reference.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| Portfolio EV sedan V3 | [`EV_SEDAN_V3_COMPLETE_ASSEMBLED.stl`](outputs/portfolio_ev_sedan_v3/EV_SEDAN_V3_COMPLETE_ASSEMBLED.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| Formula EV prototype / V1 | [`FORMULA_EV_COMPLETE_ASSEMBLED.stl`](outputs/formula_ev_prototype/FORMULA_EV_COMPLETE_ASSEMBLED.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| Formula EV prototype / V1 | [`FORMULA_EV_DETAILED_VIEWER.glb`](outputs/formula_ev_prototype/FORMULA_EV_DETAILED_VIEWER.glb) | GLB | Browser-viewable binary glTF model for the formula ev detailed viewer component/system. |
+| Formula EV V2 — detailed GLB and rear DRS | [`FORMULA_EV_V2_COMPLETE_ANIMATED_DRS.glb`](outputs/formula_ev_v2_detailed/FORMULA_EV_V2_COMPLETE_ANIMATED_DRS.glb) | GLB | Browser-viewable binary glTF model of the complete assembly; may contain animation. |
+| Formula EV V3 — 2022–2025-inspired floor study | [`FORMULA_EV_V3_COMPLETE_2022_2025_FLOOR.glb`](outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_COMPLETE_2022_2025_FLOOR.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
+| Formula EV V3 — 2022–2025-inspired floor study | [`FORMULA_EV_V3_COMPLETE_UNDERFLOOR.glb`](outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_COMPLETE_UNDERFLOOR.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
+| Formula EV V3 — 2022–2025-inspired floor study | [`FORMULA_EV_V3_EXPLODED_UNDERFLOOR.glb`](outputs/formula_ev_v3_2022_2025_floor/FORMULA_EV_V3_EXPLODED_UNDERFLOOR.glb) | GLB | Browser-viewable binary glTF model in an exploded technical layout. |
+| Formula EV V4 — dual active aero | [`FORMULA_EV_V4_COMPLETE_DUAL_ACTIVE_AERO.glb`](outputs/formula_ev_v4_dual_active_aero/FORMULA_EV_V4_COMPLETE_DUAL_ACTIVE_AERO.glb) | GLB | Browser-viewable binary glTF model of the complete assembly; may contain animation. |
+| Formula EV V5 — six active front flaps and synchronized assembly | [`FORMULA_EV_V5_COMPLETE_ACTIVE_FRONT_WING.glb`](outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_ACTIVE_FRONT_WING.glb) | GLB | Browser-viewable binary glTF model of the complete assembly; may contain animation. |
+| Formula EV V5 — six active front flaps and synchronized assembly | [`FORMULA_EV_V5_COMPLETE_ALL_ACTIVE_FLAPS.glb`](outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_ALL_ACTIVE_FLAPS.glb) | GLB | Browser-viewable binary glTF model of the complete assembly; may contain animation. |
+| Formula EV V5 — six active front flaps and synchronized assembly | [`FORMULA_EV_V5_COMPLETE_SYNCED_AERO_FIXED.glb`](outputs/formula_ev_v5_all_active_flaps/FORMULA_EV_V5_COMPLETE_SYNCED_AERO_FIXED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly; may contain animation. |
+| Formula EV V5 — wind-tunnel animation and reduced-order track study | [`V5_VENTURI_WIND_TUNNEL_ANIMATION.glb`](outputs/v5_wind_tunnel_and_track_sim/V5_VENTURI_WIND_TUNNEL_ANIMATION.glb) | GLB | Browser-viewable binary glTF model containing the conceptual airflow presentation; may contain animation. |
+| Formula EV V6 — full-scale CFD-preparation rebuild | [`V6_FULL_SCALE_CFD_PREVIEW.glb`](outputs/V6_CFD_REBUILD/V6_FULL_SCALE_CFD_PREVIEW.glb) | GLB | Browser-viewable binary glTF model for the v6 full scale cfd preview component/system. |
+| Formula EV V6 — repaired 5-inch and 8-inch print release | [`V6_5IN_PRINT_READY_SOLID_MM.stl`](outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_PRINT_READY_SOLID_MM.stl) | STL | Validated manifold STL prepared for FDM slicing; import as millimeters. |
+| Formula EV V6 — repaired 5-inch and 8-inch print release | [`V6_8IN_PRINT_READY_SOLID_MM.stl`](outputs/V6_PRINT_READY_5_TO_8_INCH/V6_8IN_PRINT_READY_SOLID_MM.stl) | STL | Validated manifold STL prepared for FDM slicing; import as millimeters. |
+
+The interactive catalog currently indexes **311** GLB/STL files.

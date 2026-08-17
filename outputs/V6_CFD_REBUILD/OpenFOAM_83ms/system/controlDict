@@ -1,0 +1,8 @@
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class dictionary;
+ object controlDict;
+}
+application simpleFoam; startFrom startTime; startTime 0; stopAt endTime; endTime 3000; deltaT 1; writeControl timeStep; writeInterval 250; purgeWrite 0; writeFormat binary; writePrecision 8; writeCompression off; timeFormat general; timePrecision 6; runTimeModifiable true; functions {forces {type forceCoeffs; libs ("libforces.so"); patches (body nose sidepods canopy halo floor venturi plank skids diffuser frontWing frontFlaps rearWing rearFlap suspension cooling wheelFL wheelFR wheelRL wheelRR); rho rhoInf; rhoInf 1.225; liftDir (0 0 1); dragDir (1 0 0); pitchAxis (0 1 0); CofR (0 0 0.30); magUInf 83.333; lRef 5.60; Aref 1.60; writeControl timeStep; writeInterval 10;}}

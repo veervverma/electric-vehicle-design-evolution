@@ -1,0 +1,29 @@
+V5 FORMULA EV — FIRST-ORDER AERODYNAMIC ESTIMATE
+
+SCOPE
+Full-size conceptual interpretation of the V5 design. This is not CFD or wind-tunnel validation. It uses the aerodynamic force relation F = 0.5*rho*V^2*ClA.
+
+ASSUMPTIONS
+Air density: 1.225 kg/m^3 (standard sea-level day)
+Closed/high-downforce effective ClA: 4.60 m^2
+Corner efficiency factor for yaw, roll and ride-height disturbance: 0.92
+Active-front-wing + rear-DRS effective ClA: 3.20 m^2
+Corner CdA: 1.55 m^2
+Straight active-aero CdA: 1.05 m^2
+Uncertainty band: +/-25%
+
+300 KM/H STRAIGHT
+Speed: 83.33 m/s
+Dynamic pressure: 4253 Pa
+Estimated downforce: 13.61 kN (1388 kgf)
+Plausible range: 10.21-17.01 kN
+Estimated drag: 4.47 kN
+Aerodynamic power required: 372 kW
+
+300 KM/H, CLOSED-AERO CORNER EQUIVALENT
+Speed: 83.33 m/s
+Estimated downforce: 18.00 kN (1836 kgf)
+Plausible range: 13.50-22.50 kN
+
+LIMITATIONS
+The GLB is a visual/printing mesh, not a CFD-ready watertight aerodynamic surface. The estimate does not solve pressure fields, turbulence, wheel rotation, moving ground, tire deformation, porpoising, crosswind, cooling flow or aeroelastic wing movement. Reliable figures require CFD with a moving ground and rotating wheels, followed by wind-tunnel or track correlation.
