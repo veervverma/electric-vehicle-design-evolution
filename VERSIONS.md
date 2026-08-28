@@ -22,8 +22,10 @@
 | V5 conceptual studies | [`outputs/aero_estimate_v5`](outputs/aero_estimate_v5/), [`outputs/v5_track_setups_spa_silverstone_monaco`](outputs/v5_track_setups_spa_silverstone_monaco/), [`outputs/v5_wind_tunnel_and_track_sim`](outputs/v5_wind_tunnel_and_track_sim/) | First-order force estimates, track-specific setup hypotheses, reduced-order lap estimates, and a presentation airflow animation. These are not CFD validation. |
 | V6 full-scale CFD rebuild | [`outputs/V6_CFD_REBUILD`](outputs/V6_CFD_REBUILD/) | Parametric 5.45 m Formula EV geometry, separated aerodynamic surfaces, preview GLB, manifest, and prepared 300 km/h OpenFOAM case. This is CFD preparation, not a solved case. |
 | V6 repaired print release | [`outputs/V6_PRINT_READY_5_TO_8_INCH`](outputs/V6_PRINT_READY_5_TO_8_INCH/) | Solidified and topology-checked 5-inch and 8-inch derivatives of the V6 model, with explicit-millimeter 3MFs and validated STL alternatives. |
+| W11/V6 static 8-inch hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN`](outputs/W11_V6_HYBRID_STATIC_8IN/) | Final static study using the supplied high-detail W11-style exterior as a visual reference while adding a new printable twin-Venturi floor, full EV chassis, energy store, rear motor/gearbox, inverter, suspension, rolling wheels, individual GLBs/STLs, and a one-plate 3MF kit. |
 
 ## Important distinction between V5 and V6
 
 V5 is primarily a detailed presentation/animation and multi-part printing model. V6 is a separate full-scale CFD-preparation rebuild with a different parametric geometry pipeline. The later V6 print files are scaled, reinforced, and solidified derivatives made specifically because the full-scale CFD surface export was too large and unsuitable for a consumer slicer.
 
+The W11/V6 hybrid is a separate static integration branch. Its textured exterior GLB is retained for high-detail viewing under CC BY 4.0 attribution, while the print parts are newly generated and strengthened rather than being a direct raw STL conversion of the non-watertight rendering mesh.

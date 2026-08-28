@@ -117,6 +117,14 @@ FOLDERS = {
         "use": "Use the `PRINT_READY_SOLID_MM` 3MF or STL files. The 8-inch version preserves stronger details; the 5-inch version fits smaller beds.",
         "limit": "One-piece static display derivatives. Active flaps do not move, and small details remain challenging on a typical 0.4 mm FDM nozzle.",
     },
+    "W11_V6_HYBRID_STATIC_8IN": {
+        "title": "W11 reference / V6 — static 8-inch printable hybrid",
+        "summary": "Static final-form study combining the supplied high-detail 2020 Mercedes-style exterior reference with a newly built twin-Venturi floor, structural EV chassis, low energy store, rear motor/gearbox, inverter, suspension, and rolling-wheel print hardware.",
+        "units": "Printable STL geometry is millimeters; the complete 3MF explicitly declares millimeters. Overall printable assembly length is exactly 203.2 mm / 8.00 inches.",
+        "use": "Start with `W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb` for the detailed exterior, `W11_REFERENCE_V6_SYSTEMS_EXPLODED.glb` for the chassis/floor reveal, and `W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf` for printing.",
+        "limit": "Static educational display design. The exterior source is a rendering mesh and the printable body is a strengthened procedural derivative; the floor is V6-inspired but not validated CFD or structural engineering.",
+        "preserve_readme": True,
+    },
 }
 
 FAMILY_ORDER = {name: i for i, name in enumerate(FOLDERS)}
@@ -171,6 +179,8 @@ def write_folder_readmes() -> None:
     for name, meta in FOLDERS.items():
         folder = OUTPUTS / name
         if not folder.exists():
+            continue
+        if meta.get("preserve_readme") and (folder / "README.md").exists():
             continue
         rows = []
         for path in folder_files(folder):
@@ -286,4 +296,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

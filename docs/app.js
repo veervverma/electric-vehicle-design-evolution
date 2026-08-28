@@ -41,6 +41,7 @@ let animationsPlaying = true;
 let models = [];
 let visibleModels = [];
 const clock = new THREE.Clock();
+const requestedModel = new URLSearchParams(location.search).get('model');
 
 function assetUrl(item) {
   // GitHub Pages publishes only /docs, so model binaries remain in the main
@@ -123,7 +124,7 @@ async function loadModel(item) {
 }
 
 function rebuildList(keepSelection = false) {
-  const current = keepSelection ? modelSelect.value : '';
+  const current = keepSelection ? modelSelect.value : (requestedModel || '');
   const q = search.value.trim().toLowerCase();
   const family = familySelect.value;
   visibleModels = models.filter(m => (family === 'all' || m.family === family) && (!q || `${m.label} ${m.path}`.toLowerCase().includes(q)));
@@ -138,7 +139,12 @@ function rebuildList(keepSelection = false) {
 
 modelSelect.addEventListener('change', () => {
   const item = visibleModels.find(m => m.path === modelSelect.value);
-  if (item) loadModel(item);
+  if (item) {
+    loadModel(item);
+    const url = new URL(location.href);
+    url.searchParams.set('model', item.path);
+    history.replaceState(null, '', url);
+  }
 });
 familySelect.addEventListener('change', () => rebuildList());
 search.addEventListener('input', () => rebuildList(true));

@@ -6,3 +6,7 @@ __pycache__/
 # outputs/V6_PRINT_READY_5_TO_8_INCH/.
 outputs/V6_PRINT_READY_5_TO_8_INCH 2/
 
+# Temporary extraction of the downloaded Sketchfab archive. The canonical,
+# attributed self-contained GLB is preserved under references/ instead.
+work/reference_mercedes_f1_2020/
+work/preview_render/

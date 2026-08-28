@@ -19,6 +19,8 @@ These Python scripts are the reproducible design record behind the files in `out
 | `embed_v6_actual_side_profile.py` | Updates V6 presentation geometry used in comparison visuals. |
 | `rebuild_v6_cfd.py` | Rebuilds the full-scale V6 surfaces and OpenFOAM preparation package. |
 | `make_v6_print_ready.py` | Repairs, reinforces, scales, solidifies, and validates the 5-inch and 8-inch V6 print models. |
+| `build_w11_v6_static_hybrid.py` | Builds the static 8-inch W11-reference/V6-floor hybrid, complete EV chassis, rolling-wheel print kit, GLBs, STLs, 3MF, validation, and package archive. |
+| `audit_w11_reference.py` | Audits the supplied rendering mesh and documents why its raw shells are unsuitable for direct STL printing. |
 | `audit_stl_mesh.py` | Audits STL topology, boundaries, degeneracy, dimensions, and shells. |
 | `aero_estimate_v5.py` | Creates the first-order V5 force estimate. |
 | `track_sim_v5.py` | Creates reduced-order track/lap estimates. |
@@ -29,4 +31,3 @@ These Python scripts are the reproducible design record behind the files in `out
 ## Reproducibility note
 
 The outputs reflect the scripts and assumptions at the time each version was created. Regeneration can replace files in `outputs/`; preserve a clean Git commit before rerunning a generator. Aerodynamic scripts implement conceptual reduced-order equations and should not be represented as validated CFD.
-

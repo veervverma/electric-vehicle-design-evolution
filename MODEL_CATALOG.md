@@ -21,5 +21,8 @@ The GitHub Pages gallery reads `docs/models.json` and can display every GLB and 
 | Formula EV V6 — full-scale CFD-preparation rebuild | [`V6_FULL_SCALE_CFD_PREVIEW.glb`](outputs/V6_CFD_REBUILD/V6_FULL_SCALE_CFD_PREVIEW.glb) | GLB | Browser-viewable binary glTF model for the v6 full scale cfd preview component/system. |
 | Formula EV V6 — repaired 5-inch and 8-inch print release | [`V6_5IN_PRINT_READY_SOLID_MM.stl`](outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_PRINT_READY_SOLID_MM.stl) | STL | Validated manifold STL prepared for FDM slicing; import as millimeters. |
 | Formula EV V6 — repaired 5-inch and 8-inch print release | [`V6_8IN_PRINT_READY_SOLID_MM.stl`](outputs/V6_PRINT_READY_5_TO_8_INCH/V6_8IN_PRINT_READY_SOLID_MM.stl) | STL | Validated manifold STL prepared for FDM slicing; import as millimeters. |
+| W11 reference / V6 — static 8-inch printable hybrid | [`W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
+| W11 reference / V6 — static 8-inch printable hybrid | [`W11_V6_PRINTABLE_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
+| W11 reference / V6 — static 8-inch printable hybrid | [`W11_V6_PRINTABLE_ASSEMBLED_REFERENCE.stl`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED_REFERENCE.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
 
-The interactive catalog currently indexes **311** GLB/STL files.
+The interactive catalog currently indexes **350** GLB/STL files.

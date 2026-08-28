@@ -1,0 +1,24 @@
+W11 V6 STATIC 8-INCH PRINT MESH VALIDATION
+
+Acceptance for unique STL parts: zero boundary edges and zero degenerate triangles.
+Multiple closed shells and deliberate intersections are retained where slicers should union reinforced features.
+
+01_reinforced_upper_body | qty 1 | 153.000 x 54.000 x 32.800 mm | {'triangles': 1478, 'vertices': 767, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 73984 bytes
+02_removable_nose_crashbox | qty 1 | 35.200 x 14.400 x 10.300 mm | {'triangles': 322, 'vertices': 169, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 16184 bytes
+03_cockpit_insert | qty 1 | 31.000 x 18.000 x 17.200 mm | {'triangles': 204, 'vertices': 112, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 10284 bytes
+04_static_halo | qty 1 | 42.747 x 25.538 x 14.504 mm | {'triangles': 444, 'vertices': 231, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 22284 bytes
+05_static_front_wing | qty 1 | 27.768 x 72.300 x 15.000 mm | {'triangles': 712, 'vertices': 370, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 35684 bytes
+06_static_rear_wing | qty 1 | 33.640 x 57.200 x 23.130 mm | {'triangles': 552, 'vertices': 288, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 27684 bytes
+07_twin_venturi_floor | qty 1 | 162.000 x 58.283 x 12.750 mm | {'triangles': 1268, 'vertices': 688, 'boundary_edges': 0, 'nonmanifold_edges': 24, 'degenerate_triangles': 0} | 63484 bytes
+08_structural_ev_chassis | qty 1 | 157.000 x 26.927 x 17.475 mm | {'triangles': 1484, 'vertices': 772, 'boundary_edges': 0, 'nonmanifold_edges': 20, 'degenerate_triangles': 0} | 74284 bytes
+09_low_energy_store | qty 1 | 75.000 x 21.000 x 7.350 mm | {'triangles': 120, 'vertices': 80, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 6084 bytes
+10_rear_motor_gearbox | qty 1 | 26.500 x 16.000 x 16.000 mm | {'triangles': 1532, 'vertices': 772, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 76684 bytes
+11_inverter_controller | qty 1 | 22.500 x 15.000 x 7.000 mm | {'triangles': 216, 'vertices': 124, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 10884 bytes
+12_front_static_suspension | qty 1 | 26.205 x 57.100 x 20.035 mm | {'triangles': 1064, 'vertices': 566, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 53284 bytes
+13_rear_static_suspension | qty 1 | 26.205 x 57.100 x 20.035 mm | {'triangles': 1100, 'vertices': 580, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 55084 bytes
+14_rolling_wheel_x4 | qty 4 | 25.900 x 10.600 x 25.900 mm | {'triangles': 1968, 'vertices': 1004, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 98484 bytes
+15_axle_pin_x4 | qty 4 | 2.000 x 11.500 x 2.000 mm | {'triangles': 112, 'vertices': 58, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 5684 bytes
+16_wheel_retainer_x4 | qty 4 | 4.400 x 2.600 x 4.400 mm | {'triangles': 208, 'vertices': 108, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 10484 bytes
+
+Assembled printable envelope: [203.2, 74.80000000000001, 40.05] mm
+Packed 3MF objects: 25 on 220 x 220 mm bed

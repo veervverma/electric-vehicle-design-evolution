@@ -1865,6 +1865,240 @@
       "label": "V6 8In Smooth Repaired Mm",
       "path": "../outputs/V6_PRINT_READY_5_TO_8_INCH/V6_8IN_SMOOTH_REPAIRED_MM.stl",
       "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 Reference V6 Systems Assembled",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 V6 Printable Assembled",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 V6 Printable Assembled Reference",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED_REFERENCE.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "01 Reinforced Upper Body",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/01_reinforced_upper_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "01 Reinforced Upper Body",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/01_reinforced_upper_body.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "02 Removable Nose Crashbox",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/02_removable_nose_crashbox.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "02 Removable Nose Crashbox",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/02_removable_nose_crashbox.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "03 Cockpit Insert",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/03_cockpit_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "03 Cockpit Insert",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/03_cockpit_insert.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "04 Static Halo",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/04_static_halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "04 Static Halo",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/04_static_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "05 Static Front Wing",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/05_static_front_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "05 Static Front Wing",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/05_static_front_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "06 Static Rear Wing",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/06_static_rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "06 Static Rear Wing",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/06_static_rear_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "07 Twin Venturi Floor",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/07_twin_venturi_floor.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "07 Twin Venturi Floor",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/07_twin_venturi_floor.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "08 Structural Ev Chassis",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/08_structural_ev_chassis.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "08 Structural Ev Chassis",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/08_structural_ev_chassis.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "09 Low Energy Store",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/09_low_energy_store.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "09 Low Energy Store",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/09_low_energy_store.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "10 Rear Motor Gearbox",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/10_rear_motor_gearbox.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "10 Rear Motor Gearbox",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/10_rear_motor_gearbox.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "11 Inverter Controller",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/11_inverter_controller.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "11 Inverter Controller",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/11_inverter_controller.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "12 Front Static Suspension",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/12_front_static_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "12 Front Static Suspension",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/12_front_static_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "13 Rear Static Suspension",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/13_rear_static_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "13 Rear Static Suspension",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/13_rear_static_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "14 Rolling Wheel X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/14_rolling_wheel_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "14 Rolling Wheel X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/14_rolling_wheel_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "15 Axle Pin X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/15_axle_pin_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "15 Axle Pin X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/15_axle_pin_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "16 Wheel Retainer X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/STL_PRINT_PARTS/16_wheel_retainer_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "16 Wheel Retainer X4",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/GLB_INDIVIDUAL_PARTS/16_wheel_retainer_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 Reference V6 Systems Exploded",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_EXPLODED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 V6 Chassis Only",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_CHASSIS_ONLY.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 V6 Printable Exploded",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_EXPLODED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 reference / V6 \u2014 static 8-inch printable hybrid",
+      "label": "W11 V6 Venturi Floor Only",
+      "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_VENTURI_FLOOR_ONLY.glb",
+      "ext": "glb"
     }
   ]
 }

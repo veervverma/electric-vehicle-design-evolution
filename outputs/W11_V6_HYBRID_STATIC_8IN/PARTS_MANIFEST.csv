@@ -1,0 +1,17 @@
+file,part,quantity,length_mm,width_mm,height_mm,material
+STL_PRINT_PARTS/01_reinforced_upper_body.stl,Reinforced upper body,1,153.000,54.000,32.800,White body
+STL_PRINT_PARTS/02_removable_nose_crashbox.stl,Removable nose and crash box,1,35.200,14.400,10.300,White body
+STL_PRINT_PARTS/03_cockpit_insert.stl,Cockpit insert,1,31.000,18.000,17.200,Cockpit
+STL_PRINT_PARTS/04_static_halo.stl,Static halo,1,42.747,25.538,14.504,Black carbon
+STL_PRINT_PARTS/05_static_front_wing.stl,Static multi-element front wing,1,27.768,72.300,15.000,Black carbon
+STL_PRINT_PARTS/06_static_rear_wing.stl,Static rear wing,1,33.640,57.200,23.130,Black carbon
+STL_PRINT_PARTS/07_twin_venturi_floor.stl,Twin Venturi floor and diffuser,1,162.000,58.283,12.750,Black carbon
+STL_PRINT_PARTS/08_structural_ev_chassis.stl,Structural EV chassis,1,157.000,26.927,17.475,Aluminum
+STL_PRINT_PARTS/09_low_energy_store.stl,Low energy store,1,75.000,21.000,7.350,Battery
+STL_PRINT_PARTS/10_rear_motor_gearbox.stl,Rear motor and gearbox,1,26.500,16.000,16.000,HV orange
+STL_PRINT_PARTS/11_inverter_controller.stl,Inverter and controller,1,22.500,15.000,7.000,Electronics
+STL_PRINT_PARTS/12_front_static_suspension.stl,Front static suspension and steering rack,1,26.205,57.100,20.035,Aluminum
+STL_PRINT_PARTS/13_rear_static_suspension.stl,Rear static suspension,1,26.205,57.100,20.035,Aluminum
+STL_PRINT_PARTS/14_rolling_wheel_x4.stl,Rolling wheel,4,25.900,10.600,25.900,Tire
+STL_PRINT_PARTS/15_axle_pin_x4.stl,Axle pin,4,2.000,11.500,2.000,Aluminum
+STL_PRINT_PARTS/16_wheel_retainer_x4.stl,Wheel retainer,4,4.400,2.600,4.400,Accent

@@ -20,6 +20,8 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 | Print the repaired V6 at 5 inches | [`outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_PRINT_READY_SOLID_MM.3mf`](outputs/V6_PRINT_READY_5_TO_8_INCH/V6_5IN_PRINT_READY_SOLID_MM.3mf) |
 | View the portfolio sedan | [`outputs/portfolio_ev_sedan_v3/EV_SEDAN_V3_COMPLETE_ASSEMBLED.stl`](outputs/portfolio_ev_sedan_v3/EV_SEDAN_V3_COMPLETE_ASSEMBLED.stl) |
 | Inspect V5 print parts | [`outputs/FORMULA_EV_V5_PRINT_PARTS/`](outputs/FORMULA_EV_V5_PRINT_PARTS/) |
+| View the final static W11/V6 hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb) |
+| Print the final 8-inch modular hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
 
 ## Repository layout
 
