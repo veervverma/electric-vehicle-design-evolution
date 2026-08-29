@@ -1,0 +1,21 @@
+file,part,quantity,length_mm,width_mm,height_mm,material
+STL_PRINT_PARTS/01_reinforced_upper_body.stl,Reinforced W11 upper body,1,153.000,54.000,32.800,White body
+STL_PRINT_PARTS/02_removable_nose.stl,Removable W11 nose,1,35.200,14.400,10.300,White body
+STL_PRINT_PARTS/03_cockpit_insert.stl,Cockpit insert,1,31.000,18.000,17.200,Cockpit
+STL_PRINT_PARTS/04_static_halo.stl,Static titanium-style halo,1,42.747,25.538,14.504,Black carbon
+STL_PRINT_PARTS/05_static_front_wing.stl,Static front wing,1,27.768,72.300,15.000,Black carbon
+STL_PRINT_PARTS/06_static_rear_wing.stl,Static rear wing,1,33.640,57.200,23.130,Black carbon
+STL_PRINT_PARTS/07_2020_flat_stepped_floor_diffuser.stl,2020 flat stepped floor and diffuser,1,137.700,52.000,10.675,Black carbon
+STL_PRINT_PARTS/08_four_stack_bargeboards.stl,Four-stack bargeboards,1,26.775,52.574,14.000,Black carbon
+STL_PRINT_PARTS/09_carbon_honeycomb_survival_cell.stl,Carbon honeycomb survival cell,1,96.000,27.000,25.300,White body
+STL_PRINT_PARTS/10_front_impact_structure.stl,Front impact structure,1,32.500,14.000,9.300,White body
+STL_PRINT_PARTS/11_side_impact_structures.stl,Side impact structures,1,40.589,47.240,7.350,Black carbon
+STL_PRINT_PARTS/12_v6_turbo_hybrid_power_unit.stl,V6 turbo hybrid power unit study,1,27.500,18.400,19.000,HV orange
+STL_PRINT_PARTS/13_compact_energy_store.stl,Compact energy store,1,18.000,15.000,6.900,Battery
+STL_PRINT_PARTS/14_transaxle_gearbox.stl,Rear transaxle and gearbox,1,31.000,21.000,15.000,Electronics
+STL_PRINT_PARTS/15_rear_impact_structure.stl,Rear impact structure,1,24.750,9.000,10.000,Aluminum
+STL_PRINT_PARTS/16_front_pushrod_suspension.stl,Front pushrod suspension and DAS study,1,26.427,57.000,18.841,Aluminum
+STL_PRINT_PARTS/17_rear_swept_pullrod_suspension.stl,Rear swept pullrod suspension,1,29.255,57.000,14.000,Aluminum
+STL_PRINT_PARTS/18_rolling_wheel_x4.stl,Rolling wheel,4,25.900,10.600,25.900,Tire
+STL_PRINT_PARTS/19_axle_pin_x4.stl,Axle pin,4,2.000,11.500,2.000,Aluminum
+STL_PRINT_PARTS/20_wheel_retainer_x4.stl,Wheel retainer,4,4.400,2.600,4.400,Accent

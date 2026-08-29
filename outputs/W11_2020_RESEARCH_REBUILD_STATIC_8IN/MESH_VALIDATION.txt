@@ -1,0 +1,28 @@
+W11 2020 STATIC 8-INCH PRINT MESH VALIDATION
+
+Acceptance for unique STL parts: zero boundary edges and zero degenerate triangles.
+Multiple closed shells and deliberate intersections are retained where slicers should union reinforced features.
+
+01_reinforced_upper_body | qty 1 | 153.000 x 54.000 x 32.800 mm | {'triangles': 1478, 'vertices': 767, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 73984 bytes
+02_removable_nose | qty 1 | 35.200 x 14.400 x 10.300 mm | {'triangles': 322, 'vertices': 169, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 16184 bytes
+03_cockpit_insert | qty 1 | 31.000 x 18.000 x 17.200 mm | {'triangles': 204, 'vertices': 112, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 10284 bytes
+04_static_halo | qty 1 | 42.747 x 25.538 x 14.504 mm | {'triangles': 444, 'vertices': 231, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 22284 bytes
+05_static_front_wing | qty 1 | 27.768 x 72.300 x 15.000 mm | {'triangles': 712, 'vertices': 370, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 35684 bytes
+06_static_rear_wing | qty 1 | 33.640 x 57.200 x 23.130 mm | {'triangles': 552, 'vertices': 288, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 27684 bytes
+07_2020_flat_stepped_floor_diffuser | qty 1 | 137.700 x 52.000 x 10.675 mm | {'triangles': 604, 'vertices': 378, 'boundary_edges': 0, 'nonmanifold_edges': 4, 'degenerate_triangles': 0} | 30284 bytes
+08_four_stack_bargeboards | qty 1 | 26.775 x 52.574 x 14.000 mm | {'triangles': 328, 'vertices': 192, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 16484 bytes
+09_carbon_honeycomb_survival_cell | qty 1 | 96.000 x 27.000 x 25.300 mm | {'triangles': 590, 'vertices': 317, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 29584 bytes
+10_front_impact_structure | qty 1 | 32.500 x 14.000 x 9.300 mm | {'triangles': 132, 'vertices': 70, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 6684 bytes
+11_side_impact_structures | qty 1 | 40.589 x 47.240 x 7.350 mm | {'triangles': 280, 'vertices': 152, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 14084 bytes
+12_v6_turbo_hybrid_power_unit | qty 1 | 27.500 x 18.400 x 19.000 mm | {'triangles': 972, 'vertices': 504, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 48684 bytes
+13_compact_energy_store | qty 1 | 18.000 x 15.000 x 6.900 mm | {'triangles': 48, 'vertices': 32, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 2484 bytes
+14_transaxle_gearbox | qty 1 | 31.000 x 21.000 x 15.000 mm | {'triangles': 120, 'vertices': 62, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 6084 bytes
+15_rear_impact_structure | qty 1 | 24.750 x 9.000 x 10.000 mm | {'triangles': 96, 'vertices': 54, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 4884 bytes
+16_front_pushrod_suspension | qty 1 | 26.427 x 57.000 x 18.841 mm | {'triangles': 956, 'vertices': 508, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 47884 bytes
+17_rear_swept_pullrod_suspension | qty 1 | 29.255 x 57.000 x 14.000 mm | {'triangles': 908, 'vertices': 482, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 45484 bytes
+18_rolling_wheel_x4 | qty 4 | 25.900 x 10.600 x 25.900 mm | {'triangles': 1968, 'vertices': 1004, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 98484 bytes
+19_axle_pin_x4 | qty 4 | 2.000 x 11.500 x 2.000 mm | {'triangles': 112, 'vertices': 58, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 5684 bytes
+20_wheel_retainer_x4 | qty 4 | 4.400 x 2.600 x 4.400 mm | {'triangles': 208, 'vertices': 108, 'boundary_edges': 0, 'nonmanifold_edges': 0, 'degenerate_triangles': 0} | 10484 bytes
+
+Assembled printable envelope: [203.2, 74.80000000000001, 40.05] mm
+Packed 3MF objects: 29 on 220 x 220 mm bed

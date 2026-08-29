@@ -125,6 +125,14 @@ FOLDERS = {
         "limit": "Static educational display design. The exterior source is a rendering mesh and the printable body is a strengthened procedural derivative; the floor is V6-inspired but not validated CFD or structural engineering.",
         "preserve_readme": True,
     },
+    "W11_2020_RESEARCH_REBUILD_STATIC_8IN": {
+        "title": "W11 2020 — open-source research rebuild, static 8-inch print model",
+        "summary": "Historically corrected release based on the FIA 2020 floor rules, Mercedes' published chassis specification, and contemporary W11 technical analysis. Replaces the inaccurate 2022-style tunnel floor with a flat reference/step-plane floor, plank, bargeboards, rear-tyre vanes and short diffuser, plus a carbon-honeycomb monocoque and W11-inspired suspension.",
+        "units": "Printable STL geometry is millimeters; the complete 3MF explicitly declares millimeters. Overall printable assembly length is exactly 203.2 mm / 8.00 inches.",
+        "use": "Open `W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb` for the detailed corrected car, `W11_2020_REFERENCE_RESEARCH_EXPLODED.glb` for the system reveal, and `W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf` for the 29-piece print kit.",
+        "limit": "Publicly documented architecture, not proprietary Mercedes CAD. Hidden bulkheads, laminates, ducts and exact pickup coordinates are informed approximations; legal-scale details are thickened for FDM.",
+        "preserve_readme": True,
+    },
 }
 
 FAMILY_ORDER = {name: i for i, name in enumerate(FOLDERS)}

@@ -22,6 +22,8 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 | Inspect V5 print parts | [`outputs/FORMULA_EV_V5_PRINT_PARTS/`](outputs/FORMULA_EV_V5_PRINT_PARTS/) |
 | View the final static W11/V6 hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb) |
 | Print the final 8-inch modular hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
+| View the historically corrected W11 2020 rebuild | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb) |
+| Print the corrected 29-piece W11 model | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
 
 ## Repository layout
 

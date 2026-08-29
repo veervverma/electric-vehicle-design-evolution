@@ -20,6 +20,7 @@ These Python scripts are the reproducible design record behind the files in `out
 | `rebuild_v6_cfd.py` | Rebuilds the full-scale V6 surfaces and OpenFOAM preparation package. |
 | `make_v6_print_ready.py` | Repairs, reinforces, scales, solidifies, and validates the 5-inch and 8-inch V6 print models. |
 | `build_w11_v6_static_hybrid.py` | Builds the static 8-inch W11-reference/V6-floor hybrid, complete EV chassis, rolling-wheel print kit, GLBs, STLs, 3MF, validation, and package archive. |
+| `build_w11_2020_research_rebuild.py` | Replaces the V6 tunnel concept with a source-backed 2020 W11 flat/stepped floor, carbon-honeycomb chassis study, hybrid packaging, pushrod front suspension, swept pullrod rear suspension, and a complete 8-inch print/view package. |
 | `audit_w11_reference.py` | Audits the supplied rendering mesh and documents why its raw shells are unsuitable for direct STL printing. |
 | `audit_stl_mesh.py` | Audits STL topology, boundaries, degeneracy, dimensions, and shells. |
 | `aero_estimate_v5.py` | Creates the first-order V5 force estimate. |

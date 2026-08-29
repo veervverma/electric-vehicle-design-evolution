@@ -2099,6 +2099,288 @@
       "label": "W11 V6 Venturi Floor Only",
       "path": "../outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_VENTURI_FLOOR_ONLY.glb",
       "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Printable Assembled",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_PRINTABLE_ASSEMBLED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Printable Assembled Reference",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_PRINTABLE_ASSEMBLED_REFERENCE.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Reference Research Assembled",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "01 Reinforced Upper Body",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/01_reinforced_upper_body.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "01 Reinforced Upper Body",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/01_reinforced_upper_body.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "02 Removable Nose",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/02_removable_nose.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "02 Removable Nose",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/02_removable_nose.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "03 Cockpit Insert",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/03_cockpit_insert.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "03 Cockpit Insert",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/03_cockpit_insert.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "04 Static Halo",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/04_static_halo.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "04 Static Halo",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/04_static_halo.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "05 Static Front Wing",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/05_static_front_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "05 Static Front Wing",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/05_static_front_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "06 Static Rear Wing",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/06_static_rear_wing.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "06 Static Rear Wing",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/06_static_rear_wing.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "07 2020 Flat Stepped Floor Diffuser",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/07_2020_flat_stepped_floor_diffuser.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "07 2020 Flat Stepped Floor Diffuser",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/07_2020_flat_stepped_floor_diffuser.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "08 Four Stack Bargeboards",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/08_four_stack_bargeboards.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "08 Four Stack Bargeboards",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/08_four_stack_bargeboards.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "09 Carbon Honeycomb Survival Cell",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/09_carbon_honeycomb_survival_cell.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "09 Carbon Honeycomb Survival Cell",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/09_carbon_honeycomb_survival_cell.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "10 Front Impact Structure",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/10_front_impact_structure.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "10 Front Impact Structure",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/10_front_impact_structure.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "11 Side Impact Structures",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/11_side_impact_structures.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "11 Side Impact Structures",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/11_side_impact_structures.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "12 V6 Turbo Hybrid Power Unit",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/12_v6_turbo_hybrid_power_unit.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "12 V6 Turbo Hybrid Power Unit",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/12_v6_turbo_hybrid_power_unit.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "13 Compact Energy Store",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/13_compact_energy_store.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "13 Compact Energy Store",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/13_compact_energy_store.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "14 Transaxle Gearbox",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/14_transaxle_gearbox.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "14 Transaxle Gearbox",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/14_transaxle_gearbox.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "15 Rear Impact Structure",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/15_rear_impact_structure.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "15 Rear Impact Structure",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/15_rear_impact_structure.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "16 Front Pushrod Suspension",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/16_front_pushrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "16 Front Pushrod Suspension",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/16_front_pushrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "17 Rear Swept Pullrod Suspension",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/17_rear_swept_pullrod_suspension.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "17 Rear Swept Pullrod Suspension",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/17_rear_swept_pullrod_suspension.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "18 Rolling Wheel X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/18_rolling_wheel_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "18 Rolling Wheel X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/18_rolling_wheel_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "19 Axle Pin X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/19_axle_pin_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "19 Axle Pin X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/19_axle_pin_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "20 Wheel Retainer X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/STL_PRINT_PARTS/20_wheel_retainer_x4.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "20 Wheel Retainer X4",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/GLB_INDIVIDUAL_PARTS/20_wheel_retainer_x4.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Chassis Only",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_CHASSIS_ONLY.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Flat Stepped Floor Only",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_FLAT_STEPPED_FLOOR_ONLY.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Printable Exploded",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_PRINTABLE_EXPLODED.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 open-source research rebuild, static 8-inch print model",
+      "label": "W11 2020 Reference Research Exploded",
+      "path": "../outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_EXPLODED.glb",
+      "ext": "glb"
     }
   ]
 }

@@ -24,5 +24,8 @@ The GitHub Pages gallery reads `docs/models.json` and can display every GLB and 
 | W11 reference / V6 — static 8-inch printable hybrid | [`W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_REFERENCE_V6_SYSTEMS_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
 | W11 reference / V6 — static 8-inch printable hybrid | [`W11_V6_PRINTABLE_ASSEMBLED.glb`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
 | W11 reference / V6 — static 8-inch printable hybrid | [`W11_V6_PRINTABLE_ASSEMBLED_REFERENCE.stl`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_PRINTABLE_ASSEMBLED_REFERENCE.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| W11 2020 — open-source research rebuild, static 8-inch print model | [`W11_2020_PRINTABLE_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_PRINTABLE_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
+| W11 2020 — open-source research rebuild, static 8-inch print model | [`W11_2020_PRINTABLE_ASSEMBLED_REFERENCE.stl`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_PRINTABLE_ASSEMBLED_REFERENCE.stl) | STL | Combined triangle-mesh reference of the complete design; read this folder's unit and print limitations. |
+| W11 2020 — open-source research rebuild, static 8-inch print model | [`W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
 
-The interactive catalog currently indexes **350** GLB/STL files.
+The interactive catalog currently indexes **397** GLB/STL files.
