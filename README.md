@@ -24,6 +24,8 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 | Print the final 8-inch modular hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_V6_HYBRID_STATIC_8IN/W11_V6_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
 | View the historically corrected W11 2020 rebuild | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb) |
 | Print the corrected 29-piece W11 model | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
+| View the W11 2020 whole-car airflow presentation | [`outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb) |
+| Review the solved SU2 CFD screening | [`outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/CFD_VALIDATION_REPORT.md`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/CFD_VALIDATION_REPORT.md) |
 
 ## Repository layout
 
@@ -42,10 +44,11 @@ Every folder under `outputs/` includes its own `README.md` describing its purpos
 - **3MF:** preferred for printing when available because it can preserve millimeter units, objects, and material assignments.
 - **CSV/SVG/TXT:** conceptual analysis data, plots, reports, and assembly notes.
 - **OpenFOAM case:** a prepared CFD starting point, not a completed or validated CFD result.
+- **SU2/VTU/CSV:** reproducible CFD cases, ParaView-readable solved fields, and solver histories in the W11 2020 aerodynamic package.
 
 ## Accuracy and safety
 
-This repository documents an educational design study—not a road-safe vehicle, homologated race car, validated aerodynamic package, or manufacturing release. The aerodynamic and lap-time outputs are reduced-order conceptual estimates unless a file explicitly states otherwise. The V6 OpenFOAM case was prepared but not solved or experimentally correlated. Always inspect meshes in a slicer, confirm units, test tolerances, and perform appropriate engineering validation before fabrication or powered use.
+This repository documents an educational design study—not a road-safe vehicle, homologated race car, validated aerodynamic package, or manufacturing release. The aerodynamic and lap-time outputs are reduced-order conceptual estimates unless a file explicitly states otherwise. The V6 OpenFOAM case was prepared but not solved. The W11 2020 aerodynamic package contains actual SU2 RANS screening, but it did not achieve mesh independence or physical wind-tunnel correlation and is not exact W11 performance data. Always inspect meshes in a slicer, confirm units, test tolerances, and perform appropriate engineering validation before fabrication or powered use.
 
 ## License
 

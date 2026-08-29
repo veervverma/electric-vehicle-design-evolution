@@ -24,6 +24,7 @@
 | V6 repaired print release | [`outputs/V6_PRINT_READY_5_TO_8_INCH`](outputs/V6_PRINT_READY_5_TO_8_INCH/) | Solidified and topology-checked 5-inch and 8-inch derivatives of the V6 model, with explicit-millimeter 3MFs and validated STL alternatives. |
 | W11/V6 static 8-inch hybrid | [`outputs/W11_V6_HYBRID_STATIC_8IN`](outputs/W11_V6_HYBRID_STATIC_8IN/) | Final static study using the supplied high-detail W11-style exterior as a visual reference while adding a new printable twin-Venturi floor, full EV chassis, energy store, rear motor/gearbox, inverter, suspension, rolling wheels, individual GLBs/STLs, and a one-plate 3MF kit. |
 | W11 2020 research rebuild | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/) | Source-backed correction using the FIA 2020 floor rules, Mercedes chassis specifications and contemporary W11 technical analysis. Replaces the anachronistic tunnel floor and EV frame with a flat stepped floor, plank, bargeboards, short diffuser, carbon-honeycomb survival cell, compact hybrid packaging, pushrod front suspension and swept pullrod rear suspension. |
+| W11 2020 aerodynamic CFD screening | [`outputs/W11_2020_AERO_CFD_VALIDATION_300KPH`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/) | Reruns the latest W11 reference design as a de-featured full-scale half-car surrogate: animated airflow presentation, transparent equation estimate, coarse and medium SU2 RANS/SST meshes, stationary/moving-ground diagnostics, solved fields, grid sensitivity, and explicit validation limits. |
 
 ## Important distinction between V5 and V6
 
@@ -32,3 +33,5 @@ V5 is primarily a detailed presentation/animation and multi-part printing model.
 The W11/V6 hybrid is a separate static integration branch. Its textured exterior GLB is retained for high-detail viewing under CC BY 4.0 attribution, while the print parts are newly generated and strengthened rather than being a direct raw STL conversion of the non-watertight rendering mesh.
 
 The later W11 2020 research rebuild corrects the hybrid branch's historical mismatch: 2020 cars used a regulated reference/step-plane floor and short diffuser rather than the deep 2022-style Venturi tunnels. It keeps the 8-inch static print format while changing the floor, chassis, hybrid packaging and suspension architecture.
+
+The aerodynamic package advances that research rebuild from presentation-only airflow to a real open-source SU2 CFD screening exercise at 300 km/h. The coarse moving-ground case passed its force-Cauchy target, but the medium case did not and the coarse/medium ClA spread remained about 30%; therefore the result is numerical screening rather than mesh-independent or wind-tunnel-validated W11 data.

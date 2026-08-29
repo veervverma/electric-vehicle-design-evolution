@@ -1,0 +1,28 @@
+{
+  "model": "W11 2020 public-reference-based, de-featured half-car aerodynamic surrogate",
+  "solver": "SU2 8.5.0 INC_RANS, SST V2003m, steady",
+  "speed_km_h": 300.0,
+  "speed_m_s": 83.33333333333333,
+  "air_density_kg_m3": 1.225,
+  "dynamic_pressure_Pa": 4253.472222222222,
+  "moving_ground_screening_bracket_N": [
+    6651.776785092881,
+    9490.989593081596
+  ],
+  "moving_ground_screening_bracket_kgf": [
+    678.2924632869411,
+    967.8115965270094
+  ],
+  "midpoint_N": 8071.383189087239,
+  "grid_half_range_percent_of_midpoint": 17.588142834225856,
+  "coarse_to_medium_ClA_change_percent": 29.914823740385764,
+  "coarse_to_medium_CdA_change_percent": 10.459571631834843,
+  "checks": {
+    "coarse_force_convergence": "pass",
+    "medium_force_convergence": "not passed",
+    "grid_independence": "not passed",
+    "moving_ground_sensitivity": "demonstrated",
+    "wind_tunnel_correlation": "not performed",
+    "claim_level": "CFD screening / numerical verification, not physical validation"
+  }
+}

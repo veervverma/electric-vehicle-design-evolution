@@ -133,6 +133,14 @@ FOLDERS = {
         "limit": "Publicly documented architecture, not proprietary Mercedes CAD. Hidden bulkheads, laminates, ducts and exact pickup coordinates are informed approximations; legal-scale details are thickened for FDM.",
         "preserve_readme": True,
     },
+    "W11_2020_AERO_CFD_VALIDATION_300KPH": {
+        "title": "W11 2020 — 300 km/h aerodynamic visualization and SU2 CFD screening",
+        "summary": "Rerun aerodynamic package for the public-reference-based W11 study: animated whole-car airflow presentation, transparent equation estimate, full-scale half-car SU2 meshes, four solved RANS/SST cases, ParaView output, force histories, grid sensitivity, and validation-status reporting.",
+        "units": "CFD geometry and fields use SI units (metres, seconds, kilograms). The airflow GLB is a presentation model; the printable W11 release remains millimetre-scale.",
+        "use": "Read `CFD_VALIDATION_REPORT.md`, inspect the animated GLB in the browser gallery, review the solved PNG/VTU fields, and use `RUN_CFD.md` with the supplied SU2 cases to reproduce or improve the study.",
+        "limit": "CFD screening and numerical verification only. The geometry is a de-featured public-information surrogate; the medium moving-ground run did not pass the force-Cauchy target, grid independence was not achieved, and no rolling-road wind-tunnel correlation was performed.",
+        "preserve_readme": True,
+    },
 }
 
 FAMILY_ORDER = {name: i for i, name in enumerate(FOLDERS)}
@@ -153,6 +161,7 @@ def describe(path: Path) -> str:
         elif "exploded" in name: base += " in an exploded technical layout"
         elif "underfloor" in name: base += " focused on the underfloor system"
         elif "wind_tunnel" in name: base += " containing the conceptual airflow presentation"
+        elif "airflow_presentation" in name: base += " containing the explanatory airflow presentation"
         else: base += f" for the {label.lower()} component/system"
         if any(k in name for k in ("animated", "active", "drs", "synced", "wind_tunnel")): base += "; may contain animation"
         return base + "."
@@ -252,7 +261,7 @@ def write_catalogs() -> None:
     models = model_catalog()
     (ROOT / "docs" / "models.json").write_text(json.dumps({"models": models}, indent=2), encoding="utf-8")
 
-    major = [m for m in models if any(k in m["label"].lower() for k in ("complete", "assembled", "viewer", "full scale cfd preview", "underfloor", "wind tunnel", "print ready solid"))]
+    major = [m for m in models if any(k in m["label"].lower() for k in ("complete", "assembled", "viewer", "full scale cfd preview", "underfloor", "wind tunnel", "airflow presentation", "print ready solid"))]
     lines = [
         "# Model catalog",
         "",

@@ -21,6 +21,9 @@ These Python scripts are the reproducible design record behind the files in `out
 | `make_v6_print_ready.py` | Repairs, reinforces, scales, solidifies, and validates the 5-inch and 8-inch V6 print models. |
 | `build_w11_v6_static_hybrid.py` | Builds the static 8-inch W11-reference/V6-floor hybrid, complete EV chassis, rolling-wheel print kit, GLBs, STLs, 3MF, validation, and package archive. |
 | `build_w11_2020_research_rebuild.py` | Replaces the V6 tunnel concept with a source-backed 2020 W11 flat/stepped floor, carbon-honeycomb chassis study, hybrid packaging, pushrod front suspension, swept pullrod rear suspension, and a complete 8-inch print/view package. |
+| `build_w11_2020_su2_case.py` | Builds the full-scale, de-featured W11 2020 half-car meshes used for reproducible SU2 CFD screening. |
+| `build_w11_2020_aero_outputs.py` | Builds the animated whole-car airflow presentation, equation estimate, solved-field figures, and force-history charts. |
+| `build_w11_2020_validation_report.py` | Converts the solved SU2 histories into auditable force, grid-sensitivity, validation-status, and reproducibility reports. |
 | `audit_w11_reference.py` | Audits the supplied rendering mesh and documents why its raw shells are unsuitable for direct STL printing. |
 | `audit_stl_mesh.py` | Audits STL topology, boundaries, degeneracy, dimensions, and shells. |
 | `aero_estimate_v5.py` | Creates the first-order V5 force estimate. |
@@ -31,4 +34,4 @@ These Python scripts are the reproducible design record behind the files in `out
 
 ## Reproducibility note
 
-The outputs reflect the scripts and assumptions at the time each version was created. Regeneration can replace files in `outputs/`; preserve a clean Git commit before rerunning a generator. Aerodynamic scripts implement conceptual reduced-order equations and should not be represented as validated CFD.
+The outputs reflect the scripts and assumptions at the time each version was created. Regeneration can replace files in `outputs/`; preserve a clean Git commit before rerunning a generator. Most earlier aerodynamic scripts implement conceptual reduced-order equations. The W11 2020 aero package adds actual SU2 RANS screening, but its documented mesh-convergence and physical-correlation limits mean it must not be represented as exact or wind-tunnel-validated W11 data.

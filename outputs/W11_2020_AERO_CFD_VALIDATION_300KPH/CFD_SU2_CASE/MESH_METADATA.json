@@ -1,0 +1,30 @@
+{
+  "units": "metres",
+  "domain_m": {
+    "x": [
+      -10.0,
+      15.0
+    ],
+    "y": [
+      0.0,
+      5.0
+    ],
+    "z": [
+      0.0,
+      5.0
+    ]
+  },
+  "coarse": {
+    "nodes": 59882,
+    "tetrahedra": 266014,
+    "body_size_m": 0.24,
+    "underfloor_size_m": 0.024
+  },
+  "medium": {
+    "nodes": 124977,
+    "tetrahedra": 601194,
+    "body_size_m": 0.16,
+    "underfloor_size_m": 0.016
+  },
+  "boundary_model": "half-car symmetry; moving wall ground; stationary non-rotating wheels"
+}

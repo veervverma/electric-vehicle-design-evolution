@@ -1,0 +1,59 @@
+{
+  "airflow_glb": "W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb",
+  "animation_channels": 36,
+  "equation_nominal": {
+    "ClA_m2": 4.2,
+    "CdA_m2": 1.25,
+    "uncertainty_downforce": 0.3,
+    "uncertainty_drag": 0.25
+  },
+  "cfd_history_summaries": [
+    {
+      "file": "history_coarse_stationary.csv",
+      "iterations": 75,
+      "window": 20,
+      "CL_mean_half": -0.056539096881,
+      "CL_stdev_half": 0.023835809590337223,
+      "CD_mean_half": 0.369573582575,
+      "CD_stdev_half": 0.006230255793326192,
+      "final_rms_pressure_log10": -6.001392249
+    },
+    {
+      "file": "history_medium_stationary.csv",
+      "iterations": 250,
+      "window": 20,
+      "CL_mean_half": -0.095570123954,
+      "CL_stdev_half": 0.003736357645908575,
+      "CD_mean_half": 0.355738047,
+      "CD_stdev_half": 0.00063677641254371,
+      "final_rms_pressure_log10": -7.215778686
+    },
+    {
+      "file": "history_coarse_moving_ground.csv",
+      "iterations": 199,
+      "window": 20,
+      "CL_mean_half": -1.11567551135,
+      "CL_stdev_half": 0.0014387636681645803,
+      "CD_mean_half": 1.02404221105,
+      "CD_stdev_half": 0.0001790212069078424,
+      "final_rms_pressure_log10": -4.455903253
+    },
+    {
+      "file": "history_medium_moving_ground.csv",
+      "iterations": 260,
+      "window": 20,
+      "CL_mean_half": -0.781923148615,
+      "CL_stdev_half": 0.0017576387002817381,
+      "CD_mean_half": 0.916931782445,
+      "CD_stdev_half": 0.0030066365314518674,
+      "final_rms_pressure_log10": -4.409003899
+    }
+  ],
+  "figures": [
+    "FIGURES/EQUATION_DOWNFORCE_VS_SPEED.png",
+    "FIGURES/CFD_FORCE_CONVERGENCE.png",
+    "FIGURES/CFD_MOVING_GROUND_CONVERGENCE.png",
+    "FIGURES/CFD_SIDEPLANE_VELOCITY.png",
+    "FIGURES/CFD_SIDEPLANE_PRESSURE.png"
+  ]
+}
