@@ -141,6 +141,14 @@ FOLDERS = {
         "limit": "CFD screening and numerical verification only. The geometry is a de-featured public-information surrogate; the medium moving-ground run did not pass the force-Cauchy target, grid independence was not achieved, and no rolling-road wind-tunnel correlation was performed.",
         "preserve_readme": True,
     },
+    "W11_2020_GLBDERIVED_CFD_V2_300KPH": {
+        "title": "W11 2020 — source-GLB-derived full-car CFD correction",
+        "summary": "Corrective aerodynamic release replacing the earlier boxy primitive surrogate with a single watertight full-car shell derived directly from the supplied textured W11 GLB, a full-domain SU2 screening case, and continuous streamlines integrated from the solved velocity field.",
+        "units": "CFD geometry, mesh and fields use SI units (metres, seconds, kilograms). The exact source GLB retains its original presentation transform; this release is not a printable-scale model.",
+        "use": "Start with `W11_SOURCE_WITH_SOLVER_DERIVED_CONTINUOUS_AIRFLOW.glb`, compare the source and CFD shell in `W11_SOURCE_TO_CFD_SURFACE_OVERLAY.glb`, and read `CORRECTION_AND_CFD_REPORT.md` before interpreting the force history.",
+        "limit": "Source-faithful public rendering geometry, not proprietary Mercedes CAD. The SU2 result is screening-only: stationary unified tyre envelopes, no cooling, no prism-layer/y+ study, no demonstrated mesh independence, and no rolling-road wind-tunnel correlation.",
+        "preserve_readme": True,
+    },
 }
 
 FAMILY_ORDER = {name: i for i, name in enumerate(FOLDERS)}
@@ -282,6 +290,8 @@ def ignored(path: Path) -> bool:
     return (
         "/.git/" in f"/{rel}/"
         or path.name == ".DS_Store"
+        or "__pycache__" in path.parts
+        or path.suffix == ".pyc"
         or rel.startswith("outputs/V6_PRINT_READY_5_TO_8_INCH 2/")
         or rel == "FILE_MANIFEST.csv"
     )
@@ -298,7 +308,7 @@ def sha256(path: Path) -> str:
 def write_manifest() -> None:
     paths = sorted((p for p in ROOT.rglob("*") if p.is_file() and not ignored(p)), key=lambda p: p.relative_to(ROOT).as_posix())
     with (ROOT / "FILE_MANIFEST.csv").open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.writer(stream)
+        writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(["path", "bytes", "format", "sha256"])
         for path in paths:
             writer.writerow([path.relative_to(ROOT).as_posix(), path.stat().st_size, path.suffix.lower().lstrip(".") or "file", sha256(path)])

@@ -1,0 +1,23 @@
+{
+  "source": "references/mercedec-f1-2020/mercedec-f1-2020.glb",
+  "source_selected_triangles": 116006,
+  "voxel_pitch_m": 0.02,
+  "surface_vertices": 130092,
+  "surface_triangles": 260304,
+  "watertight": true,
+  "winding_consistent": true,
+  "connected_components": 1,
+  "bounds_m": [
+    [
+      -2.6900990714285724,
+      -0.9901107428571428,
+      0.029904999999999807
+    ],
+    [
+      2.9501254,
+      0.9901107428571431,
+      1.1300949999999998
+    ]
+  ],
+  "method": "source triangle voxel union, morphological sealing, marching cubes, light Taubin smoothing"
+}

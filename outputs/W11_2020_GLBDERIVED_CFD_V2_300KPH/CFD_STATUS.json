@@ -1,0 +1,20 @@
+{
+  "geometry": "full-car watertight surface derived from supplied W11 GLB",
+  "solver": "SU2 8.5.0 INC_RANS SST V2003m",
+  "speed_km_h": 300,
+  "iterations": 160,
+  "final_window": 20,
+  "CL_mean": -0.31880074995,
+  "CL_stdev": 0.12143846176291317,
+  "CD_mean": 1.8138021578999999,
+  "CD_stdev": 0.06635203328463846,
+  "reference_area_m2": 1.5,
+  "downforce_N_screening_only": 2034.015201503906,
+  "drag_N_screening_only": 11572.43564285156,
+  "drag_cauchy": 0.00638951,
+  "drag_cauchy_criterion": 0.0002,
+  "force_converged": false,
+  "mesh_independence": false,
+  "wind_tunnel_correlation": false,
+  "claim_level": "geometry/flow visualization correction and CFD screening; not validated W11 performance"
+}

@@ -2387,6 +2387,48 @@
       "label": "W11 2020 Whole Car Airflow Presentation",
       "path": "../outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb",
       "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 2020 GLBderived Cfd Surface",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_2020_GLBDERIVED_CFD_SURFACE.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 2020 GLBderived Cfd Surface",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_2020_GLBDERIVED_CFD_SURFACE.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 GLBderived Floor Diffuser Cfd View",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_GLBDERIVED_FLOOR_DIFFUSER_CFD_VIEW.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 GLBderived Front Wing Cfd View",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_GLBDERIVED_FRONT_WING_CFD_VIEW.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 GLBderived Rear Wing Cfd View",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_GLBDERIVED_REAR_WING_CFD_VIEW.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 Source To Cfd Surface Overlay",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_SOURCE_TO_CFD_SURFACE_OVERLAY.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-GLB-derived full-car CFD correction",
+      "label": "W11 Source With Solver Derived Continuous Airflow",
+      "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_SOURCE_WITH_SOLVER_DERIVED_CONTINUOUS_AIRFLOW.glb",
+      "ext": "glb"
     }
   ]
 }

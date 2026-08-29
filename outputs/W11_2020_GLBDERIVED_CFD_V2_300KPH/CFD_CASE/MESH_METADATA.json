@@ -1,0 +1,14 @@
+{
+  "surface_source": "W11_2020_GLBDERIVED_CFD_SURFACE.stl",
+  "source_reference": "references/mercedec-f1-2020/mercedec-f1-2020.glb",
+  "units": "metres",
+  "domain_m": {"x": [-12.0, 18.0], "y": [-6.0, 6.0], "z": [0.0, 6.0]},
+  "nodes": 320259,
+  "tetrahedra": 1634564,
+  "boundary_triangles_car": 260304,
+  "full_car_domain": true,
+  "moving_ground": true,
+  "rotating_wheels": false,
+  "mesher": "Gmsh 4.15.2 HXT",
+  "notes": "Source-derived outer envelope; 20 mm watertight voxel union. No prism-layer/y+ refinement."
+}

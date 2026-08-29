@@ -1,0 +1,11 @@
+REFERENCE MODEL ATTRIBUTION
+
+Title: mercedec f1 2020
+Creator: Kevin Love SketchFab / Tyler_Kevin
+Source: https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+The exact textured source model is included in overlay and airflow GLB derivatives.
+The corrected CFD shell is a sealed and smoothed derivative built from selected exterior
+triangles of the supplied source. It is not proprietary Mercedes-Benz CAD.

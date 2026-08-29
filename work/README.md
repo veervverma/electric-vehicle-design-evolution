@@ -24,6 +24,11 @@ These Python scripts are the reproducible design record behind the files in `out
 | `build_w11_2020_su2_case.py` | Builds the full-scale, de-featured W11 2020 half-car meshes used for reproducible SU2 CFD screening. |
 | `build_w11_2020_aero_outputs.py` | Builds the animated whole-car airflow presentation, equation estimate, solved-field figures, and force-history charts. |
 | `build_w11_2020_validation_report.py` | Converts the solved SU2 histories into auditable force, grid-sensitivity, validation-status, and reproducibility reports. |
+| `build_w11_2020_glbderived_cfd_v2.py` | Rebuilds the CFD shell directly from the supplied W11 GLB exterior and prepares the corrected full-car domain. |
+| `render_w11_glbderived_cfd_figures.py` | Renders source-versus-CFD silhouette and corrected-shell reference figures. |
+| `integrate_w11_su2_streamlines.py` | Integrates continuous streamlines from the solved SU2 velocity field and renders flow/side-plane figures. |
+| `build_w11_glbderived_visuals.py` | Builds the exact-source overlay GLB and solver-derived continuous-airflow animated GLB. |
+| `build_w11_glbderived_cfd_report.py` | Summarizes convergence, screening forces, geometry correction, assumptions, and validation limits. |
 | `audit_w11_reference.py` | Audits the supplied rendering mesh and documents why its raw shells are unsuitable for direct STL printing. |
 | `audit_stl_mesh.py` | Audits STL topology, boundaries, degeneracy, dimensions, and shells. |
 | `aero_estimate_v5.py` | Creates the first-order V5 force estimate. |
