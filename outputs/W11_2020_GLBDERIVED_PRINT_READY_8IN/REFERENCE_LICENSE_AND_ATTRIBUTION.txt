@@ -1,0 +1,10 @@
+REFERENCE MODEL ATTRIBUTION
+
+Title: mercedec f1 2020
+Creator: Kevin Love SketchFab / Tyler_Kevin
+Source: https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+The printable car is a strengthened, scaled and solidified derivative of the
+corrected source-GLB-derived CFD shell. It is not proprietary Mercedes-Benz CAD.

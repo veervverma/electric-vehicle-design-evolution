@@ -17,7 +17,7 @@ The earlier run replaced the supplied W11 rendering mesh with boxes, ellipsoids 
 
 `W11_SOURCE_WITH_SOLVER_DERIVED_CONTINUOUS_AIRFLOW.glb` uses continuous tubes obtained by integrating the solved SU2 nodal velocity field. The colored tubes are the CFD-derived streamlines. Animated white pulses travel along those tubes only to show direction; they do not replace or fabricate the solved flow path.
 
-The streamline integration uses inverse-distance velocity interpolation and midpoint stepping. The package includes **31 continuous streamlines**, including **9 floor/diffuser-seeded lines**. Floor lines are traced in both directions from an in-field seed so a solid front-wing cell cannot numerically terminate the path before it enters the underbody.
+The streamline integration uses inverse-distance velocity interpolation and midpoint stepping. The package includes **40 continuous streamlines**, including **9 floor/diffuser-seeded lines** and **9 additional solved-field paths selected to run from the front-wing region into the floor and through the diffuser**. These paths are traced in both directions from in-field seeds so a solid front-wing cell cannot numerically terminate them before they enter the underbody.
 
 ## CFD setup
 

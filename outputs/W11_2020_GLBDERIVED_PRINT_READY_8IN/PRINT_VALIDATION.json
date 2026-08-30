@@ -1,0 +1,78 @@
+{
+  "target_length_mm": 203.2,
+  "target_length_in": 8.0,
+  "one_piece": {
+    "vertices": 427776,
+    "triangles": 855628,
+    "watertight": true,
+    "winding_consistent": true,
+    "connected_bodies": 1,
+    "positive_volume_mm3": 169853.81293176697,
+    "dimensions_mm": [
+      203.2,
+      71.97495,
+      40.56047
+    ]
+  },
+  "three_section_option": {
+    "01_FRONT_SECTION": {
+      "vertices": 135590,
+      "triangles": 271208,
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 41174.77657355691,
+      "dimensions_mm": [
+        68.072,
+        71.97495,
+        34.99335
+      ]
+    },
+    "02_CENTER_SECTION": {
+      "vertices": 168879,
+      "triangles": 337806,
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 81548.71815945298,
+      "dimensions_mm": [
+        83.312,
+        60.8407,
+        40.56047
+      ]
+    },
+    "03_REAR_SECTION": {
+      "vertices": 127495,
+      "triangles": 254994,
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_bodies": 1,
+      "positive_volume_mm3": 47130.31819875714,
+      "dimensions_mm": [
+        51.816,
+        71.97495,
+        38.57221
+      ]
+    }
+  },
+  "bed_fit": {
+    "one_piece_220x220": true,
+    "three_section_plate_width_mm": 211.2
+  },
+  "source_bounds_m": [
+    [
+      -2.690099000930786,
+      -0.9901107549667358,
+      0.02990500070154667
+    ],
+    [
+      2.9501254558563232,
+      0.9901107549667358,
+      1.1300950050354004
+    ]
+  ],
+  "source_to_initial_print_scale": 36.026935019488675,
+  "voxel_pitch_mm": 0.4,
+  "reinforcement": "one printer-scale voxel outward dilation followed by closing and solidification",
+  "airflow_visualization": "solver-field-derived digital GLB; deliberately not fused into the printable car"
+}

@@ -29,4 +29,4 @@ The GitHub Pages gallery reads `docs/models.json` and can display every GLB and 
 | W11 2020 — open-source research rebuild, static 8-inch print model | [`W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb) | GLB | Browser-viewable binary glTF model of the complete assembly. |
 | W11 2020 — 300 km/h aerodynamic visualization and SU2 CFD screening | [`W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb) | GLB | Browser-viewable binary glTF model containing the explanatory airflow presentation. |
 
-The interactive catalog currently indexes **405** GLB/STL files.
+The interactive catalog currently indexes **411** GLB/STL files.

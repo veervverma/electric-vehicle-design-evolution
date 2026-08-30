@@ -41,6 +41,7 @@ log = (RESULTS / "solver_continue_80.log").read_text()
 streamline_data = json.loads((RESULTS / "SOLVER_DERIVED_STREAMLINES.json").read_text())
 streamline_count = streamline_data["streamline_count"]
 underfloor_count = sum(line["region"] == "underfloor" for line in streamline_data["streamlines"])
+front_diffuser_count = sum(line["region"] == "front_wing_to_diffuser" for line in streamline_data["streamlines"])
 match = re.search(r"Cauchy\[CD\]\|\s*([0-9.eE+-]+)\|\s*<\s*([0-9.eE+-]+)\|\s*(Yes|No)", log)
 cauchy = float(match.group(1)) if match else None
 criterion = float(match.group(2)) if match else None
@@ -100,7 +101,7 @@ The earlier run replaced the supplied W11 rendering mesh with boxes, ellipsoids 
 
 `W11_SOURCE_WITH_SOLVER_DERIVED_CONTINUOUS_AIRFLOW.glb` uses continuous tubes obtained by integrating the solved SU2 nodal velocity field. The colored tubes are the CFD-derived streamlines. Animated white pulses travel along those tubes only to show direction; they do not replace or fabricate the solved flow path.
 
-The streamline integration uses inverse-distance velocity interpolation and midpoint stepping. The package includes **{streamline_count} continuous streamlines**, including **{underfloor_count} floor/diffuser-seeded lines**. Floor lines are traced in both directions from an in-field seed so a solid front-wing cell cannot numerically terminate the path before it enters the underbody.
+The streamline integration uses inverse-distance velocity interpolation and midpoint stepping. The package includes **{streamline_count} continuous streamlines**, including **{underfloor_count} floor/diffuser-seeded lines** and **{front_diffuser_count} additional solved-field paths selected to run from the front-wing region into the floor and through the diffuser**. These paths are traced in both directions from in-field seeds so a solid front-wing cell cannot numerically terminate them before they enter the underbody.
 
 ## CFD setup
 

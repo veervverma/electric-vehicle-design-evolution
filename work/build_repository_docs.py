@@ -149,6 +149,14 @@ FOLDERS = {
         "limit": "Source-faithful public rendering geometry, not proprietary Mercedes CAD. The SU2 result is screening-only: stationary unified tyre envelopes, no cooling, no prism-layer/y+ study, no demonstrated mesh independence, and no rolling-road wind-tunnel correlation.",
         "preserve_readme": True,
     },
+    "W11_2020_GLBDERIVED_PRINT_READY_8IN": {
+        "title": "W11 2020 — source-derived exact 8-inch print release and CFD airflow points",
+        "summary": "Printer-strengthened derivative of the corrected W11 GLB-derived aerodynamic shell, including an exact 203.2 mm one-piece model, a three-section alternative, millimeter-aware 3MF projects, and a digital CFD airflow-point view emphasizing front-wing-to-diffuser paths.",
+        "units": "All STL and 3MF print geometry is millimeter-scale. The complete car is exactly 203.2 mm / 8.000 inches long; the 3MF files explicitly declare millimeters.",
+        "use": "Use `W11_8IN_ONE_PIECE_PRINT_READY_MM.3mf` for the lowest-assembly-cost one-object print, `W11_8IN_THREE_SECTION_PRINT_PLATE_MM.3mf` to reduce support risk, and `W11_8IN_CFD_AIRFLOW_POINTS_FRONTWING_TO_DIFFUSER.glb` for the airflow presentation.",
+        "limit": "Static display model. The airflow points are solver-derived digital markers and are deliberately not fused into the printable car. The underlying CFD field remains unconverged screening rather than validated W11 performance.",
+        "preserve_readme": True,
+    },
 }
 
 FAMILY_ORDER = {name: i for i, name in enumerate(FOLDERS)}

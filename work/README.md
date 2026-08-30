@@ -29,6 +29,7 @@ These Python scripts are the reproducible design record behind the files in `out
 | `integrate_w11_su2_streamlines.py` | Integrates continuous streamlines from the solved SU2 velocity field and renders flow/side-plane figures. |
 | `build_w11_glbderived_visuals.py` | Builds the exact-source overlay GLB and solver-derived continuous-airflow animated GLB. |
 | `build_w11_glbderived_cfd_report.py` | Summarizes convergence, screening forces, geometry correction, assumptions, and validation limits. |
+| `build_w11_glbderived_print_ready_8in.py` | Strengthens and scales the corrected shell to an exact 8-inch one-piece print, creates a three-section option and 3MF files, and builds the front-wing-to-diffuser airflow-point preview. |
 | `audit_w11_reference.py` | Audits the supplied rendering mesh and documents why its raw shells are unsuitable for direct STL printing. |
 | `audit_stl_mesh.py` | Audits STL topology, boundaries, degeneracy, dimensions, and shells. |
 | `aero_estimate_v5.py` | Creates the first-order V5 force estimate. |

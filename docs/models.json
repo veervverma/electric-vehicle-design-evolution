@@ -2429,6 +2429,42 @@
       "label": "W11 Source With Solver Derived Continuous Airflow",
       "path": "../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/W11_SOURCE_WITH_SOLVER_DERIVED_CONTINUOUS_AIRFLOW.glb",
       "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "01 Front Section Print Ready Mm",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/THREE_SECTION_OPTION/01_FRONT_SECTION_PRINT_READY_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "02 Center Section Print Ready Mm",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/THREE_SECTION_OPTION/02_CENTER_SECTION_PRINT_READY_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "03 Rear Section Print Ready Mm",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/THREE_SECTION_OPTION/03_REAR_SECTION_PRINT_READY_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "W11 8In One Piece Print Ready Mm",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/W11_8IN_ONE_PIECE_PRINT_READY_MM.stl",
+      "ext": "stl"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "W11 8In One Piece Print Ready Preview",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/W11_8IN_ONE_PIECE_PRINT_READY_PREVIEW.glb",
+      "ext": "glb"
+    },
+    {
+      "family": "W11 2020 \u2014 source-derived exact 8-inch print release and CFD airflow points",
+      "label": "W11 8In Cfd Airflow Points Frontwing To Diffuser",
+      "path": "../outputs/W11_2020_GLBDERIVED_PRINT_READY_8IN/W11_8IN_CFD_AIRFLOW_POINTS_FRONTWING_TO_DIFFUSER.glb",
+      "ext": "glb"
     }
   ]
 }

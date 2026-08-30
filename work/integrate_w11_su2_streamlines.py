@@ -198,17 +198,29 @@ def main():
     for y in (-1.22, 1.22):
         for z in (0.28, 0.48, 0.72, 0.95):
             seeds.append((-2.25, y, z))
+    # Solved-field paths selected specifically because their bidirectional
+    # traces pass the front-wing region, remain close to the floor and continue
+    # through the rear diffuser. These are not hand-drawn presentation curves.
+    front_diffuser_seeds = [
+        (-1.40, -0.30, 0.20), (-1.40, -0.30, 0.22),
+        (-1.40, -0.20, 0.12), (-1.20, -0.30, 0.16),
+        (-1.20, -0.20, 0.14), (-1.20, -0.20, 0.22),
+        (-1.00, -0.50, 0.28), (-1.00, -0.40, 0.24),
+        (-0.80, -0.70, 0.32),
+    ]
+    seeds.extend(front_diffuser_seeds)
     lines = []
     for seed in seeds:
         is_floor = seed[2] < 0.20 and seed[0] > 0.0
-        path, speeds = integrate_bidirectional(sampler, seed) if is_floor else integrate(sampler, seed)
+        is_front_diffuser = seed in front_diffuser_seeds
+        path, speeds = integrate_bidirectional(sampler, seed) if (is_floor or is_front_diffuser) else integrate(sampler, seed)
         if len(path) < 24 or path[-1, 0] < 2.7:
             continue
         # SU2 stores velocity nondimensionally here; freestream magnitude is 1.
         ratio = speeds if len(speeds) == len(path) else np.r_[speeds, speeds[-1]]
         lines.append({
             "seed_m": list(seed),
-            "region": "underfloor" if is_floor else "whole_car",
+            "region": "front_wing_to_diffuser" if is_front_diffuser else ("underfloor" if is_floor else "whole_car"),
             "points_m": np.round(path, 5).tolist(),
             "speed_ratio": np.round(ratio, 5).tolist(),
             "mean_speed_ratio": float(np.mean(ratio)),
