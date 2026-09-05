@@ -155,7 +155,9 @@ animationButton.addEventListener('click', () => {
   animationButton.textContent = animationsPlaying ? 'Pause animation' : 'Play animation';
 });
 
-fetch('models.json').then(r => r.json()).then(data => {
+// Always revalidate the catalog so a newly published model is immediately
+// selectable instead of waiting for the GitHub Pages CDN/browser cache.
+fetch('models.json', { cache: 'no-store' }).then(r => r.json()).then(data => {
   models = data.models;
   const families = [...new Set(models.map(m => m.family))];
   familySelect.append(...families.map(f => { const o = document.createElement('option'); o.value = f; o.textContent = f; return o; }));
