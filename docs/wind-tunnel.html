@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive W11 aerodynamic wind-tunnel visualization using solver-derived CFD streamlines.">
+  <title>W11 Aerodynamic Lab — Interactive Wind Tunnel</title>
+  <link rel="stylesheet" href="wind-tunnel.css?v=20260906">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"}}
+  </script>
+</head>
+<body>
+  <main class="lab-shell">
+    <header class="topbar">
+      <div>
+        <a class="back-link" href="./">← 3D MODEL GALLERY</a>
+        <p class="kicker">VEER VERMA · AERODYNAMIC STUDY 06</p>
+        <h1>W11 AERODYNAMIC LAB</h1>
+      </div>
+      <div class="run-state">
+        <span class="status-light"></span>
+        <div><b>LIVE VISUALIZATION</b><small>CFD paths + continuity tracing guide</small></div>
+      </div>
+    </header>
+
+    <section class="stage">
+      <div id="viewport" aria-label="Interactive W11 wind-tunnel visualization"></div>
+      <div id="loading" role="status"><span></span>Loading W11 and solved airflow…</div>
+
+      <div class="telemetry" aria-label="Wind tunnel telemetry">
+        <article><span>WIND SPEED</span><strong id="speed-readout">300</strong><small>km/h</small></article>
+        <article><span>VELOCITY</span><strong id="velocity-readout">83.3</strong><small>m/s</small></article>
+        <article><span>DYNAMIC PRESSURE</span><strong id="pressure-readout">4.25</strong><small>kPa</small></article>
+        <article><span>CFD PATHS</span><strong id="path-readout">—</strong><small>continuous</small></article>
+      </div>
+
+      <aside class="control-panel">
+        <div class="panel-heading"><span>WIND-TUNNEL CONTROLS</span><button id="collapse" aria-label="Collapse controls">−</button></div>
+        <div class="panel-body">
+          <label for="speed">Air speed <output id="speed-output">300 km/h</output></label>
+          <input id="speed" type="range" min="60" max="330" step="5" value="300">
+
+          <label for="density">Flow-point density <output id="density-output">75%</output></label>
+          <input id="density" type="range" min="20" max="100" step="5" value="75">
+
+          <div class="control-label">Camera</div>
+          <div class="button-grid camera-buttons">
+            <button data-camera="iso" class="active">ISO</button>
+            <button data-camera="side">SIDE</button>
+            <button data-camera="top">TOP</button>
+            <button data-camera="floor">FLOOR</button>
+          </div>
+
+          <div class="control-label">Display</div>
+          <label class="switch-row"><input id="trails" type="checkbox" checked><span>Continuous path lines</span></label>
+          <label class="switch-row"><input id="ambient" type="checkbox" checked><span>Freestream seed points</span></label>
+          <label class="switch-row"><input id="tunnel" type="checkbox" checked><span>Tunnel reference cage</span></label>
+        </div>
+      </aside>
+
+      <div class="flow-key" aria-label="Flow color key">
+        <span><i class="key overall"></i>Overall flow</span>
+        <span><i class="key floor"></i>Floor / diffuser</span>
+        <span><i class="key focus"></i>Front → diffuser trace*</span>
+      </div>
+
+      <div class="mode-bar" role="group" aria-label="Visualization mode">
+        <button data-mode="all" class="active"><b>[01]</b> FULL FLOW</button>
+        <button data-mode="focus"><b>[02]</b> FRONT → DIFFUSER</button>
+        <button data-mode="inspect"><b>[03]</b> CAR INSPECTION</button>
+        <button id="pause"><b>Ⅱ</b> PAUSE</button>
+      </div>
+
+      <div class="disclaimer">GREEN PATHS ARE SOLVER-INTEGRATED; ORANGE PATHS ADD AN UPSTREAM FRONT-WING GUIDE TO THE SOLVED FLOOR/DIFFUSER SEGMENT · PATH GEOMETRY IS FROM THE 300 KM/H FIELD; SPEED SCALES ANIMATION + q, NOT CFD · NOT WIND-TUNNEL VALIDATED</div>
+    </section>
+
+    <footer>
+      <p>Original interactive implementation inspired by the mode-based presentation of <a href="https://lab.patrickheintzmann.com/demo/demoFormula">Patrick Heintzmann’s Formula demo</a>; no source code or branded assets were copied.</p>
+      <p>W11 visual reference: <a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">Kevin Love SketchFab / Tyler_Kevin</a>, CC BY 4.0. Use mouse or touch to orbit and zoom.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="wind-tunnel.js?v=20260906"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 ## Explore the project
 
 - **[Interactive browser gallery](https://veervverma.github.io/electric-vehicle-design-evolution/):** displays both GLB and STL models, plays available glTF animations, and exposes every viewable model through a searchable catalog.
+- **[Interactive W11 aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html):** places the detailed W11 reference model in an original browser wind-tunnel scene with continuous solved-flow paths, front-to-diffuser tracing guides, speed telemetry, camera presets, and focused inspection modes.
 - **[Version history](VERSIONS.md):** what changed from the first chassis sketches through Formula EV V6.
 - **[Model catalog](MODEL_CATALOG.md):** recommended assembled files and direct repository links.
 - **[Complete file manifest](FILE_MANIFEST.csv):** path, size, type, and SHA-256 digest for the preserved project artifacts.
@@ -25,6 +26,7 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 | View the historically corrected W11 2020 rebuild | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_REFERENCE_RESEARCH_ASSEMBLED.glb) |
 | Print the corrected 29-piece W11 model | [`outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf`](outputs/W11_2020_RESEARCH_REBUILD_STATIC_8IN/W11_2020_ALL_PRINT_PARTS_220MM_PLATE.3mf) |
 | View the W11 2020 whole-car airflow presentation | [`outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/W11_2020_WHOLE_CAR_AIRFLOW_PRESENTATION.glb) |
+| Explore the interactive W11 wind tunnel | [Open the GitHub Pages aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html) |
 | Review the solved SU2 CFD screening | [`outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/CFD_VALIDATION_REPORT.md`](outputs/W11_2020_AERO_CFD_VALIDATION_300KPH/CFD_VALIDATION_REPORT.md) |
 
 ## Repository layout
