@@ -5,7 +5,7 @@ An educational CAD, visualization, 3D-printing, and conceptual aerodynamics port
 ## Explore the project
 
 - **[Interactive browser gallery](https://veervverma.github.io/electric-vehicle-design-evolution/):** displays both GLB and STL models, plays available glTF animations, and exposes every viewable model through a searchable catalog.
-- **[Interactive W11 aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html):** places the detailed W11 reference model in an original browser wind-tunnel scene with continuous solved-flow paths, front-to-diffuser tracing guides, speed telemetry, camera presets, and focused inspection modes.
+- **[Interactive W11 aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html):** places the detailed W11 reference model in an original browser wind-tunnel scene with automatic and keyboard-controlled vehicle motion, continuous solved-flow paths, front-to-diffuser tracing guides, speed telemetry, camera presets, and focused inspection modes.
 - **[Version history](VERSIONS.md):** what changed from the first chassis sketches through Formula EV V6.
 - **[Model catalog](MODEL_CATALOG.md):** recommended assembled files and direct repository links.
 - **[Complete file manifest](FILE_MANIFEST.csv):** path, size, type, and SHA-256 digest for the preserved project artifacts.

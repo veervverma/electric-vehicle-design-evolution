@@ -9,7 +9,7 @@ This release replaces the boxy primitive surrogate with a watertight full-car CF
 3. `W11_2020_GLBDERIVED_CFD_SURFACE.glb` — corrected standalone CFD shell.
 4. `CORRECTION_AND_CFD_REPORT.md` — explanation, CFD method, results and limits.
 5. `FIGURES/SOLVER_DERIVED_CONTINUOUS_STREAMLINES.png` — continuous solved airflow in side and top projection.
-6. [Interactive W11 aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html) — browser presentation of the detailed W11 with the 40 solved paths, controls, camera presets and clearly identified tracing guides.
+6. [Interactive W11 aerodynamic lab](https://veervverma.github.io/electric-vehicle-design-evolution/wind-tunnel.html) — browser presentation of the detailed W11 with automatic and keyboard-controlled Drive mode, 40 solved paths, camera presets and clearly identified tracing guides.
 
 The CFD geometry is source-faithful, not proprietary Mercedes CAD. The force solution is screening-only and did not pass its force-Cauchy target.
 

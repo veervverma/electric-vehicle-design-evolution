@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Interactive W11 aerodynamic wind-tunnel visualization using solver-derived CFD streamlines.">
+  <meta name="description" content="Interactive moving W11 aerodynamic wind-tunnel visualization using solver-derived CFD streamlines.">
   <title>W11 Aerodynamic Lab — Interactive Wind Tunnel</title>
-  <link rel="stylesheet" href="wind-tunnel.css?v=20260906">
+  <link rel="stylesheet" href="wind-tunnel.css?v=20260906-drive">
   <script type="importmap">
     {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"}}
   </script>
@@ -20,7 +20,7 @@
       </div>
       <div class="run-state">
         <span class="status-light"></span>
-        <div><b>LIVE VISUALIZATION</b><small>CFD paths + continuity tracing guide</small></div>
+        <div><b>LIVE VISUALIZATION</b><small id="status-detail">moving W11 + attached CFD paths</small></div>
       </div>
     </header>
 
@@ -65,14 +65,32 @@
         <span><i class="key focus"></i>Front → diffuser trace*</span>
       </div>
 
+      <div id="drive-hud" class="drive-hud" aria-label="Drive controls">
+        <div class="drive-heading"><strong>DRIVE MODE</strong><output id="drive-speed">0.0 mm/s</output></div>
+        <p>HOLD WASD / ARROWS · SPACE BRAKE · R RESET · M AUTO</p>
+        <div class="drive-controls">
+          <div class="drive-pad">
+            <button data-drive="forward" aria-label="Drive forward">▲</button>
+            <button data-drive="left" aria-label="Steer left">◀</button>
+            <button data-drive="reverse" aria-label="Drive reverse">▼</button>
+            <button data-drive="right" aria-label="Steer right">▶</button>
+          </div>
+          <div class="drive-actions">
+            <button id="auto-drive" class="active">AUTO TOUR: ON</button>
+            <button id="reset-drive">RESET POSITION</button>
+          </div>
+        </div>
+      </div>
+
       <div class="mode-bar" role="group" aria-label="Visualization mode">
-        <button data-mode="all" class="active"><b>[01]</b> FULL FLOW</button>
-        <button data-mode="focus"><b>[02]</b> FRONT → DIFFUSER</button>
-        <button data-mode="inspect"><b>[03]</b> CAR INSPECTION</button>
+        <button data-mode="drive" class="active"><b>[01]</b> DRIVE + FLOW</button>
+        <button data-mode="all"><b>[02]</b> FULL FLOW</button>
+        <button data-mode="focus"><b>[03]</b> FRONT → DIFFUSER</button>
+        <button data-mode="inspect"><b>[04]</b> CAR INSPECTION</button>
         <button id="pause"><b>Ⅱ</b> PAUSE</button>
       </div>
 
-      <div class="disclaimer">GREEN PATHS ARE SOLVER-INTEGRATED; ORANGE PATHS ADD AN UPSTREAM FRONT-WING GUIDE TO THE SOLVED FLOOR/DIFFUSER SEGMENT · PATH GEOMETRY IS FROM THE 300 KM/H FIELD; SPEED SCALES ANIMATION + q, NOT CFD · NOT WIND-TUNNEL VALIDATED</div>
+      <div class="disclaimer">DRIVE MODE IS PRESENTATION MOTION, NOT MOVING-BODY CFD · GREEN PATHS ARE SOLVER-INTEGRATED; ORANGE PATHS ADD AN UPSTREAM GUIDE · PATH GEOMETRY IS FROM THE 300 KM/H FIELD; SPEED SCALES ANIMATION + q, NOT CFD · NOT WIND-TUNNEL VALIDATED</div>
     </section>
 
     <footer>
@@ -81,6 +99,6 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20260906"></script>
+  <script type="module" src="wind-tunnel.js?v=20260906-drive"></script>
 </body>
 </html>

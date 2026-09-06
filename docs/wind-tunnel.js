@@ -81,17 +81,45 @@ for (let row = -3; row <= 3; row++) {
 }
 
 let car;
-const flowGroup = new THREE.Group(); scene.add(flowGroup);
+// The car and its CFD overlay share one parent so Drive mode never separates
+// the visualization from the W11 geometry it describes.
+const vehicleRig = new THREE.Group(); scene.add(vehicleRig);
+const flowGroup = new THREE.Group(); vehicleRig.add(flowGroup);
+const wheelMotionGroup = new THREE.Group(); vehicleRig.add(wheelMotionGroup);
+const wheelMotionMarkers = [];
+for (const x of [-67, 59]) {
+  for (const z of [-34, 34]) {
+    for (const phase of [0, Math.PI]) {
+      const marker = new THREE.Mesh(
+        new THREE.TorusGeometry(14.4, .19, 5, 34, Math.PI * .72),
+        new THREE.MeshBasicMaterial({ color: 0x62d9ff, transparent: true, opacity: .5, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: true }),
+      );
+      marker.position.set(x, 13.2, z);
+      marker.rotation.z = phase;
+      marker.userData.phaseOffset = phase;
+      marker.renderOrder = 6;
+      wheelMotionGroup.add(marker);
+      wheelMotionMarkers.push(marker);
+    }
+  }
+}
+wheelMotionGroup.visible = false;
 const lineRecords = [];
 const particles = [];
 let particleCloud;
 let ambientCloud;
-let currentMode = 'all';
+let currentMode = 'drive';
 let running = true;
 let windSpeed = 300;
 let densityFraction = .75;
 let clock = new THREE.Clock();
 let cameraGoal = null;
+let driveClock = 0;
+let driveVelocity = 0;
+let driveSteer = 0;
+let wheelPhase = 0;
+let autoDrive = true;
+const driveInput = { forward: false, reverse: false, left: false, right: false, brake: false };
 
 const regionColor = {
   whole_car: new THREE.Color(0x31bff3),
@@ -138,7 +166,7 @@ function addCar(gltf) {
       material.needsUpdate = true;
     });
   });
-  scene.add(car);
+  vehicleRig.add(car);
 }
 
 function addFlow(data) {
@@ -240,18 +268,52 @@ function updateTelemetry() {
   document.querySelector('#speed-output').textContent = `${windSpeed} km/h`;
 }
 
+function flowVisibleInMode(region, mode = currentMode) {
+  return mode === 'all' || mode === 'drive' || (mode === 'focus' && isFocusRegion(region));
+}
+
+function updateAutoDriveButton() {
+  const button = document.querySelector('#auto-drive');
+  button.textContent = `AUTO TOUR: ${autoDrive ? 'ON' : 'OFF'}`;
+  button.classList.toggle('active', autoDrive);
+}
+
+function setAutoDrive(enabled) {
+  autoDrive = enabled;
+  driveVelocity = 0;
+  driveSteer = 0;
+  updateAutoDriveButton();
+}
+
+function resetDrivePose() {
+  vehicleRig.position.set(0, 0, 0);
+  vehicleRig.rotation.set(0, 0, 0);
+  driveVelocity = 0;
+  driveSteer = 0;
+  driveClock = 0;
+  wheelPhase = 0;
+}
+
 function setMode(mode) {
+  const leavingDrive = currentMode === 'drive' && mode !== 'drive';
   currentMode = mode;
+  if (leavingDrive) resetDrivePose();
   document.querySelectorAll('[data-mode]').forEach(button => button.classList.toggle('active', button.dataset.mode === mode));
   lineRecords.forEach(record => {
     const trailsEnabled = document.querySelector('#trails').checked;
-    record.line.visible = trailsEnabled && (mode === 'all' || (mode === 'focus' && isFocusRegion(record.region)));
+    record.line.visible = trailsEnabled && flowVisibleInMode(record.region, mode);
     record.line.material.opacity = record.region === 'front_floor_diffuser' ? .98 : (record.region === 'underfloor' ? (mode === 'focus' ? .78 : .64) : .42);
   });
   if (particleCloud) particleCloud.visible = mode !== 'inspect';
-  if (ambientCloud) ambientCloud.visible = mode === 'all' && document.querySelector('#ambient').checked;
+  if (ambientCloud) ambientCloud.visible = (mode === 'all' || mode === 'drive') && document.querySelector('#ambient').checked;
+  wheelMotionGroup.visible = mode === 'drive';
+  document.querySelector('#drive-hud').hidden = mode !== 'drive';
+  const status = document.querySelector('#status-detail');
+  status.textContent = mode === 'drive' ? 'moving W11 + attached CFD paths' : (mode === 'focus' ? 'focused floor / diffuser visualization' : (mode === 'inspect' ? 'static detailed W11 inspection' : 'CFD paths + continuity tracing guide'));
+  if (mode === 'drive') setCamera('iso');
   if (mode === 'focus') setCamera('floor');
   if (mode === 'inspect') setCamera('iso');
+  if (leavingDrive && mode === 'all') setCamera('iso');
 }
 
 const cameraViews = {
@@ -274,7 +336,7 @@ function updateParticles(dt) {
   for (let i = 0; i < particles.length; i++) {
     const item = particles[i];
     if (running) item.phase = (item.phase + dt * item.speed * flowMultiplier) % 1;
-    const modeVisible = currentMode === 'all' || (currentMode === 'focus' && isFocusRegion(item.region));
+    const modeVisible = flowVisibleInMode(item.region);
     const densityVisible = ((i * 37) % 101) / 100 < densityFraction;
     if (!modeVisible || !densityVisible || currentMode === 'inspect') {
       positions.setXYZ(i, 9999, 9999, 9999);
@@ -284,6 +346,57 @@ function updateParticles(dt) {
     positions.setXYZ(i, point.x, point.y, point.z);
   }
   positions.needsUpdate = true;
+}
+
+function updateDrive(dt) {
+  const previous = vehicleRig.position.clone();
+  let modelSpeed = 0;
+
+  if (currentMode === 'drive' && running) {
+    if (autoDrive) {
+      driveClock += dt;
+      const previousX = vehicleRig.position.x;
+      const previousZ = vehicleRig.position.z;
+      vehicleRig.position.x = -38 * Math.sin(driveClock * .42);
+      vehicleRig.position.z = 7.5 * Math.sin(driveClock * .73);
+      vehicleRig.position.y = .28 + .18 * Math.sin(driveClock * 3.1);
+      vehicleRig.rotation.y = .055 * Math.sin(driveClock * .54);
+      vehicleRig.rotation.x = .009 * Math.sin(driveClock * 1.15);
+      vehicleRig.rotation.z = .006 * Math.cos(driveClock * 1.7);
+      modelSpeed = Math.hypot(vehicleRig.position.x - previousX, vehicleRig.position.z - previousZ) / Math.max(dt, .001);
+    } else {
+      const throttle = Number(driveInput.forward) - Number(driveInput.reverse);
+      const steering = Number(driveInput.left) - Number(driveInput.right);
+      const targetVelocity = driveInput.brake ? 0 : throttle * 46;
+      driveVelocity = THREE.MathUtils.damp(driveVelocity, targetVelocity, driveInput.brake ? 11 : (throttle ? 3.4 : 1.8), dt);
+      driveSteer = THREE.MathUtils.damp(driveSteer, steering, 7, dt);
+      if (Math.abs(driveVelocity) > .2) {
+        vehicleRig.rotation.y += driveSteer * Math.sign(driveVelocity) * dt * .58;
+      }
+      vehicleRig.position.x += -Math.cos(vehicleRig.rotation.y) * driveVelocity * dt;
+      vehicleRig.position.z += Math.sin(vehicleRig.rotation.y) * driveVelocity * dt;
+      vehicleRig.position.x = THREE.MathUtils.clamp(vehicleRig.position.x, -112, 112);
+      vehicleRig.position.z = THREE.MathUtils.clamp(vehicleRig.position.z, -42, 42);
+      vehicleRig.position.y = .22 + .16 * Math.sin(clock.elapsedTime * 7) * Math.min(Math.abs(driveVelocity) / 46, 1);
+      vehicleRig.rotation.x = -driveSteer * Math.min(Math.abs(driveVelocity) / 46, 1) * .018;
+      vehicleRig.rotation.z = THREE.MathUtils.damp(vehicleRig.rotation.z, -throttle * .008, 4, dt);
+      modelSpeed = Math.abs(driveVelocity);
+    }
+
+    wheelPhase -= modelSpeed * dt / 14.4;
+    wheelMotionMarkers.forEach(marker => { marker.rotation.z = marker.userData.phaseOffset + wheelPhase; });
+  }
+
+  document.querySelector('#drive-speed').textContent = `${modelSpeed.toFixed(1)} mm/s`;
+  const delta = vehicleRig.position.clone().sub(previous);
+  if (currentMode === 'drive') {
+    camera.position.add(delta);
+    controls.target.add(delta);
+    if (cameraGoal) {
+      cameraGoal.position.add(delta);
+      cameraGoal.target.add(delta);
+    }
+  }
 }
 
 function updateAmbient(dt) {
@@ -314,8 +427,8 @@ document.querySelector('#speed').addEventListener('input', event => { windSpeed 
 document.querySelector('#density').addEventListener('input', event => { densityFraction = Number(event.target.value) / 100; document.querySelector('#density-output').textContent = `${event.target.value}%`; });
 document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => setMode(button.dataset.mode)));
 document.querySelectorAll('[data-camera]').forEach(button => button.addEventListener('click', () => setCamera(button.dataset.camera)));
-document.querySelector('#trails').addEventListener('change', event => lineRecords.forEach(record => record.line.visible = event.target.checked && (currentMode === 'all' || (currentMode === 'focus' && isFocusRegion(record.region)))));
-document.querySelector('#ambient').addEventListener('change', event => { if (ambientCloud) ambientCloud.visible = event.target.checked && currentMode === 'all'; });
+document.querySelector('#trails').addEventListener('change', event => lineRecords.forEach(record => record.line.visible = event.target.checked && flowVisibleInMode(record.region)));
+document.querySelector('#ambient').addEventListener('change', event => { if (ambientCloud) ambientCloud.visible = event.target.checked && (currentMode === 'all' || currentMode === 'drive'); });
 document.querySelector('#tunnel').addEventListener('change', event => { tunnelGroup.visible = event.target.checked; });
 document.querySelector('#collapse').addEventListener('click', () => {
   const panel = document.querySelector('.control-panel'); panel.classList.toggle('collapsed');
@@ -326,21 +439,58 @@ document.querySelector('#pause').addEventListener('click', event => {
   event.currentTarget.innerHTML = running ? '<b>Ⅱ</b> PAUSE' : '<b>▶</b> PLAY';
 });
 
-addAmbient(); updateTelemetry();
+const keyToDriveInput = {
+  w: 'forward', arrowup: 'forward', s: 'reverse', arrowdown: 'reverse',
+  a: 'left', arrowleft: 'left', d: 'right', arrowright: 'right', ' ': 'brake',
+};
+function engageManualDrive() {
+  if (autoDrive) setAutoDrive(false);
+}
+window.addEventListener('keydown', event => {
+  if (currentMode !== 'drive') return;
+  const key = event.key.toLowerCase();
+  if (key === 'r') { if (!event.repeat) { resetDrivePose(); setCamera('iso'); } event.preventDefault(); return; }
+  if (key === 'm') { if (!event.repeat) setAutoDrive(!autoDrive); event.preventDefault(); return; }
+  const input = keyToDriveInput[key];
+  if (!input) return;
+  engageManualDrive(); driveInput[input] = true; event.preventDefault();
+});
+window.addEventListener('keyup', event => {
+  const input = keyToDriveInput[event.key.toLowerCase()];
+  if (!input) return;
+  driveInput[input] = false;
+  if (currentMode === 'drive') event.preventDefault();
+});
+document.querySelectorAll('[data-drive]').forEach(button => {
+  const input = button.dataset.drive;
+  const engage = event => {
+    engageManualDrive(); driveInput[input] = true; button.classList.add('pressed');
+    if (button.setPointerCapture && event.pointerId !== undefined) button.setPointerCapture(event.pointerId);
+  };
+  const release = () => { driveInput[input] = false; button.classList.remove('pressed'); };
+  button.addEventListener('pointerdown', engage);
+  button.addEventListener('pointerup', release);
+  button.addEventListener('pointercancel', release);
+  button.addEventListener('pointerleave', release);
+});
+document.querySelector('#auto-drive').addEventListener('click', () => setAutoDrive(!autoDrive));
+document.querySelector('#reset-drive').addEventListener('click', () => { resetDrivePose(); setCamera('iso'); });
+
+addAmbient(); updateTelemetry(); updateAutoDriveButton();
 Promise.all([
   new GLTFLoader().loadAsync(assetUrl(CAR_PATH)),
   fetch(assetUrl(FLOW_PATH), { cache: 'no-store' }).then(response => {
     if (!response.ok) throw new Error(`Flow data ${response.status}`); return response.json();
   }),
 ]).then(([gltf, flow]) => {
-  addCar(gltf); addFlow(flow); loading.hidden = true; setMode('all');
+  addCar(gltf); addFlow(flow); loading.hidden = true; setMode('drive');
 }).catch(error => {
   console.error(error); loading.innerHTML = '<span></span>Unable to load the W11 visualization.';
 });
 
 renderer.setAnimationLoop(() => {
   const dt = Math.min(clock.getDelta(), .05);
-  updateParticles(dt); updateAmbient(dt);
+  updateParticles(dt); updateAmbient(dt); updateDrive(dt);
   if (cameraGoal) {
     camera.position.lerp(cameraGoal.position, .075); controls.target.lerp(cameraGoal.target, .075);
     if (camera.position.distanceTo(cameraGoal.position) < .12) cameraGoal = null;
