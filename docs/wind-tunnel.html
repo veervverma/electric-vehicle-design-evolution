@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Interactive moving W11 aerodynamic wind-tunnel visualization using solver-derived CFD streamlines.">
   <title>W11 Aerodynamic Lab — Interactive Wind Tunnel</title>
-  <link rel="stylesheet" href="wind-tunnel.css?v=20260906-drive">
+  <link rel="stylesheet" href="wind-tunnel.css?v=20260906-live-wheels">
   <script type="importmap">
     {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"}}
   </script>
@@ -66,7 +66,7 @@
       </div>
 
       <div id="drive-hud" class="drive-hud" aria-label="Drive controls">
-        <div class="drive-heading"><strong>DRIVE MODE</strong><output id="drive-speed">0.0 mm/s</output></div>
+        <div class="drive-heading"><strong>DRIVE MODE · <span id="wheel-state">WHEELS LOADING</span></strong><output id="drive-speed">0.0 mm/s</output></div>
         <p>HOLD WASD / ARROWS · SPACE BRAKE · R RESET · M AUTO</p>
         <div class="drive-controls">
           <div class="drive-pad">
@@ -99,6 +99,6 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20260906-drive"></script>
+  <script type="module" src="wind-tunnel.js?v=20260906-live-wheels"></script>
 </body>
 </html>

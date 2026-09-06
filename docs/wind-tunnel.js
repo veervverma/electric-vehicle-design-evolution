@@ -85,25 +85,6 @@ let car;
 // the visualization from the W11 geometry it describes.
 const vehicleRig = new THREE.Group(); scene.add(vehicleRig);
 const flowGroup = new THREE.Group(); vehicleRig.add(flowGroup);
-const wheelMotionGroup = new THREE.Group(); vehicleRig.add(wheelMotionGroup);
-const wheelMotionMarkers = [];
-for (const x of [-67, 59]) {
-  for (const z of [-34, 34]) {
-    for (const phase of [0, Math.PI]) {
-      const marker = new THREE.Mesh(
-        new THREE.TorusGeometry(14.4, .19, 5, 34, Math.PI * .72),
-        new THREE.MeshBasicMaterial({ color: 0x62d9ff, transparent: true, opacity: .5, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: true }),
-      );
-      marker.position.set(x, 13.2, z);
-      marker.rotation.z = phase;
-      marker.userData.phaseOffset = phase;
-      marker.renderOrder = 6;
-      wheelMotionGroup.add(marker);
-      wheelMotionMarkers.push(marker);
-    }
-  }
-}
-wheelMotionGroup.visible = false;
 const lineRecords = [];
 const particles = [];
 let particleCloud;
@@ -120,6 +101,12 @@ let driveSteer = 0;
 let wheelPhase = 0;
 let autoDrive = true;
 const driveInput = { forward: false, reverse: false, left: false, right: false, brake: false };
+const wheelShaderStates = [];
+const wheelMaterialNames = new Set([
+  'Tyre', 'RIM_BLUR', 'mercedes_wheel_hub_BLUR',
+  'mercedes_wheel_hub', 'discs', 'EXT_Disc',
+]);
+const WHEEL_RADIUS_MM = .3365 * MODEL_SCALE;
 
 const regionColor = {
   whole_car: new THREE.Color(0x31bff3),
@@ -137,6 +124,62 @@ function flowPoint(point) {
     (point[2] - CFD_MIN.z) * MODEL_SCALE,
     point[1] * MODEL_SCALE,
   );
+}
+
+function enableWheelAnimation(material) {
+  if (!wheelMaterialNames.has(material.name) || material.userData.w11WheelAnimation) return;
+  const state = {
+    spin: { value: 0 },
+    steer: { value: 0 },
+  };
+  wheelShaderStates.push(state);
+  material.userData.w11WheelAnimation = true;
+  const previousCompile = material.onBeforeCompile;
+  material.onBeforeCompile = (shader, webglRenderer) => {
+    if (previousCompile) previousCompile(shader, webglRenderer);
+    shader.uniforms.w11WheelSpin = state.spin;
+    shader.uniforms.w11WheelSteer = state.steer;
+    shader.vertexShader = shader.vertexShader
+      .replace('#include <common>', `#include <common>
+uniform float w11WheelSpin;
+uniform float w11WheelSteer;`)
+      .replace('#include <beginnormal_vertex>', `#include <beginnormal_vertex>
+float w11SpinCNormal = cos(w11WheelSpin);
+float w11SpinSNormal = sin(w11WheelSpin);
+float w11NormalY = objectNormal.y;
+float w11NormalZ = objectNormal.z;
+objectNormal.y = w11SpinCNormal * w11NormalY - w11SpinSNormal * w11NormalZ;
+objectNormal.z = w11SpinSNormal * w11NormalY + w11SpinCNormal * w11NormalZ;
+if (position.y > -0.25) {
+  float w11SteerCNormal = cos(w11WheelSteer);
+  float w11SteerSNormal = sin(w11WheelSteer);
+  float w11NormalX = objectNormal.x;
+  w11NormalY = objectNormal.y;
+  objectNormal.x = w11SteerCNormal * w11NormalX - w11SteerSNormal * w11NormalY;
+  objectNormal.y = w11SteerSNormal * w11NormalX + w11SteerCNormal * w11NormalY;
+}`)
+      .replace('#include <begin_vertex>', `vec3 transformed = vec3(position);
+bool w11FrontWheel = position.y > -0.25;
+float w11CenterY = w11FrontWheel ? 1.5037 : -2.1373;
+float w11CenterZ = -0.3365;
+float w11SpinC = cos(w11WheelSpin);
+float w11SpinS = sin(w11WheelSpin);
+float w11Y = transformed.y - w11CenterY;
+float w11Z = transformed.z - w11CenterZ;
+transformed.y = w11CenterY + w11SpinC * w11Y - w11SpinS * w11Z;
+transformed.z = w11CenterZ + w11SpinS * w11Y + w11SpinC * w11Z;
+if (w11FrontWheel) {
+  float w11CenterX = position.x > 0.0 ? 0.7875 : -0.8051;
+  float w11SteerC = cos(w11WheelSteer);
+  float w11SteerS = sin(w11WheelSteer);
+  float w11X = transformed.x - w11CenterX;
+  w11Y = transformed.y - w11CenterY;
+  transformed.x = w11CenterX + w11SteerC * w11X - w11SteerS * w11Y;
+  transformed.y = w11CenterY + w11SteerS * w11X + w11SteerC * w11Y;
+}`);
+  };
+  material.customProgramCacheKey = () => `w11-live-wheel-v2-${material.name}`;
+  material.needsUpdate = true;
 }
 
 function addCar(gltf) {
@@ -163,9 +206,11 @@ function addCar(gltf) {
       material.side = THREE.DoubleSide;
       if ('roughness' in material) material.roughness = Math.max(material.roughness ?? .35, .28);
       if ('metalness' in material) material.metalness = Math.min(material.metalness ?? .3, .48);
+      enableWheelAnimation(material);
       material.needsUpdate = true;
     });
   });
+  document.querySelector('#wheel-state').textContent = wheelShaderStates.length ? 'WHEELS LIVE' : 'WHEEL FALLBACK';
   vehicleRig.add(car);
 }
 
@@ -306,7 +351,6 @@ function setMode(mode) {
   });
   if (particleCloud) particleCloud.visible = mode !== 'inspect';
   if (ambientCloud) ambientCloud.visible = (mode === 'all' || mode === 'drive') && document.querySelector('#ambient').checked;
-  wheelMotionGroup.visible = mode === 'drive';
   document.querySelector('#drive-hud').hidden = mode !== 'drive';
   const status = document.querySelector('#status-detail');
   status.textContent = mode === 'drive' ? 'moving W11 + attached CFD paths' : (mode === 'focus' ? 'focused floor / diffuser visualization' : (mode === 'inspect' ? 'static detailed W11 inspection' : 'CFD paths + continuity tracing guide'));
@@ -351,6 +395,8 @@ function updateParticles(dt) {
 function updateDrive(dt) {
   const previous = vehicleRig.position.clone();
   let modelSpeed = 0;
+  let wheelVelocity = 0;
+  let wheelSteerAngle = 0;
 
   if (currentMode === 'drive' && running) {
     if (autoDrive) {
@@ -364,6 +410,8 @@ function updateDrive(dt) {
       vehicleRig.rotation.x = .009 * Math.sin(driveClock * 1.15);
       vehicleRig.rotation.z = .006 * Math.cos(driveClock * 1.7);
       modelSpeed = Math.hypot(vehicleRig.position.x - previousX, vehicleRig.position.z - previousZ) / Math.max(dt, .001);
+      wheelVelocity = -(vehicleRig.position.x - previousX) / Math.max(dt, .001);
+      wheelSteerAngle = .12 * Math.sin(driveClock * .54);
     } else {
       const throttle = Number(driveInput.forward) - Number(driveInput.reverse);
       const steering = Number(driveInput.left) - Number(driveInput.right);
@@ -381,11 +429,17 @@ function updateDrive(dt) {
       vehicleRig.rotation.x = -driveSteer * Math.min(Math.abs(driveVelocity) / 46, 1) * .018;
       vehicleRig.rotation.z = THREE.MathUtils.damp(vehicleRig.rotation.z, -throttle * .008, 4, dt);
       modelSpeed = Math.abs(driveVelocity);
+      wheelVelocity = driveVelocity;
+      wheelSteerAngle = driveSteer * .34;
     }
 
-    wheelPhase -= modelSpeed * dt / 14.4;
-    wheelMotionMarkers.forEach(marker => { marker.rotation.z = marker.userData.phaseOffset + wheelPhase; });
+    wheelPhase -= wheelVelocity * dt / WHEEL_RADIUS_MM;
   }
+
+  wheelShaderStates.forEach(state => {
+    state.spin.value = wheelPhase;
+    state.steer.value = wheelSteerAngle;
+  });
 
   document.querySelector('#drive-speed').textContent = `${modelSpeed.toFixed(1)} mm/s`;
   const delta = vehicleRig.position.clone().sub(previous);

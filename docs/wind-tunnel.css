@@ -66,6 +66,7 @@ input[type="range"] { width: 100%; accent-color: var(--cyan); }
 .drive-hud { position: absolute; top: 92px; left: 18px; width: 272px; padding: 11px; border: 1px solid #29414d; background: #060c11e6; box-shadow: 0 14px 36px #0009; backdrop-filter: blur(14px); }
 .drive-hud[hidden] { display: none; }
 .drive-heading { display: flex; align-items: center; justify-content: space-between; color: white; font-size: 10px; letter-spacing: .12em; }
+.drive-heading strong span { color: var(--cyan); }
 .drive-heading output { color: var(--green); font-size: 9px; }
 .drive-hud p { margin: 6px 0 9px; color: #78909a; font-size: 7px; letter-spacing: .07em; }
 .drive-controls { display: flex; align-items: center; gap: 10px; }
