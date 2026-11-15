@@ -121,3 +121,14 @@ footer a { color: #91bac8; text-underline-offset: 2px; }
   .equation-panel math { font-size: 23px; }
   .mode-bar { bottom: 18px; }
 }
+
+/* Colored flow and the original 3D lab share one page. */
+[hidden] { display: none !important; }
+.lab-shell { grid-template-rows: auto auto minmax(620px, 1fr) auto; }
+.lab-view-switch { display:flex; align-items:center; flex-wrap:wrap; gap:10px; padding:14px clamp(18px,3vw,46px); background:#10101a; border-bottom:1px solid #29404b; }
+.lab-view-switch button { padding:12px 16px; border:1px solid #395464; border-radius:5px; background:#09121a; color:#b8cfda; cursor:pointer; font-size:11px; }
+.lab-view-switch button[aria-pressed="true"] { background:#ffcc64; border-color:#ffcc64; color:#24162b; font-weight:700; }
+.lab-view-switch span { color:#a8b5c2; font-size:10px; }
+.colored-flow-view { min-height:840px; background:#100e18; }
+.colored-flow-view iframe { display:block; width:100%; height:860px; border:0; }
+@media(max-width:850px) { .colored-flow-view iframe { height:1240px; } .lab-shell { grid-template-rows:auto auto auto auto; } }

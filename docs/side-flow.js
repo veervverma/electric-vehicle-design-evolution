@@ -3,6 +3,7 @@ const heat=document.createElement('canvas'),hctx=heat.getContext('2d');
 const trails=document.createElement('canvas'),tctx=trails.getContext('2d');
 const worker=new Worker('side-flow-worker.js?v=1');
 let epoch=0;
+let embedActive=true;
 let geo,ux,uy,rho,image,mask,latest,running=true,busy=false,failed=false,last=performance.now(),seed=12345;
 const MAX_PARTICLES=18000,px=new Float32Array(MAX_PARTICLES),py=new Float32Array(MAX_PARTICLES),age=new Uint16Array(MAX_PARTICLES);
 function random(){seed=(Math.imul(seed,1664525)+1013904223)|0;return (seed>>>0)/4294967296;}
@@ -30,7 +31,7 @@ function drawHeat(){
  const labels=$('.legend').querySelectorAll('span');
  labels[1].textContent=mode==='speed'?'0':'−';labels[2].textContent=mode==='speed'?'0.75':'0';labels[3].textContent=mode==='speed'?'1.5+':'+';
 }
-function request(){if(busy||!running||failed||!geo||document.hidden)return;busy=true;worker.postMessage({type:'advance',steps:Number($('#rate').value)});}
+function request(){if(busy||!running||failed||!geo||document.hidden||!embedActive)return;busy=true;worker.postMessage({type:'advance',steps:Number($('#rate').value)});}
 worker.onmessage=({data})=>{
  if(data.type==='field'&&data.epoch!==epoch)return;
  busy=false;
@@ -41,6 +42,10 @@ worker.onmessage=({data})=>{
  $('#state').textContent=data.ticks<2500?'Flow developing · computing live':'Live 2D flow · educational model';
  drawHeat();request();
 };
+window.addEventListener('message',event=>{
+ if(event.source!==parent||event.origin!==location.origin||event.data?.type!=='w11-flow-visibility')return;
+ embedActive=Boolean(event.data.active);if(embedActive)request();
+});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)request();});
 worker.onerror=e=>{failed=true;$('#state').textContent='Solver unavailable: '+e.message;};
 function sample(x,y){
@@ -52,7 +57,7 @@ function sample(x,y){
  for(let k=0;k<4;k++){u+=ux[ids[k]]*w[k];v+=uy[ids[k]]*w[k];}return [u,v];
 }
 function animate(now){
- requestAnimationFrame(animate);const dt=Math.min(.04,(now-last)/1000);last=now;if(!geo||!ux)return;
+ requestAnimationFrame(animate);const dt=Math.min(.04,(now-last)/1000);last=now;if(!geo||!ux||!embedActive)return;
  if(running){
   const fade=.025+(1-Number($('#trail').value)/100)*.25;
   tctx.globalCompositeOperation='destination-out';tctx.fillStyle='rgba(0,0,0,'+fade+')';tctx.fillRect(0,0,trails.width,trails.height);tctx.globalCompositeOperation='source-over';

@@ -569,6 +569,7 @@ Promise.all([
 
 renderer.setAnimationLoop(() => {
   const dt = Math.min(clock.getDelta(), .05);
+  if (document.querySelector('#three-flow-view')?.hidden || document.hidden) return;
   updateParticles(dt); updateAmbient(dt); updateDrive(dt);
   if (cameraGoal) {
     camera.position.lerp(cameraGoal.position, .075); controls.target.lerp(cameraGoal.target, .075);

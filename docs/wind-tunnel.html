@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Interactive moving W11 aerodynamic wind-tunnel visualization using solver-derived CFD streamlines.">
   <title>W11 Aerodynamic Lab — Interactive Wind Tunnel</title>
-  <link rel="stylesheet" href="wind-tunnel.css?v=20261115-navier-stokes">
+  <link rel="stylesheet" href="wind-tunnel.css?v=20261115-integrated">
   <script type="importmap">
     {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"}}
   </script>
@@ -15,7 +15,7 @@
     <header class="topbar">
       <div>
         <a class="back-link" href="./">← 3D MODEL GALLERY</a>
-        <a class="back-link" href="side-flow.html" style="margin-left:18px;color:#ffcc64">NEW · 2D FLOW STUDIO →</a>
+        <a class="back-link" href="#colored-flow-view" style="margin-left:18px;color:#ffcc64">COLORED AIRFLOW ↓</a>
         <p class="kicker">VEER VERMA · AERODYNAMIC STUDY 06</p>
         <h1>W11 AERODYNAMIC LAB</h1>
       </div>
@@ -25,7 +25,16 @@
       </div>
     </header>
 
-    <section class="stage">
+    <nav class="lab-view-switch" aria-label="Airflow presentation">
+      <button id="view-colored" type="button" aria-pressed="true">COLORED CFD · LIVE 2D</button>
+      <button id="view-three" type="button" aria-pressed="false">3D W11 · PARTICLE FLOW</button>
+      <span>Switch views without leaving the lab</span>
+    </nav>
+    <section id="colored-flow-view" class="colored-flow-view" aria-label="Colored airflow simulation">
+      <p style="margin:0;padding:12px 20px;color:#b8b0c5;font-size:11px">Live 2D flow around the W11 side projection · educational, reduced-Reynolds-number model · no validated full-scale forces</p>
+      <iframe id="colored-flow-frame" src="side-flow.html?embed=1" title="Live W11 colored airflow with density, speed and viscosity controls"></iframe>
+    </section>
+    <section class="stage" id="three-flow-view" hidden>
       <div id="viewport" aria-label="Interactive W11 wind-tunnel visualization"></div>
       <div id="loading" role="status"><span></span>Loading W11 and solved airflow…</div>
 
@@ -116,6 +125,7 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20261115-fuller-airflow"></script>
+  <script type="module" src="wind-tunnel.js?v=20261115-integrated"></script>
+  <script src="lab-view-switch.js?v=20261115-integrated"></script>
 </body>
 </html>
