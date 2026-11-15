@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+const AIRFLOW_DENSITY_MULTIPLIER = 100;
 const CAR_PATH = '../references/mercedec-f1-2020/mercedec-f1-2020.glb';
 const FLOW_PATH = '../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/CFD_RESULTS/SOLVER_DERIVED_STREAMLINES.json';
 const CFD_MIN = new THREE.Vector3(-2.690099, -0.990111, 0.029905);
@@ -214,6 +215,20 @@ function addCar(gltf) {
   vehicleRig.add(car);
 }
 
+// Shared lookup tables keep dense particles inexpensive to animate.
+const airflowCurveSamples = new WeakMap();
+const airflowSamplePoint = new THREE.Vector3();
+function sampleAirflowCurve(curve, phase) {
+  let samples = airflowCurveSamples.get(curve);
+  if (!samples) {
+    samples = curve.getPoints(1024);
+    airflowCurveSamples.set(curve, samples);
+  }
+  const t = Math.max(0, Math.min(1, phase)) * (samples.length - 1);
+  const i = Math.min(Math.floor(t), samples.length - 2);
+  return airflowSamplePoint.copy(samples[i]).lerp(samples[i + 1], t - i);
+}
+
 function addFlow(data) {
   const positions = [];
   const colors = [];
@@ -241,10 +256,10 @@ function addFlow(data) {
     line.userData.region = displayRegion; flowGroup.add(line);
     lineRecords.push({ line, region: displayRegion });
 
-    const count = displayRegion === 'underfloor' ? 9 : 5;
+    const count = (displayRegion === 'underfloor' ? 9 : 5) * AIRFLOW_DENSITY_MULTIPLIER;
     for (let i = 0; i < count; i++) {
       particles.push({ curve, phase: (i / count + lineIndex * .037) % 1, speed: .035 + (lineIndex % 7) * .0025, region: displayRegion });
-      const p = curve.getPoint(i / count); positions.push(p.x, p.y, p.z); colors.push(base.r, base.g, base.b);
+      const p = sampleAirflowCurve(curve, i / count); positions.push(p.x, p.y, p.z); colors.push(base.r, base.g, base.b);
     }
 
     if (displayRegion === 'underfloor') {
@@ -274,10 +289,10 @@ function addFlow(data) {
       flowGroup.add(trace);
       lineRecords.push({ line: trace, region: 'front_floor_diffuser' });
 
-      const traceCount = 14;
+      const traceCount = 14 * AIRFLOW_DENSITY_MULTIPLIER;
       for (let i = 0; i < traceCount; i++) {
         particles.push({ curve: compositeCurve, phase: (i / traceCount + lineIndex * .051) % 1, speed: .041 + (lineIndex % 5) * .0028, region: 'front_floor_diffuser' });
-        const p = compositeCurve.getPoint(i / traceCount);
+        const p = sampleAirflowCurve(compositeCurve, i / traceCount);
         positions.push(p.x, p.y, p.z);
         colors.push(regionColor.front_floor_diffuser.r, regionColor.front_floor_diffuser.g, regionColor.front_floor_diffuser.b);
       }
@@ -286,13 +301,13 @@ function addFlow(data) {
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
   geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-  const material = new THREE.PointsMaterial({ size: 1.75, sizeAttenuation: true, vertexColors: true, transparent: true, opacity: .98, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false });
+  const material = new THREE.PointsMaterial({ size: .75, sizeAttenuation: true, vertexColors: true, transparent: true, opacity: .55, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false });
   particleCloud = new THREE.Points(geometry, material); flowGroup.add(particleCloud);
   document.querySelector('#path-readout').textContent = data.streamline_count;
 }
 
 function addAmbient() {
-  const count = 620;
+  const count = 620 * AIRFLOW_DENSITY_MULTIPLIER;
   const positions = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
     positions[i * 3] = THREE.MathUtils.randFloat(-245, 245);
@@ -300,7 +315,7 @@ function addAmbient() {
     positions[i * 3 + 2] = THREE.MathUtils.randFloat(-87, 87);
   }
   const geometry = new THREE.BufferGeometry(); geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  ambientCloud = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x8bdff7, size: .46, transparent: true, opacity: .34, depthWrite: false, blending: THREE.AdditiveBlending }));
+  ambientCloud = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x8bdff7, size: .46, transparent: true, opacity: .12, depthWrite: false, blending: THREE.AdditiveBlending }));
   tunnelGroup.add(ambientCloud);
 }
 
@@ -386,7 +401,7 @@ function updateParticles(dt) {
       positions.setXYZ(i, 9999, 9999, 9999);
       continue;
     }
-    const point = item.curve.getPoint(item.phase);
+    const point = sampleAirflowCurve(item.curve, item.phase);
     positions.setXYZ(i, point.x, point.y, point.z);
   }
   positions.needsUpdate = true;

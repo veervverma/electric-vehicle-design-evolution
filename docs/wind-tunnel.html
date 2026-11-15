@@ -41,7 +41,7 @@
           <label for="speed">Air speed <output id="speed-output">300 km/h</output></label>
           <input id="speed" type="range" min="60" max="330" step="5" value="300">
 
-          <label for="density">Flow-point density <output id="density-output">75%</output></label>
+          <label for="density">Flow-point density · 100× <output id="density-output">75%</output></label>
           <input id="density" type="range" min="20" max="100" step="5" value="75">
 
           <div class="control-label">Camera</div>
@@ -70,7 +70,7 @@
           <p class="equation-caption">Continuity · conservation of mass</p>
           <math display="block" aria-label="Divergence of velocity u equals zero"><mo>∇</mo><mo>·</mo><mi mathvariant="bold">u</mi><mo>=</mo><mn>0</mn></math>
           <p class="equation-key"><b>u</b> velocity · <i>t</i> time · <i>p</i> pressure<br>ρ density · ν = μ/ρ kinematic viscosity<br>∇ gradient · ∇² Laplacian</p>
-          <p class="equation-note">Governing equations, with body forces omitted. The archived CFD uses a steady RANS/SST approximation; particle animation shows airflow paths.</p>
+          <p class="equation-note">Governing equations, with body forces omitted. The archived CFD uses a steady RANS/SST approximation. Particle density is 100×; CFD mesh resolution is unchanged.</p>
         </section>
       </aside>
 
@@ -114,6 +114,6 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20260906-live-wheels"></script>
+  <script type="module" src="wind-tunnel.js?v=20261115-density100"></script>
 </body>
 </html>
