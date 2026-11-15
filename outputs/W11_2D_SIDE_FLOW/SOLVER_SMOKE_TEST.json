@@ -1,0 +1,10 @@
+{
+  "uniform_field_preservation": true,
+  "solid_velocity_zero": true,
+  "steps": 3200,
+  "Re": 182.38307189941406,
+  "maxMach": 0.11552841754234373,
+  "maxDensityError": 0.03423774801194668,
+  "peakSpeedX": 0.0666450634598732,
+  "claim": "Numerical smoke tests only; no grid-convergence or physical validation"
+}

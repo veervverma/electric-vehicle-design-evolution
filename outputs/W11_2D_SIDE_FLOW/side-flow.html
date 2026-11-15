@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W11 · 2D Flow Studio</title><link rel="stylesheet" href="side-flow.css?v=1"></head>
+<body><header><a href="wind-tunnel.html">← 3D W11 LAB</a><span>VEER VERMA · FLOW STUDIES</span></header>
+<main><div class="title"><div><p class="eyebrow">COMPUTED IN YOUR BROWSER</p><h1>Air around the W11.</h1><p>A side-view flow experiment, inspired by the Matheorems reference.</p></div><span id="state" role="status">Loading W11 outline…</span></div>
+<section class="studio">
+ <div class="scene">
+  <div class="equations"><span>INCOMPRESSIBLE NAVIER–STOKES · LOW-MACH APPROXIMATION</span><div>∂<b>u</b>/∂t + (<b>u</b> · ∇)<b>u</b> = −∇p/ρ + ν∇²<b>u</b><em>∇ · <b>u</b> = 0</em></div></div>
+  <canvas id="flow" aria-label="Live computed two-dimensional flow around a projected W11 silhouette"></canvas>
+  <div class="legend"><span id="legend-label">SPEED / INLET SPEED</span><i></i><span>0</span><span>0.75</span><span>1.5+</span></div>
+  <div class="stats"><span>GRID <b>480 × 144</b></span><span>ITERATION <b id="iteration">0</b></span><span>Re <b id="re">—</b></span><span>MAX Ma <b id="mach">—</b></span><span>MAX Δρ/ρ <b id="rho">—</b></span></div>
+ </div>
+ <aside><h2>Flow controls</h2>
+ <label>Particle density <output id="density-out">70%</output><input id="density" type="range" min="1" max="100" value="70"></label>
+ <label>Trail length <output id="trail-out">65%</output><input id="trail" type="range" min="5" max="95" value="65"></label>
+ <label>Inlet speed <output id="speed-out">0.045 lu/step</output><input id="speed" type="range" min="20" max="60" step="1" value="45"></label>
+ <label>Kinematic viscosity <output id="viscosity-out">0.045 lu²/step</output><input id="viscosity" type="range" min="35" max="120" step="1" value="45"></label>
+ <label>Solver steps / update <output id="rate-out">24</output><input id="rate" type="range" min="4" max="64" step="4" value="24"></label>
+ <label>Color field<select id="field"><option value="speed">Speed · purple to yellow</option><option value="vorticity">Vorticity · blue / red</option><option value="pressure">Relative pressure · blue / red</option></select></label>
+ <label class="check"><input type="checkbox" id="particles" checked> Show particle trails</label>
+ <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset flow</button></div>
+ <p class="control-note">Changes to speed or viscosity evolve the computed field. Density and trails change its presentation.</p>
+ </aside>
+</section>
+<section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at reduced Reynolds number. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
+<footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
+</main><script type="module" src="side-flow.js?v=1"></script></body></html>
