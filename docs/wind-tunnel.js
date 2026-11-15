@@ -317,6 +317,7 @@ function addAmbient() {
   const geometry = new THREE.BufferGeometry(); geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   ambientCloud = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x8bdff7, size: .46, transparent: true, opacity: .12, depthWrite: false, blending: THREE.AdditiveBlending }));
   tunnelGroup.add(ambientCloud);
+  updateParticleDensity();
 }
 
 function updateTelemetry() {
@@ -396,7 +397,7 @@ function updateParticles(dt) {
     const item = particles[i];
     if (running) item.phase = (item.phase + dt * item.speed * flowMultiplier) % 1;
     const modeVisible = flowVisibleInMode(item.region);
-    const densityVisible = ((i * 37) % 101) / 100 < densityFraction;
+    const densityVisible = ((i * 37) % 100) / 100 < densityFraction;
     if (!modeVisible || !densityVisible || currentMode === 'inspect') {
       positions.setXYZ(i, 9999, 9999, 9999);
       continue;
@@ -493,7 +494,16 @@ function resize() {
 new ResizeObserver(resize).observe(host);
 
 document.querySelector('#speed').addEventListener('input', event => { windSpeed = Number(event.target.value); updateTelemetry(); });
-document.querySelector('#density').addEventListener('input', event => { densityFraction = Number(event.target.value) / 100; document.querySelector('#density-output').textContent = `${event.target.value}%`; });
+function updateParticleDensity() {
+  const slider = document.querySelector('#density');
+  densityFraction = Number(slider.value) / 100;
+  document.querySelector('#density-output').textContent = slider.value + '%';
+  slider.setAttribute('aria-valuetext', slider.value + '% of maximum airflow particles');
+  if (ambientCloud) {
+    ambientCloud.geometry.setDrawRange(0, Math.round(ambientCloud.geometry.attributes.position.count * densityFraction));
+  }
+}
+document.querySelector('#density').addEventListener('input', updateParticleDensity);
 document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => setMode(button.dataset.mode)));
 document.querySelectorAll('[data-camera]').forEach(button => button.addEventListener('click', () => setCamera(button.dataset.camera)));
 document.querySelector('#trails').addEventListener('change', event => lineRecords.forEach(record => record.line.visible = event.target.checked && flowVisibleInMode(record.region)));

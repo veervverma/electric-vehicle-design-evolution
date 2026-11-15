@@ -41,8 +41,9 @@
           <label for="speed">Air speed <output id="speed-output">300 km/h</output></label>
           <input id="speed" type="range" min="60" max="330" step="5" value="300">
 
-          <label for="density">Flow-point density · 100× <output id="density-output">75%</output></label>
-          <input id="density" type="range" min="20" max="100" step="5" value="75">
+          <label for="density">Airflow particle density <output id="density-output">75%</output></label>
+          <input id="density" type="range" min="1" max="100" step="1" value="75" aria-describedby="density-help">
+          <small id="density-help" style="color:#9eb6c2;font-size:9px;line-height:1.5">1% sparse → 100% maximum · controls car and background particles · maximum = 100× original</small>
 
           <div class="control-label">Camera</div>
           <div class="button-grid camera-buttons">
@@ -114,6 +115,6 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20261115-density100"></script>
+  <script type="module" src="wind-tunnel.js?v=20261115-density-slider"></script>
 </body>
 </html>
