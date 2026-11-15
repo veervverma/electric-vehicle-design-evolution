@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const AIRFLOW_DENSITY_MULTIPLIER = 100;
+const AIRFLOW_DENSITY_MULTIPLIER = 400;
 const CAR_PATH = '../references/mercedec-f1-2020/mercedec-f1-2020.glb';
 const FLOW_PATH = '../outputs/W11_2020_GLBDERIVED_CFD_V2_300KPH/CFD_RESULTS/SOLVER_DERIVED_STREAMLINES.json';
 const CFD_MIN = new THREE.Vector3(-2.690099, -0.990111, 0.029905);
@@ -93,7 +93,7 @@ let ambientCloud;
 let currentMode = 'drive';
 let running = true;
 let windSpeed = 300;
-let densityFraction = .75;
+let densityFraction = 1;
 let clock = new THREE.Clock();
 let cameraGoal = null;
 let driveClock = 0;
@@ -301,21 +301,21 @@ function addFlow(data) {
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
   geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-  const material = new THREE.PointsMaterial({ size: .75, sizeAttenuation: true, vertexColors: true, transparent: true, opacity: .55, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false });
+  const material = new THREE.PointsMaterial({ size: 2.2, sizeAttenuation: false, vertexColors: true, transparent: true, opacity: .82, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false });
   particleCloud = new THREE.Points(geometry, material); flowGroup.add(particleCloud);
   document.querySelector('#path-readout').textContent = data.streamline_count;
 }
 
 function addAmbient() {
-  const count = 620 * AIRFLOW_DENSITY_MULTIPLIER;
+  const count = 310 * AIRFLOW_DENSITY_MULTIPLIER;
   const positions = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
     positions[i * 3] = THREE.MathUtils.randFloat(-245, 245);
-    positions[i * 3 + 1] = THREE.MathUtils.randFloat(3, 112);
-    positions[i * 3 + 2] = THREE.MathUtils.randFloat(-87, 87);
+    positions[i * 3 + 1] = THREE.MathUtils.randFloat(3, i % 4 ? 65 : 112);
+    positions[i * 3 + 2] = THREE.MathUtils.randFloat(i % 4 ? -50 : -87, i % 4 ? 50 : 87);
   }
   const geometry = new THREE.BufferGeometry(); geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  ambientCloud = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x8bdff7, size: .46, transparent: true, opacity: .12, depthWrite: false, blending: THREE.AdditiveBlending }));
+  ambientCloud = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x8bdff7, size: 1.4, sizeAttenuation: false, transparent: true, opacity: .30, depthWrite: false, blending: THREE.AdditiveBlending }));
   tunnelGroup.add(ambientCloud);
   updateParticleDensity();
 }

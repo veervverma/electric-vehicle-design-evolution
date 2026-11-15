@@ -41,9 +41,9 @@
           <label for="speed">Air speed <output id="speed-output">300 km/h</output></label>
           <input id="speed" type="range" min="60" max="330" step="5" value="300">
 
-          <label for="density">Airflow particle density <output id="density-output">75%</output></label>
-          <input id="density" type="range" min="1" max="100" step="1" value="75" aria-describedby="density-help">
-          <small id="density-help" style="color:#9eb6c2;font-size:9px;line-height:1.5">1% sparse → 100% maximum · controls car and background particles · maximum = 100× original</small>
+          <label for="density">Airflow particle density <output id="density-output">100%</output></label>
+          <input id="density" type="range" min="1" max="100" step="1" value="100" aria-describedby="density-help">
+          <small id="density-help" style="color:#9eb6c2;font-size:9px;line-height:1.5">1% sparse → 100% maximum · controls car and background particles · maximum = 400× original path particles; brighter, larger markers</small>
 
           <div class="control-label">Camera</div>
           <div class="button-grid camera-buttons">
@@ -71,7 +71,7 @@
           <p class="equation-caption">Continuity · conservation of mass</p>
           <math display="block" aria-label="Divergence of velocity u equals zero"><mo>∇</mo><mo>·</mo><mi mathvariant="bold">u</mi><mo>=</mo><mn>0</mn></math>
           <p class="equation-key"><b>u</b> velocity · <i>t</i> time · <i>p</i> pressure<br>ρ density · ν = μ/ρ kinematic viscosity<br>∇ gradient · ∇² Laplacian</p>
-          <p class="equation-note">Governing equations, with body forces omitted. The archived CFD uses a steady RANS/SST approximation. Particle density is 100×; CFD mesh resolution is unchanged.</p>
+          <p class="equation-note">Governing equations, with body forces omitted. The archived CFD uses a steady RANS/SST approximation. Path particle count is 400× the original; CFD mesh resolution is unchanged.</p>
         </section>
       </aside>
 
@@ -115,6 +115,6 @@
     </footer>
   </main>
 
-  <script type="module" src="wind-tunnel.js?v=20261115-density-slider"></script>
+  <script type="module" src="wind-tunnel.js?v=20261115-fuller-airflow"></script>
 </body>
 </html>
