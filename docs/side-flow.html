@@ -20,9 +20,10 @@
  <label>Color field<select id="field"><option value="speed">Speed · purple to yellow</option><option value="vorticity">Vorticity · blue / red</option><option value="pressure">Relative pressure · blue / red</option></select></label>
  <label class="check"><input type="checkbox" id="particles" checked> Show particle trails</label>
  <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset flow</button></div>
- <p class="control-note">Changes to speed or viscosity evolve the computed field. Density and trails change its presentation.</p>
+ <p class="control-note">Particles are restricted to the lower half: car and wake. The upper velocity color field is retained.</p>
+ <p class="control-note"><b>Why a smooth wake?</b> Default Re ≈ 182, a coarse 2D projection and numerical diffusion limit wake detail. At default speed, one car-length flow time takes ≈4,050 solver steps. Allow several flow times. Vorticity reveals shear and rotation; it does not by itself prove an eddy. This view does not resolve a real F1 car’s turbulent 3D wake.</p>
  </aside>
 </section>
 <section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at reduced Reynolds number. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
 <footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
-</main><script type="module" src="side-flow.js?v=integrated1"></script></body></html>
+</main><script type="module" src="side-flow.js?v=wake-focus1"></script></body></html>

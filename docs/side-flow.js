@@ -5,9 +5,19 @@ const worker=new Worker('side-flow-worker.js?v=1');
 let epoch=0;
 let embedActive=true;
 let geo,ux,uy,rho,image,mask,latest,running=true,busy=false,failed=false,last=performance.now(),seed=12345;
+const FLOW_VIEW={x:41.6,y:50.88,width:310.4,height:93.12};
 const MAX_PARTICLES=18000,px=new Float32Array(MAX_PARTICLES),py=new Float32Array(MAX_PARTICLES),age=new Uint16Array(MAX_PARTICLES);
 function random(){seed=(Math.imul(seed,1664525)+1013904223)|0;return (seed>>>0)/4294967296;}
-function spawn(i){for(let k=0;k<20;k++){px[i]=random()*(geo.nx-2)+1;py[i]=random()*(geo.ny-3)+1;if(!mask[Math.floor(py[i])*geo.nx+Math.floor(px[i])])break;}age[i]=Math.floor(random()*120);}
+function particleCeiling(){return geo.ny-FLOW_VIEW.y-FLOW_VIEW.height/2;}
+function spawn(i){
+ // Seed only the visible car/wake band; upper-half markers are intentionally omitted.
+ for(let k=0;k<40;k++){
+  px[i]=FLOW_VIEW.x+1+random()*(FLOW_VIEW.width-2);
+  py[i]=1+random()*(particleCeiling()-2);
+  if(!mask[Math.floor(py[i])*geo.nx+Math.floor(px[i])])break;
+ }
+ age[i]=Math.floor(random()*120);
+}
 const stops=[[38,16,68],[122,35,124],[216,79,97],[255,178,62],[255,255,176]];
 const palette=Array.from({length:256},(_,i)=>{const t=i/255*4,j=Math.min(3,Math.floor(t)),f=t-j;return stops[j].map((v,k)=>Math.round(v*(1-f)+stops[j+1][k]*f));});
 function diverging(t){t=Math.max(-1,Math.min(1,t));const white=[239,227,224],end=t<0?[42,91,203]:[225,57,82];return white.map((v,k)=>Math.round(v+(end[k]-v)*Math.abs(t)));}
@@ -65,18 +75,22 @@ function animate(now){
    const count=Math.round(MAX_PARTICLES*Number($('#density').value)/100),sx=trails.width/geo.nx,sy=trails.height/geo.ny;
    tctx.strokeStyle='rgba(255,253,235,.68)';tctx.lineWidth=1;tctx.beginPath();
    for(let i=0;i<count;i++){
-    let v=sample(px[i],py[i]);if(!v||age[i]++>210){spawn(i);continue;}
+    let v=sample(px[i],py[i]);if(!v||py[i]>=particleCeiling()||age[i]++>210){spawn(i);continue;}
     const step=dt*340,x=px[i],y=py[i],nx=x+v[0]*step,ny=y+v[1]*step;
     // Check the entire short segment before drawing it.
-    if(!sample((x+nx)*.5,(y+ny)*.5)||!sample(nx,ny)){spawn(i);continue;}
+    if(ny>=particleCeiling()||!sample((x+nx)*.5,(y+ny)*.5)||!sample(nx,ny)){spawn(i);continue;}
     px[i]=nx;py[i]=ny;tctx.moveTo(x*sx,(geo.ny-y)*sy);tctx.lineTo(nx*sx,(geo.ny-ny)*sy);
    }
    tctx.stroke();
   }else tctx.clearRect(0,0,trails.width,trails.height);
  }
- const viewX=41.6,viewY=50.88,viewW=310.4,viewH=93.12;
+ const {x:viewX,y:viewY,width:viewW,height:viewH}=FLOW_VIEW;
  ctx.imageSmoothingEnabled=true;ctx.drawImage(heat,viewX,viewY,viewW,viewH,0,0,canvas.width,canvas.height);
- if($('#particles').checked)ctx.drawImage(trails,viewX*3,viewY*3,viewW*3,viewH*3,0,0,canvas.width,canvas.height);
+ if($('#particles').checked){
+  // Clip historical trails as well: no stale upper-half dots after advection.
+  ctx.save();ctx.beginPath();ctx.rect(0,canvas.height/2,canvas.width,canvas.height/2);ctx.clip();
+  ctx.drawImage(trails,viewX*3,viewY*3,viewW*3,viewH*3,0,0,canvas.width,canvas.height);ctx.restore();
+ }
  // Resolve silhouette edges directly from the W11 mask.
  ctx.fillStyle='#9094a3';
  for(const i of geo.solid_indices){const x=i%geo.nx,y=Math.floor(i/geo.nx);if(!mask[i+geo.nx]||!mask[i-geo.nx]||!mask[i-1]||!mask[i+1])ctx.fillRect((x-viewX)*canvas.width/viewW,(geo.ny-1-y-viewY)*canvas.height/viewH,canvas.width/viewW,1);}
