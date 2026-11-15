@@ -1,0 +1,16 @@
+{
+  U: 0.06,
+  nu: 0.035,
+  iterations: 1600,
+  maxMach: 0.13952236461587225,
+  maxDensityError: 0.04680165648460388
+}
+{
+  U: 0.02,
+  nu: 0.12,
+  iterations: 1600,
+  maxMach: 0.10438281818654814,
+  maxDensityError: 0.019591104239225388
+}
+
+Both slider extremes remained finite over 1,600 steps. This is a stability smoke test, not validation.
