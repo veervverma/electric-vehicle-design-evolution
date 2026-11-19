@@ -10,7 +10,8 @@ if(new URLSearchParams(location.search).has('embed')){
 let embedActive=true,loadingGrid=false,gridRequest=0;
 let geo,ux,uy,rho,image,mask,latest,running=true,busy=false,failed=false,last=performance.now(),seed=12345;
 const FLOW_VIEW={x:41.6,y:50.88,width:310.4,height:93.12};
-const MAX_PARTICLES=18000,px=new Float32Array(MAX_PARTICLES),py=new Float32Array(MAX_PARTICLES),age=new Uint16Array(MAX_PARTICLES);
+const journey=new URLSearchParams(location.search).has('journey');
+const MAX_PARTICLES=journey?36000:18000,px=new Float32Array(MAX_PARTICLES),py=new Float32Array(MAX_PARTICLES),age=new Uint16Array(MAX_PARTICLES);
 function random(){seed=(Math.imul(seed,1664525)+1013904223)|0;return (seed>>>0)/4294967296;}
 function particleBand(){
  return geo.particle_band_m?geo.particle_band_m.map(z=>z/geo.dx_m):[1,geo.ny-FLOW_VIEW.y-FLOW_VIEW.height/2];
@@ -175,7 +176,17 @@ async function loadGrid(){
   const response=await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-projection-')+$('#grid').value+'.json');
   if(!response.ok)throw Error('Selected W11 grid unavailable');
   const loaded=await response.json();if(ticket!==gridRequest)return;
-  geo=loaded;canvas.setAttribute('aria-label',(geo.title||'Exterior side projection')+' · calculated 2D airflow');mask=new Uint8Array(geo.nx*geo.ny);geo.solid_indices.forEach(i=>mask[i]=1);
+  geo=loaded;
+  if(journey){
+   const top=$('#region').value==='cooling';
+   geo={...geo,view_m:{xmin:-3.7,xmax:6.3,zmin:top?.75:0,zmax:top?3.75:3},
+    particle_band_m:top?[.76,3.74]:[.005,1.35],
+    seed_regions_m:top?[[-3.6,-2.7,.85,3.65],[-2.7,3.1,1,3.5],[3.1,6.1,.85,3.65]]:[[-3.6,-2.7,.01,1.3],[-2.7,3.1,.01,.32],[3.1,6.1,.01,1.3]],
+    vector_box_m:top?[-3.1,5.5,1,3.5]:[-3.1,5.5,.03,1.3],
+    axis_note:top?'TOP PROJECTION · external tyre / sidepod / floor-edge flow · no internal ducts':'SIDE PROJECTION · front wing / tyres / lower-car / diffuser wake · projected floor gaps may be blocked',
+    labels:top?[{x:-2.8,z:3.55,text:'FRONT WING'},{x:-1.9,z:1.02,text:'FRONT TYRES'},{x:.2,z:3.48,text:'SIDEPODS / FLOOR EDGES'},{x:3.4,z:3.4,text:'REAR WAKE'}]:[{x:-2.9,z:1.2,text:'FRONT WING + TYRES'},{x:-.5,z:1.55,text:'CHASSIS / SIDEPOD REGION'},{x:.3,z:.22,text:'PROJECTED FLOOR'},{x:3.25,z:1.2,text:'DIFFUSER / REAR WAKE'}]};
+  }
+  canvas.setAttribute('aria-label',(geo.title||'Exterior side projection')+' · calculated 2D airflow');mask=new Uint8Array(geo.nx*geo.ny);geo.solid_indices.forEach(i=>mask[i]=1);
   const scale=geo.nx/480;
   if(geo.view_m){
    const v=geo.view_m;Object.assign(FLOW_VIEW,{x:(v.xmin-geo.xmin_m)/geo.dx_m,y:geo.ny-v.zmax/geo.dx_m,width:(v.xmax-v.xmin)/geo.dx_m,height:(v.zmax-v.zmin)/geo.dx_m});
@@ -189,6 +200,16 @@ async function loadGrid(){
  }catch(e){loadingGrid=false;failed=true;$('#state').textContent=e.message;}
 }
 $('#field').onchange=drawHeat;
+window.addEventListener('message',event=>{
+ if(event.source!==parent||event.origin!==location.origin||event.data?.type!=='w11-journey-control')return;
+ const {name,value}=event.data;
+ if(['density','trail','rate','speed','target-re'].includes(name)){const el=$('#'+name);el.value=String(value);el.oninput();}
+ else if(name==='grid'){$('#grid').value=String(value);loadGrid();}
+ else if(name==='field'){$('#field').value=value;drawHeat();}
+ else if(name==='running'){running=Boolean(value);$('#pause').textContent=running?'Pause':'Resume';if(running)request();}
+ else if(name==='reset')reset();
+});
+if(journey){$('#density').value=100;$('#density-out').textContent='100%';$('#trail').value=80;$('#trail-out').textContent='80%';$('#grid').value='480';}
 const initialRegion=new URLSearchParams(location.search).get('region');
 if(['underfloor','cooling'].includes(initialRegion))$('#region').value=initialRegion;
 await loadGrid();

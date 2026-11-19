@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W11 · 2D Flow Studio</title><link rel="stylesheet" href="side-flow.css?v=20261118-fine"></head>
+<title>W11 · 2D Flow Studio</title><link rel="stylesheet" href="side-flow.css?v=20261118-fine"><style>html.journey main{padding:0}html.journey .studio{display:block;min-height:0;border:0;border-radius:0}html.journey aside,html.journey .equations,html.journey .legend{display:none}html.journey .scene{padding:0}html.journey .axis-note{margin:8px 15px;font-size:11px}html.journey .stats{padding:8px 15px;gap:10px}html.journey #phase-note{font-size:10px}</style></head>
 <body>
-<script>if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embedded');</script><header><a href="wind-tunnel.html">← 3D W11 LAB</a><span>VEER VERMA · FLOW STUDIES</span></header>
+<script>if(new URLSearchParams(location.search).has('journey'))document.documentElement.classList.add('journey');if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embedded');</script><header><a href="wind-tunnel.html">← 3D W11 LAB</a><span>VEER VERMA · FLOW STUDIES</span></header>
 <main><div class="title"><div><p class="eyebrow">COMPUTED IN YOUR BROWSER</p><h1>Air around the W11.</h1><p>A side-view flow experiment, inspired by the Matheorems reference.</p></div><span id="state" role="status">Loading W11 outline…</span></div>
 <section class="studio">
  <div class="scene">
@@ -34,4 +34,4 @@
 </section>
 <section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 two-relaxation-time lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at a chosen reduced Reynolds number, with selectable independently rasterized grids. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
 <footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
-</main><script type="module" src="side-flow.js?v=20261118-projection1"></script></body></html>
+</main><script type="module" src="side-flow.js?v=20261118-journey1"></script></body></html>
