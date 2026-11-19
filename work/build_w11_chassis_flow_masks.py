@@ -46,7 +46,7 @@ for nx in [480,960,1440]:
   view_m=dict(xmin=-3.2,xmax=5.2,zmin=0,zmax=1.05),particle_band_m=[.005,.55],
   seed_regions_m=[[-3,-1,.015,.25],[-.8,2.6,.015,.20],[2.7,4.9,.03,.65]],
   vector_box_m=[-2.4,4.7,.03,.50],
-  labels=[dict(x=-1.9,z=.40,text='Floor entry'),dict(x=.3,z=.45,text='Solid floor above road gap'),dict(x=2.75,z=.65,text='Diffuser / exit')],
+  labels=[dict(x=-1.1,z=.18,text='Floor entry'),dict(x=.3,z=.45,text='Solid floor above road gap'),dict(x=2.55,z=.25,text='Diffuser / exit')],
   axis_note='Longitudinal section; vertical scale enlarged for visibility. Air flows through fluid gaps, never through solid floor.',
   solver_surface_sha256=hashlib.sha256(shellpath.read_bytes()).hexdigest())),
  ('cooling',cooling.astype(bool),dict(

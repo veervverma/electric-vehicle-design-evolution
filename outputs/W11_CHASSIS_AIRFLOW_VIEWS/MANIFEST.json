@@ -36,17 +36,17 @@
   },
   {
     "path": "w11-underfloor-mask-1440.json",
-    "sha256": "ed0f0a8336a2d08feff2ba234b50aec9741b305d3e48b13f3b58c9a96ecf3ea0",
-    "bytes": 69670
+    "sha256": "754ec29ae62059bde2c05f8d271d3d36791f791b0e64ad42d8794192b07a6575",
+    "bytes": 69671
   },
   {
     "path": "w11-underfloor-mask-480.json",
-    "sha256": "97627885b22e4e018e903d609322295fee5191368ee2fc46f91935b9ab613a9d",
-    "bytes": 7538
+    "sha256": "618301f7d03a6a217f116c0158445fc1fad9579362e586237eacb6dd8547fd93",
+    "bytes": 7539
   },
   {
     "path": "w11-underfloor-mask-960.json",
-    "sha256": "8bcf58419e4da7d9a62d9d17bb80d89a1f7d13690c7cd2124bafe38ae1a4e002",
-    "bytes": 30648
+    "sha256": "7742e12e0e72b409b45323ba4a0fdbdbc9594106804ba3a18ea2b3c0dbe7904e",
+    "bytes": 30649
   }
 ]
