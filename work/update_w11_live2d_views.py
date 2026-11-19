@@ -12,9 +12,9 @@ s=s.replace("geo.region?' Passage velocity arrows'","geo.region?' Region velocit
 (out/'side-flow.js').write_text(s)
 s=head('docs/side-flow.html').replace('<option value="exterior">Exterior · side projection</option>','<option value="exterior">Exterior · side projection</option><option value="underfloor">Lower car · same side projection</option><option value="cooling">Sidepods · exterior top projection</option>').replace('20261118-source1','20261118-projection1').replace('beneath the floor or inside the assumed cooling channels','near the lower car or around the exterior sidepods')
 (out/'side-flow.html').write_text(s)
-s=head('docs/wind-tunnel.html').replace('W11 FLOOR / DIFFUSER','LIVE 2D · LOWER CAR').replace('W11 SIDEPOD INSPECTION','LIVE 2D · SIDEPODS').replace('lab-view-switch.js?v=20261118-source1','lab-view-switch.js?v=20261118-projection1').replace('side-flow.html?embed=1&v=20261118-passages','side-flow.html?embed=1&v=20261118-projection1')
+s=head('docs/wind-tunnel.html').replace('W11 FLOOR / DIFFUSER','LIVE 2D · LOWER CAR').replace('W11 SIDEPOD INSPECTION','LIVE 2D · SIDEPODS').replace('lab-view-switch.js?v=20261118-source1','lab-view-switch.js?v=20261118-projection1').replace('side-flow.html?embed=1&amp;v=20261118-passages','side-flow.html?embed=1&amp;v=20261118-projection1')
 (out/'wind-tunnel.html').write_text(s)
 for p in out.iterdir():
  if p.name!='wind-tunnel.html':(root/'docs'/p.name).write_text(p.read_text())
 # Preserve unrelated local edits.
-p=root/'docs/wind-tunnel.html';s=p.read_text().replace('W11 FLOOR / DIFFUSER','LIVE 2D · LOWER CAR').replace('W11 SIDEPOD INSPECTION','LIVE 2D · SIDEPODS').replace('lab-view-switch.js?v=20261118-source1','lab-view-switch.js?v=20261118-projection1').replace('side-flow.html?embed=1&v=20261118-passages','side-flow.html?embed=1&v=20261118-projection1');p.write_text(s)
+p=root/'docs/wind-tunnel.html';s=p.read_text().replace('W11 FLOOR / DIFFUSER','LIVE 2D · LOWER CAR').replace('W11 SIDEPOD INSPECTION','LIVE 2D · SIDEPODS').replace('lab-view-switch.js?v=20261118-source1','lab-view-switch.js?v=20261118-projection1').replace('side-flow.html?embed=1&amp;v=20261118-passages','side-flow.html?embed=1&amp;v=20261118-projection1');p.write_text(s)
