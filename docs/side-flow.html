@@ -14,7 +14,7 @@
   <div class="stats"><span>GRID <b id="grid-readout">960 × 288</b></span><span>ITERATION <b id="iteration">0</b></span><span>Re <b id="re">—</b></span><span>FLOW TIMES <b id="flow-times">0</b></span><span>ν <b id="viscosity-readout">—</b></span><span>MAX Ma <b id="mach">—</b></span><span>MAX Δρ/ρ <b id="rho">—</b></span></div>
  </div>
  <aside><h2>Flow region and controls</h2>
- <label>Flow region<select id="region"><option value="exterior">Exterior · side projection</option></select></label>
+ <label>Flow region<select id="region"><option value="exterior">Exterior · side projection</option><option value="underfloor">Lower car · same side projection</option><option value="cooling">Sidepods · exterior top projection</option></select></label>
  <p id="region-note" class="control-note"></p>
  <label>Solver grid<select id="grid"><option value="480">Coarse · 480 × 144</option><option value="960" selected>Fine · 960 × 288 (4× cells)</option><option value="1440">Ultra · 1440 × 432 (9× cells)</option></select></label>
  <label>Simulated Reynolds number <output id="target-re-out">1,000</output><input id="target-re" type="range" min="100" max="2000" step="50" value="1000"></label>
@@ -26,7 +26,7 @@
  <label class="check"><input type="checkbox" id="particles" checked> Show particle trails</label>
  <label class="check"><input type="checkbox" id="vectors" checked> Wake velocity arrows</label>
  <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset flow</button></div>
- <p class="control-note">Exterior tracers focus on the lower half. Passage modes seed fluid regions beneath the floor or inside the assumed cooling channels.</p>
+ <p class="control-note">Exterior tracers focus on the lower half. Passage modes seed fluid regions near the lower car or around the exterior sidepods.</p>
  <p class="control-note">ν = U × car length in cells / Re. Viscosity is recalculated when the grid changes, so refinement preserves the requested Re. Particle density does not change the fluid grid.</p>
  <details class="reference"><summary>Full-scale Reynolds comparison</summary><label>Reference speed (km/h)<input id="physical-speed" type="number" min="1" max="400" value="300"></label><p>Air: ρ = 1.225 kg/m³; μ = 1.7894 × 10⁻⁵ Pa·s. Source-model length sets L.</p><p>Reference Re: <b id="physical-re">—</b></p><p id="re-gap">Calculating…</p><p>This comparison does not set the solver to full-scale conditions. The browser experiment remains a reduced-Re 2D study.</p></details>
  <p class="control-note">No artificial vortices are added. Allow several car-length flow times for wake development. Finer grids cost more computation. Grid sensitivity and a stability check do not establish force accuracy.</p>
@@ -34,4 +34,4 @@
 </section>
 <section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 two-relaxation-time lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at a chosen reduced Reynolds number, with selectable independently rasterized grids. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
 <footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
-</main><script type="module" src="side-flow.js?v=20261118-source1"></script></body></html>
+</main><script type="module" src="side-flow.js?v=20261118-projection1"></script></body></html>

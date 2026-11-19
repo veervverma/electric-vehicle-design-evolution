@@ -12,13 +12,13 @@
     activeView=view;
     const notes={
       colored:'Exterior flow · 2D side projection · reduced-Reynolds-number educational study',
-      underfloor:'Original W11 GLB · underside inspection + legacy external flow paths · unverified visualization, not new CFD',
-      cooling:'Original W11 GLB · transparent sidepod inspection · internal ducts are not defined; no internal flow prediction',
+      underfloor:'LIVE 2D · original W11 side projection · lower-car tracer focus · NOT an internal floor section',
+      cooling:'LIVE 2D · original W11 top projection · EXTERIOR sidepod airflow only · internal cooling geometry unavailable',
       '3d':'Original 3D W11 particle presentation'
     };
     const summary=document.querySelector('#flow-region-summary');if(summary)summary.textContent=notes[view];
-    const isColored=view==='colored';
-    if(!isColored)window.dispatchEvent(new CustomEvent('w11-source-view',{detail:view}));
+    const isColored=view!=='3d';
+    if(!isColored)window.dispatchEvent(new CustomEvent('w11-source-view',{detail:'3d'}));
     colored.hidden=!isColored;three.hidden=isColored;
     const runState=document.querySelector('.run-state');if(runState)runState.hidden=isColored;
     coloredButton.setAttribute('aria-pressed',String(view==='colored'));

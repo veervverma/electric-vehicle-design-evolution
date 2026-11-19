@@ -1,0 +1,18 @@
+[
+  {
+    "region": "underfloor",
+    "steps": 960,
+    "re": 1000,
+    "maxMach": 0.08513390402269419,
+    "maxDensityDeviation": 0.007200663909316063,
+    "solidVelocityZero": true
+  },
+  {
+    "region": "cooling",
+    "steps": 960,
+    "re": 1000,
+    "maxMach": 0.11980461019115095,
+    "maxDensityDeviation": 0.011881181970238686,
+    "solidVelocityZero": true
+  }
+]

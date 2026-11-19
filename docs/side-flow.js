@@ -160,7 +160,7 @@ for(const name of ['density','trail','speed','target-re','rate']){
 $('#physical-speed').oninput=updatePhysicalReference;
 $('#grid').onchange=()=>loadGrid();
 function setRegion(region){
- if(region!=='exterior')return;
+ if(!['exterior','underfloor','cooling'].includes(region))return;
  $('#region').value=region;loadGrid();
  if(parent!==window)parent.postMessage({type:'w11-region-changed',region},location.origin);
 }
@@ -172,7 +172,7 @@ window.addEventListener('message',event=>{
 async function loadGrid(){
  const ticket=++gridRequest;loadingGrid=true;$('#state').textContent='Loading fine W11 geometry…';
  try{
-  const response=await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-mask-')+$('#grid').value+'.json');
+  const response=await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-projection-')+$('#grid').value+'.json');
   if(!response.ok)throw Error('Selected W11 grid unavailable');
   const loaded=await response.json();if(ticket!==gridRequest)return;
   geo=loaded;canvas.setAttribute('aria-label',(geo.title||'Exterior side projection')+' · calculated 2D airflow');mask=new Uint8Array(geo.nx*geo.ny);geo.solid_indices.forEach(i=>mask[i]=1);
@@ -182,7 +182,7 @@ async function loadGrid(){
   }else Object.assign(FLOW_VIEW,{x:41.6*scale,y:50.88*scale,width:310.4*scale,height:93.12*scale});
   $('#region-note').textContent=geo.provenance?geo.provenance+' '+geo.limitation:'Exterior side projection: depth-separated parts overlap; this cannot show internal passages.';
   $('#axis-note').textContent=geo.axis_note||'Side projection · computed exterior flow · particles shown in the lower half.';
-  $('#vectors').parentElement.lastChild.textContent=geo.region?' Passage velocity arrows':' Wake velocity arrows';
+  $('#vectors').parentElement.lastChild.textContent=geo.region?' Region velocity arrows':' Wake velocity arrows';
   heat.width=geo.nx;heat.height=geo.ny;image=hctx.createImageData(geo.nx,geo.ny);
   canvas.width=1920;canvas.height=576;trails.width=1920;trails.height=576;
   latest=null;ux=null;uy=null;rho=null;loadingGrid=false;updatePhysicalReference();reset();
@@ -190,6 +190,6 @@ async function loadGrid(){
 }
 $('#field').onchange=drawHeat;
 const initialRegion=new URLSearchParams(location.search).get('region');
-// Retired surrogate passage masks: only exterior projection remains in 2D.
+if(['underfloor','cooling'].includes(initialRegion))$('#region').value=initialRegion;
 await loadGrid();
 requestAnimationFrame(animate);
