@@ -160,7 +160,7 @@ for(const name of ['density','trail','speed','target-re','rate']){
 $('#physical-speed').oninput=updatePhysicalReference;
 $('#grid').onchange=()=>loadGrid();
 function setRegion(region){
- if(!['exterior','underfloor','cooling'].includes(region))return;
+ if(region!=='exterior')return;
  $('#region').value=region;loadGrid();
  if(parent!==window)parent.postMessage({type:'w11-region-changed',region},location.origin);
 }
@@ -190,6 +190,6 @@ async function loadGrid(){
 }
 $('#field').onchange=drawHeat;
 const initialRegion=new URLSearchParams(location.search).get('region');
-if(['underfloor','cooling'].includes(initialRegion))$('#region').value=initialRegion;
+// Retired surrogate passage masks: only exterior projection remains in 2D.
 await loadGrid();
 requestAnimationFrame(animate);

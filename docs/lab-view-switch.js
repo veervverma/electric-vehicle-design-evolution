@@ -12,18 +12,19 @@
     activeView=view;
     const notes={
       colored:'Exterior flow · 2D side projection · reduced-Reynolds-number educational study',
-      underfloor:'Underfloor / diffuser · actual section of the repaired W11 shell at y = +0.45 m · 2D calculation, not validated 3D floor performance',
-      cooling:'Cooling channels · hypothetical internal passages in the W11 top projection · calculated 2D flow, not Mercedes duct CAD or thermal analysis',
+      underfloor:'Original W11 GLB · underside inspection + legacy external flow paths · unverified visualization, not new CFD',
+      cooling:'Original W11 GLB · transparent sidepod inspection · internal ducts are not defined; no internal flow prediction',
       '3d':'Original 3D W11 particle presentation'
     };
     const summary=document.querySelector('#flow-region-summary');if(summary)summary.textContent=notes[view];
-    const isColored=view!=='3d';
+    const isColored=view==='colored';
+    if(!isColored)window.dispatchEvent(new CustomEvent('w11-source-view',{detail:view}));
     colored.hidden=!isColored;three.hidden=isColored;
     const runState=document.querySelector('.run-state');if(runState)runState.hidden=isColored;
     coloredButton.setAttribute('aria-pressed',String(view==='colored'));
     underButton.setAttribute('aria-pressed',String(view==='underfloor'));
     coolingButton.setAttribute('aria-pressed',String(view==='cooling'));
-    threeButton.setAttribute('aria-pressed',String(!isColored));
+    threeButton.setAttribute('aria-pressed',String(view==='3d'));
     frame.contentWindow?.postMessage({type:'w11-flow-visibility',active:isColored},location.origin);
     if(isColored)frame.contentWindow?.postMessage({type:'w11-flow-region',region:view==='colored'?'exterior':view},location.origin);
     if(updateUrl){
@@ -50,3 +51,5 @@
   frame.addEventListener('load',()=>choose(activeView,false));
   choose(new URLSearchParams(location.search).get('view')||'colored',false);
 })();
+
+window.addEventListener('w11-model-ready',()=>window.dispatchEvent(new CustomEvent('w11-source-view',{detail:new URLSearchParams(location.search).get('view')||'3d'})));
