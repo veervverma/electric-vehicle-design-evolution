@@ -10,3 +10,5 @@ Both replacement views load references/mercedec-f1-2020/mercedec-f1-2020.glb dir
 The standalone reduced-Re 2D exterior study is retained. It is not used for the replacement underside or sidepod views. A defensible internal cooling simulation requires additional internal geometry and boundary conditions. No new CFD or physical validation was performed in this correction.
 
 Model attribution: Kevin Love SketchFab / Tyler_Kevin, CC BY 4.0; https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63
+
+The correction also removes the old manually extended front-to-floor connectors. Particle interpolation follows straight segments between archived samples, rather than smoothing across unsampled space. The archived solver field remains unverified and does not establish flow accuracy on the detailed visual GLB.

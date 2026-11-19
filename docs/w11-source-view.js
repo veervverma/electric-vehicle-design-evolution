@@ -239,7 +239,8 @@ function addFlow(data) {
     // upper/side body in this coarse field, so it is shown as general solved
     // flow rather than being mislabeled as an underfloor connection.
     const displayRegion = entry.region === 'front_wing_to_diffuser' ? 'whole_car' : entry.region;
-    const curve = new THREE.CatmullRomCurve3(points, false, 'centripetal', .25);
+    const curve = new THREE.CurvePath();
+    for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(points[i-1],points[i]));
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     const base = regionColor[displayRegion];
     const lineColor = [];
@@ -262,41 +263,7 @@ function addFlow(data) {
       const p = sampleAirflowCurve(curve, i / count); positions.push(p.x, p.y, p.z); colors.push(base.r, base.g, base.b);
     }
 
-    if (displayRegion === 'underfloor') {
-      // The solved floor paths begin downstream because upstream integration
-      // terminated in the unconverged screening field. Add a clearly labeled
-      // tracing guide from the inlet/front-wing region to the first solved
-      // sample, then retain every solver-derived floor/diffuser point.
-      const first = points[0];
-      const lateral = first.z;
-      const joinHeight = THREE.MathUtils.clamp(first.y, 2.1, 5.8);
-      const guide = [
-        new THREE.Vector3(-148, 8.2, lateral * .93),
-        new THREE.Vector3(-122, 6.8, lateral * .95),
-        new THREE.Vector3(-103, 4.5, lateral * .97),
-        new THREE.Vector3(-82, 3.1, lateral * .98),
-        new THREE.Vector3(-53, 2.45, lateral),
-        new THREE.Vector3(-19, 2.35, lateral),
-        new THREE.Vector3(Math.min(first.x - 7, -3), joinHeight, lateral),
-      ];
-      const compositePoints = [...guide, ...points];
-      const compositeCurve = new THREE.CatmullRomCurve3(compositePoints, false, 'centripetal', .22);
-      const traceGeometry = new THREE.BufferGeometry().setFromPoints(compositeCurve.getPoints(Math.max(220, compositePoints.length)));
-      const traceMaterial = new THREE.LineBasicMaterial({ color: regionColor.front_floor_diffuser, transparent: true, opacity: .96, blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false });
-      const trace = new THREE.Line(traceGeometry, traceMaterial);
-      trace.renderOrder = 4;
-      trace.userData.region = 'front_floor_diffuser';
-      flowGroup.add(trace);
-      lineRecords.push({ line: trace, region: 'front_floor_diffuser' });
 
-      const traceCount = 14 * AIRFLOW_DENSITY_MULTIPLIER;
-      for (let i = 0; i < traceCount; i++) {
-        particles.push({ curve: compositeCurve, phase: (i / traceCount + lineIndex * .051) % 1, speed: .041 + (lineIndex % 5) * .0028, region: 'front_floor_diffuser' });
-        const p = sampleAirflowCurve(compositeCurve, i / traceCount);
-        positions.push(p.x, p.y, p.z);
-        colors.push(regionColor.front_floor_diffuser.r, regionColor.front_floor_diffuser.g, regionColor.front_floor_diffuser.b);
-      }
-    }
   });
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -584,6 +551,10 @@ const sourceMaterials = new Map();
 function sourceView(view) {
   sourceInspection=view;
   if(!car)return;
+  let notice=document.querySelector('#source-model-notice');
+  if(!notice){notice=document.createElement('p');notice.id='source-model-notice';notice.style.cssText='position:absolute;bottom:100px;left:20px;right:320px;z-index:8;background:#101820e8;color:#ffe4a1;padding:14px;font:12px/1.6 monospace;pointer-events:none';host.appendChild(notice);}
+  notice.textContent=view==='cooling'?'ORIGINAL W11 GLB — sidepod inspection only. Internal ducts/radiators are not defined in this asset. NO internal cooling simulation is shown.':view==='underfloor'?'ORIGINAL W11 GLB — actual underside geometry. Legacy external flow samples only; no invented inlet connectors. NOT validated CFD.':'';
+  notice.hidden=!['underfloor','cooling'].includes(view);
   resetDrivePose(); setAutoDrive(false);
   car.traverse(node=>{
     if(!node.isMesh)return;
