@@ -1,0 +1,67 @@
+[
+  {
+    "path": "CHECK_coarse.json",
+    "bytes": 23186,
+    "sha256": "bf9ba2fd2be091311a4800c6a38151d31fddaec3290b9bdf42d1b4b364b4df46"
+  },
+  {
+    "path": "CHECK_fine.json",
+    "bytes": 45958,
+    "sha256": "7dcf8fd3ebf6a5d78957355a131fb40a03de3b56be438de766c6f5b58aeefd89"
+  },
+  {
+    "path": "GRID_SENSITIVITY.json",
+    "bytes": 776,
+    "sha256": "9e6b2378dc215ca80e1eea1ef198af7716188838a710df1b4047d975af785e30"
+  },
+  {
+    "path": "NUMERICAL_CHECK_REPORT.md",
+    "bytes": 2128,
+    "sha256": "b54b16cf2e543f6dac1bb2887c7f1800ac259041d17ca666cb9388906942955b"
+  },
+  {
+    "path": "PARAMETER_SMOKE_CHECKS.json",
+    "bytes": 830,
+    "sha256": "2516a137beceab268ac5e680354ff6eb9f0dc4ba9c7def4d1336b808f7da10d8"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4761,
+    "sha256": "83c21f335154cebcd6dc664b8b147eb117ba6d8a221003d2c2ab2e8e8fa3d7d8"
+  },
+  {
+    "path": "side-flow-worker.js",
+    "bytes": 3757,
+    "sha256": "cf68ea675dbfaf9a9adbeee9445825338989524adcaabdc1613fd047e1df0455"
+  },
+  {
+    "path": "side-flow.css",
+    "bytes": 3918,
+    "sha256": "4a2ef2586db99f0599e6414134c47f6d0479f1d029341afd9c0e541c8dc77f11"
+  },
+  {
+    "path": "side-flow.html",
+    "bytes": 5394,
+    "sha256": "7962e3c15b402f24c19173facbc9d9b00f22c18d4c31a80906e4376d6d5c3282"
+  },
+  {
+    "path": "side-flow.js",
+    "bytes": 10509,
+    "sha256": "713319fcee52ec9ee6c82fa6029899560a4c8f72f49dc2461d48145a91e10ded"
+  },
+  {
+    "path": "w11-side-mask-1440.json",
+    "bytes": 219552,
+    "sha256": "39bffa62b4237fc73fb145110231abcffd97d76be3a8f407594da9cf37f7fe04"
+  },
+  {
+    "path": "w11-side-mask-480.json",
+    "bytes": 21159,
+    "sha256": "697a4a4e8d2489be0a36f8ba1a644f3d988bd320cda821e3ac9e395b13eff620"
+  },
+  {
+    "path": "w11-side-mask-960.json",
+    "bytes": 92955,
+    "sha256": "23a94c97882c90d11786b6c3bad751e3c0a8d8642a8f8e1a175cc764c421c1f3"
+  }
+]

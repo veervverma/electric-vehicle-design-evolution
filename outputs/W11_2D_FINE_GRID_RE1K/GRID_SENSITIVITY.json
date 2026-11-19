@@ -1,0 +1,22 @@
+{
+  "simulated_Re": 1000,
+  "coarse_grid": [
+    480,
+    144
+  ],
+  "fine_grid": [
+    960,
+    288
+  ],
+  "coarse_flow_times": 1.0000928161829716,
+  "fine_flow_times": 1.0000105717078922,
+  "coarse_mean_wake_speed_ratio": 0.6136195076043914,
+  "fine_mean_wake_speed_ratio": 0.6172552692590554,
+  "coarse_reverse_flow_fraction": 0.23178016726403824,
+  "fine_reverse_flow_fraction": 0.24208079046788725,
+  "wake_speed_relative_change_percent": 0.5890207561983661,
+  "reverse_fraction_change_percentage_points": 1.0300623203849002,
+  "grid_independence_established": false,
+  "physical_validation_performed": false,
+  "reason": "Only two raster grids and one convective time. No settled wake statistics, systematic wall refinement, domain study or experimental correlation."
+}

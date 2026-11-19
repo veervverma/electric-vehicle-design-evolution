@@ -17,6 +17,12 @@
     }
     window.dispatchEvent(new Event('resize'));
   }
+  window.addEventListener('message',event=>{
+    if(event.source!==frame.contentWindow||event.origin!==location.origin||event.data?.type!=='w11-flow-height')return;
+    const height=Number(event.data.height);
+    if(Number.isFinite(height))frame.style.height=Math.max(720,Math.min(2400,height))+'px';
+  });
+  document.querySelector('a[href="#colored-flow-view"]')?.addEventListener('click',()=>choose('colored'));
   coloredButton.addEventListener('click',()=>choose('colored'));
   threeButton.addEventListener('click',()=>choose('3d'));
   frame.addEventListener('load',()=>choose(three.hidden?'colored':'3d',false));

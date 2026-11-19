@@ -1,0 +1,861 @@
+{
+  "grid": [
+    480,
+    144
+  ],
+  "targetRe": 1000,
+  "re": 1000,
+  "steps": 6080,
+  "flowTimes": 1.0000928161829716,
+  "nu": 0.0054714921569824215,
+  "tauEven": 0.5164144764709473,
+  "tauOdd": 11.922843752090696,
+  "maxMach": 0.08032294503191234,
+  "maxRhoError": 0.006806742399930954,
+  "wake": {
+    "meanSpeedRatio": 0.6136195076043914,
+    "reverseFlowFraction": 0.23178016726403824,
+    "cells": 3348
+  },
+  "history": [
+    {
+      "steps": 80,
+      "flowTimes": 0.013159116002408492,
+      "wake": {
+        "meanSpeedRatio": 0.8465806441068934,
+        "reverseFlowFraction": 0,
+        "cells": 3348
+      },
+      "maxMach": 0.10000367582484819,
+      "maxRhoError": 0.04906930401921272
+    },
+    {
+      "steps": 160,
+      "flowTimes": 0.026318232004817067,
+      "wake": {
+        "meanSpeedRatio": 0.7426256979767676,
+        "reverseFlowFraction": 0,
+        "cells": 3348
+      },
+      "maxMach": 0.10008989232326279,
+      "maxRhoError": 0.027825141325592995
+    },
+    {
+      "steps": 240,
+      "flowTimes": 0.03947734800722567,
+      "wake": {
+        "meanSpeedRatio": 0.7527985531858956,
+        "reverseFlowFraction": 0,
+        "cells": 3348
+      },
+      "maxMach": 0.09166620827139656,
+      "maxRhoError": 0.017682187259197235
+    },
+    {
+      "steps": 320,
+      "flowTimes": 0.052636464009634266,
+      "wake": {
+        "meanSpeedRatio": 0.772825723140807,
+        "reverseFlowFraction": 0.0011947431302270011,
+        "cells": 3348
+      },
+      "maxMach": 0.09267231248067957,
+      "maxRhoError": 0.013114403933286667
+    },
+    {
+      "steps": 400,
+      "flowTimes": 0.06579558001204272,
+      "wake": {
+        "meanSpeedRatio": 0.784895020631946,
+        "reverseFlowFraction": 0.005077658303464755,
+        "cells": 3348
+      },
+      "maxMach": 0.08944140826516704,
+      "maxRhoError": 0.009697716683149338
+    },
+    {
+      "steps": 480,
+      "flowTimes": 0.07895469601445076,
+      "wake": {
+        "meanSpeedRatio": 0.7840397410126508,
+        "reverseFlowFraction": 0.008661887694145758,
+        "cells": 3348
+      },
+      "maxMach": 0.09215230909672954,
+      "maxRhoError": 0.007862793281674385
+    },
+    {
+      "steps": 560,
+      "flowTimes": 0.09211381201685881,
+      "wake": {
+        "meanSpeedRatio": 0.7859281545349762,
+        "reverseFlowFraction": 0.014934289127837515,
+        "cells": 3348
+      },
+      "maxMach": 0.09043958694250054,
+      "maxRhoError": 0.007948026061058044
+    },
+    {
+      "steps": 640,
+      "flowTimes": 0.10527292801926685,
+      "wake": {
+        "meanSpeedRatio": 0.7903795404576667,
+        "reverseFlowFraction": 0.02031063321385902,
+        "cells": 3348
+      },
+      "maxMach": 0.08952271558440053,
+      "maxRhoError": 0.007708568125963211
+    },
+    {
+      "steps": 720,
+      "flowTimes": 0.1184320440216749,
+      "wake": {
+        "meanSpeedRatio": 0.798550474591406,
+        "reverseFlowFraction": 0.025686977299880526,
+        "cells": 3348
+      },
+      "maxMach": 0.08807674407228144,
+      "maxRhoError": 0.007459988817572594
+    },
+    {
+      "steps": 800,
+      "flowTimes": 0.13159116002408294,
+      "wake": {
+        "meanSpeedRatio": 0.8032426199314582,
+        "reverseFlowFraction": 0.03046594982078853,
+        "cells": 3348
+      },
+      "maxMach": 0.08653705468435964,
+      "maxRhoError": 0.0072890836745500565
+    },
+    {
+      "steps": 880,
+      "flowTimes": 0.144750276026491,
+      "wake": {
+        "meanSpeedRatio": 0.8052638403139066,
+        "reverseFlowFraction": 0.03494623655913978,
+        "cells": 3348
+      },
+      "maxMach": 0.08580321042017172,
+      "maxRhoError": 0.007233856245875359
+    },
+    {
+      "steps": 960,
+      "flowTimes": 0.15790939202889903,
+      "wake": {
+        "meanSpeedRatio": 0.8044637481828334,
+        "reverseFlowFraction": 0.04032258064516129,
+        "cells": 3348
+      },
+      "maxMach": 0.08513390402269419,
+      "maxRhoError": 0.007200663909316063
+    },
+    {
+      "steps": 1040,
+      "flowTimes": 0.17106850803130708,
+      "wake": {
+        "meanSpeedRatio": 0.8043975773136476,
+        "reverseFlowFraction": 0.044504181600955796,
+        "cells": 3348
+      },
+      "maxMach": 0.08427357397308347,
+      "maxRhoError": 0.007151072844862938
+    },
+    {
+      "steps": 1120,
+      "flowTimes": 0.18422762403371512,
+      "wake": {
+        "meanSpeedRatio": 0.8053657870115205,
+        "reverseFlowFraction": 0.048685782556750296,
+        "cells": 3348
+      },
+      "maxMach": 0.0833423987653482,
+      "maxRhoError": 0.007114056497812271
+    },
+    {
+      "steps": 1200,
+      "flowTimes": 0.19738674003612316,
+      "wake": {
+        "meanSpeedRatio": 0.8056277353830769,
+        "reverseFlowFraction": 0.052270011947431305,
+        "cells": 3348
+      },
+      "maxMach": 0.0829795848518073,
+      "maxRhoError": 0.007074849680066109
+    },
+    {
+      "steps": 1280,
+      "flowTimes": 0.2105458560385312,
+      "wake": {
+        "meanSpeedRatio": 0.8051921280320394,
+        "reverseFlowFraction": 0.056152927120669056,
+        "cells": 3348
+      },
+      "maxMach": 0.08251891448864543,
+      "maxRhoError": 0.007017260417342186
+    },
+    {
+      "steps": 1360,
+      "flowTimes": 0.22370497204093925,
+      "wake": {
+        "meanSpeedRatio": 0.8048582866138628,
+        "reverseFlowFraction": 0.06272401433691756,
+        "cells": 3348
+      },
+      "maxMach": 0.08221850041123188,
+      "maxRhoError": 0.006990116089582443
+    },
+    {
+      "steps": 1440,
+      "flowTimes": 0.2368640880433473,
+      "wake": {
+        "meanSpeedRatio": 0.804856334326981,
+        "reverseFlowFraction": 0.06720430107526881,
+        "cells": 3348
+      },
+      "maxMach": 0.08208462224199982,
+      "maxRhoError": 0.006973104551434517
+    },
+    {
+      "steps": 1520,
+      "flowTimes": 0.25002320404575534,
+      "wake": {
+        "meanSpeedRatio": 0.8047376653001286,
+        "reverseFlowFraction": 0.07108721624850657,
+        "cells": 3348
+      },
+      "maxMach": 0.08178517153903853,
+      "maxRhoError": 0.006953049451112747
+    },
+    {
+      "steps": 1600,
+      "flowTimes": 0.2631823200481656,
+      "wake": {
+        "meanSpeedRatio": 0.8045279139719678,
+        "reverseFlowFraction": 0.07437275985663082,
+        "cells": 3348
+      },
+      "maxMach": 0.08170002117459112,
+      "maxRhoError": 0.006927555426955223
+    },
+    {
+      "steps": 1680,
+      "flowTimes": 0.2763414360505759,
+      "wake": {
+        "meanSpeedRatio": 0.8039978463765858,
+        "reverseFlowFraction": 0.07825567502986858,
+        "cells": 3348
+      },
+      "maxMach": 0.08148457875461186,
+      "maxRhoError": 0.006917504593729973
+    },
+    {
+      "steps": 1760,
+      "flowTimes": 0.28950055205298614,
+      "wake": {
+        "meanSpeedRatio": 0.803156036530573,
+        "reverseFlowFraction": 0.08124253285543608,
+        "cells": 3348
+      },
+      "maxMach": 0.08138136569825752,
+      "maxRhoError": 0.006907308474183083
+    },
+    {
+      "steps": 1840,
+      "flowTimes": 0.3026596680553964,
+      "wake": {
+        "meanSpeedRatio": 0.8022942803885298,
+        "reverseFlowFraction": 0.08422939068100359,
+        "cells": 3348
+      },
+      "maxMach": 0.08127228644290574,
+      "maxRhoError": 0.0068988557904958725
+    },
+    {
+      "steps": 1920,
+      "flowTimes": 0.31581878405780667,
+      "wake": {
+        "meanSpeedRatio": 0.8013419740819765,
+        "reverseFlowFraction": 0.08811230585424133,
+        "cells": 3348
+      },
+      "maxMach": 0.08105125766204821,
+      "maxRhoError": 0.006889022886753082
+    },
+    {
+      "steps": 2000,
+      "flowTimes": 0.32897790006021693,
+      "wake": {
+        "meanSpeedRatio": 0.8001776235966852,
+        "reverseFlowFraction": 0.0913978494623656,
+        "cells": 3348
+      },
+      "maxMach": 0.08093718156639353,
+      "maxRhoError": 0.006881698966026306
+    },
+    {
+      "steps": 2080,
+      "flowTimes": 0.3421370160626272,
+      "wake": {
+        "meanSpeedRatio": 0.798826849701545,
+        "reverseFlowFraction": 0.09438470728793309,
+        "cells": 3348
+      },
+      "maxMach": 0.08072479691919851,
+      "maxRhoError": 0.0068772658705711365
+    },
+    {
+      "steps": 2160,
+      "flowTimes": 0.35529613206503746,
+      "wake": {
+        "meanSpeedRatio": 0.7972725170862054,
+        "reverseFlowFraction": 0.09767025089605735,
+        "cells": 3348
+      },
+      "maxMach": 0.08052538868770502,
+      "maxRhoError": 0.006869670003652573
+    },
+    {
+      "steps": 2240,
+      "flowTimes": 0.3684552480674477,
+      "wake": {
+        "meanSpeedRatio": 0.7956284422484078,
+        "reverseFlowFraction": 0.10125448028673835,
+        "cells": 3348
+      },
+      "maxMach": 0.08029214694141078,
+      "maxRhoError": 0.00686563178896904
+    },
+    {
+      "steps": 2320,
+      "flowTimes": 0.381614364069858,
+      "wake": {
+        "meanSpeedRatio": 0.7938044093508659,
+        "reverseFlowFraction": 0.10483870967741936,
+        "cells": 3348
+      },
+      "maxMach": 0.08005986523898105,
+      "maxRhoError": 0.006861280649900436
+    },
+    {
+      "steps": 2400,
+      "flowTimes": 0.39477348007226826,
+      "wake": {
+        "meanSpeedRatio": 0.7918444534919667,
+        "reverseFlowFraction": 0.10722819593787336,
+        "cells": 3348
+      },
+      "maxMach": 0.07986307417240923,
+      "maxRhoError": 0.006856672465801239
+    },
+    {
+      "steps": 2480,
+      "flowTimes": 0.4079325960746785,
+      "wake": {
+        "meanSpeedRatio": 0.7897223211151161,
+        "reverseFlowFraction": 0.11081242532855436,
+        "cells": 3348
+      },
+      "maxMach": 0.07962482727088452,
+      "maxRhoError": 0.006853172555565834
+    },
+    {
+      "steps": 2560,
+      "flowTimes": 0.4210917120770888,
+      "wake": {
+        "meanSpeedRatio": 0.7874332290720115,
+        "reverseFlowFraction": 0.1135005973715651,
+        "cells": 3348
+      },
+      "maxMach": 0.07939750379868175,
+      "maxRhoError": 0.006849991157650948
+    },
+    {
+      "steps": 2640,
+      "flowTimes": 0.43425082807949905,
+      "wake": {
+        "meanSpeedRatio": 0.7850118043022218,
+        "reverseFlowFraction": 0.11648745519713262,
+        "cells": 3348
+      },
+      "maxMach": 0.07915665107903844,
+      "maxRhoError": 0.006846852600574493
+    },
+    {
+      "steps": 2720,
+      "flowTimes": 0.4474099440819093,
+      "wake": {
+        "meanSpeedRatio": 0.7824344094404455,
+        "reverseFlowFraction": 0.11947431302270012,
+        "cells": 3348
+      },
+      "maxMach": 0.07893302210026427,
+      "maxRhoError": 0.006844047456979752
+    },
+    {
+      "steps": 2800,
+      "flowTimes": 0.4605690600843196,
+      "wake": {
+        "meanSpeedRatio": 0.7797216006206807,
+        "reverseFlowFraction": 0.12275985663082438,
+        "cells": 3348
+      },
+      "maxMach": 0.07874428156227985,
+      "maxRhoError": 0.006841776892542839
+    },
+    {
+      "steps": 2880,
+      "flowTimes": 0.47372817608672985,
+      "wake": {
+        "meanSpeedRatio": 0.7768617512258466,
+        "reverseFlowFraction": 0.12485065710872162,
+        "cells": 3348
+      },
+      "maxMach": 0.0785576705041045,
+      "maxRhoError": 0.00683949701488018
+    },
+    {
+      "steps": 2960,
+      "flowTimes": 0.4868872920891401,
+      "wake": {
+        "meanSpeedRatio": 0.7738743198567696,
+        "reverseFlowFraction": 0.12843488649940263,
+        "cells": 3348
+      },
+      "maxMach": 0.07837693806872942,
+      "maxRhoError": 0.006837852299213409
+    },
+    {
+      "steps": 3040,
+      "flowTimes": 0.5000464080915503,
+      "wake": {
+        "meanSpeedRatio": 0.7707603288315448,
+        "reverseFlowFraction": 0.13142174432497014,
+        "cells": 3348
+      },
+      "maxMach": 0.07821982319512212,
+      "maxRhoError": 0.006836337968707085
+    },
+    {
+      "steps": 3120,
+      "flowTimes": 0.5132055240939561,
+      "wake": {
+        "meanSpeedRatio": 0.7675244054137447,
+        "reverseFlowFraction": 0.13321385902031063,
+        "cells": 3348
+      },
+      "maxMach": 0.07811213681587724,
+      "maxRhoError": 0.006834913045167923
+    },
+    {
+      "steps": 3200,
+      "flowTimes": 0.526364640096362,
+      "wake": {
+        "meanSpeedRatio": 0.7641751864183466,
+        "reverseFlowFraction": 0.13620071684587814,
+        "cells": 3348
+      },
+      "maxMach": 0.07801459259616988,
+      "maxRhoError": 0.006833778694272041
+    },
+    {
+      "steps": 3280,
+      "flowTimes": 0.5395237560987678,
+      "wake": {
+        "meanSpeedRatio": 0.7607170868221932,
+        "reverseFlowFraction": 0.13918757467144563,
+        "cells": 3348
+      },
+      "maxMach": 0.07793088953459738,
+      "maxRhoError": 0.006832456216216087
+    },
+    {
+      "steps": 3360,
+      "flowTimes": 0.5526828721011736,
+      "wake": {
+        "meanSpeedRatio": 0.7571560916081086,
+        "reverseFlowFraction": 0.14157706093189965,
+        "cells": 3348
+      },
+      "maxMach": 0.07787157723048742,
+      "maxRhoError": 0.006831204518675804
+    },
+    {
+      "steps": 3440,
+      "flowTimes": 0.5658419881035794,
+      "wake": {
+        "meanSpeedRatio": 0.7534948096532285,
+        "reverseFlowFraction": 0.14456391875746716,
+        "cells": 3348
+      },
+      "maxMach": 0.07784301742985927,
+      "maxRhoError": 0.006829798221588135
+    },
+    {
+      "steps": 3520,
+      "flowTimes": 0.5790011041059853,
+      "wake": {
+        "meanSpeedRatio": 0.7497433438731419,
+        "reverseFlowFraction": 0.14755077658303464,
+        "cells": 3348
+      },
+      "maxMach": 0.07784302158806902,
+      "maxRhoError": 0.006828317418694496
+    },
+    {
+      "steps": 3600,
+      "flowTimes": 0.5921602201083911,
+      "wake": {
+        "meanSpeedRatio": 0.7459045137029712,
+        "reverseFlowFraction": 0.14934289127837516,
+        "cells": 3348
+      },
+      "maxMach": 0.07786019328980505,
+      "maxRhoError": 0.0068268440663814545
+    },
+    {
+      "steps": 3680,
+      "flowTimes": 0.6053193361107969,
+      "wake": {
+        "meanSpeedRatio": 0.7419882535916239,
+        "reverseFlowFraction": 0.15173237753882915,
+        "cells": 3348
+      },
+      "maxMach": 0.07788595826338596,
+      "maxRhoError": 0.006825318560004234
+    },
+    {
+      "steps": 3760,
+      "flowTimes": 0.6184784521132027,
+      "wake": {
+        "meanSpeedRatio": 0.7380006305703544,
+        "reverseFlowFraction": 0.1556152927120669,
+        "cells": 3348
+      },
+      "maxMach": 0.07791905620395528,
+      "maxRhoError": 0.0068238042294979095
+    },
+    {
+      "steps": 3840,
+      "flowTimes": 0.6316375681156086,
+      "wake": {
+        "meanSpeedRatio": 0.7339501198463425,
+        "reverseFlowFraction": 0.15890083632019117,
+        "cells": 3348
+      },
+      "maxMach": 0.07795691835041392,
+      "maxRhoError": 0.0068223923444747925
+    },
+    {
+      "steps": 3920,
+      "flowTimes": 0.6447966841180144,
+      "wake": {
+        "meanSpeedRatio": 0.7298418974322803,
+        "reverseFlowFraction": 0.16129032258064516,
+        "cells": 3348
+      },
+      "maxMach": 0.07800481082690959,
+      "maxRhoError": 0.006821013987064362
+    },
+    {
+      "steps": 4000,
+      "flowTimes": 0.6579558001204202,
+      "wake": {
+        "meanSpeedRatio": 0.7256867902115569,
+        "reverseFlowFraction": 0.16367980884109917,
+        "cells": 3348
+      },
+      "maxMach": 0.07807313562385201,
+      "maxRhoError": 0.0068197306245565414
+    },
+    {
+      "steps": 4080,
+      "flowTimes": 0.671114916122826,
+      "wake": {
+        "meanSpeedRatio": 0.7214870288960435,
+        "reverseFlowFraction": 0.16606929510155316,
+        "cells": 3348
+      },
+      "maxMach": 0.07814581834642526,
+      "maxRhoError": 0.0068185459822416306
+    },
+    {
+      "steps": 4160,
+      "flowTimes": 0.6842740321252319,
+      "wake": {
+        "meanSpeedRatio": 0.717255871792492,
+        "reverseFlowFraction": 0.16666666666666666,
+        "cells": 3348
+      },
+      "maxMach": 0.07821959047564767,
+      "maxRhoError": 0.0068174488842487335
+    },
+    {
+      "steps": 4240,
+      "flowTimes": 0.6974331481276377,
+      "wake": {
+        "meanSpeedRatio": 0.7129914272872413,
+        "reverseFlowFraction": 0.16995221027479093,
+        "cells": 3348
+      },
+      "maxMach": 0.07829397899818104,
+      "maxRhoError": 0.006816426292061806
+    },
+    {
+      "steps": 4320,
+      "flowTimes": 0.7105922641300435,
+      "wake": {
+        "meanSpeedRatio": 0.7087039217204313,
+        "reverseFlowFraction": 0.17353643966547191,
+        "cells": 3348
+      },
+      "maxMach": 0.07836954999930835,
+      "maxRhoError": 0.006815478205680847
+    },
+    {
+      "steps": 4400,
+      "flowTimes": 0.7237513801324493,
+      "wake": {
+        "meanSpeedRatio": 0.7043915525918866,
+        "reverseFlowFraction": 0.17592592592592593,
+        "cells": 3348
+      },
+      "maxMach": 0.07844645779660767,
+      "maxRhoError": 0.006814632564783096
+    },
+    {
+      "steps": 4480,
+      "flowTimes": 0.7369104961348552,
+      "wake": {
+        "meanSpeedRatio": 0.7000621488942381,
+        "reverseFlowFraction": 0.17861409796893668,
+        "cells": 3348
+      },
+      "maxMach": 0.07852645717146517,
+      "maxRhoError": 0.006813820451498032
+    },
+    {
+      "steps": 4560,
+      "flowTimes": 0.750069612137261,
+      "wake": {
+        "meanSpeedRatio": 0.6957169668191666,
+        "reverseFlowFraction": 0.18100358422939067,
+        "cells": 3348
+      },
+      "maxMach": 0.07860995923817261,
+      "maxRhoError": 0.006813134998083115
+    },
+    {
+      "steps": 4640,
+      "flowTimes": 0.7632287281396668,
+      "wake": {
+        "meanSpeedRatio": 0.6913612273718804,
+        "reverseFlowFraction": 0.18428912783751494,
+        "cells": 3348
+      },
+      "maxMach": 0.07869886964859231,
+      "maxRhoError": 0.006812499836087227
+    },
+    {
+      "steps": 4720,
+      "flowTimes": 0.7763878441420726,
+      "wake": {
+        "meanSpeedRatio": 0.6869975666654262,
+        "reverseFlowFraction": 0.18548387096774194,
+        "cells": 3348
+      },
+      "maxMach": 0.0787972176115136,
+      "maxRhoError": 0.006811853498220444
+    },
+    {
+      "steps": 4800,
+      "flowTimes": 0.7895469601444784,
+      "wake": {
+        "meanSpeedRatio": 0.6826313007491656,
+        "reverseFlowFraction": 0.1881720430107527,
+        "cells": 3348
+      },
+      "maxMach": 0.07890506590145493,
+      "maxRhoError": 0.006811350584030151
+    },
+    {
+      "steps": 4880,
+      "flowTimes": 0.8027060761468843,
+      "wake": {
+        "meanSpeedRatio": 0.6782662940830209,
+        "reverseFlowFraction": 0.18936678614097968,
+        "cells": 3348
+      },
+      "maxMach": 0.0790291151912625,
+      "maxRhoError": 0.006810817867517471
+    },
+    {
+      "steps": 4960,
+      "flowTimes": 0.8158651921492901,
+      "wake": {
+        "meanSpeedRatio": 0.6739036706793387,
+        "reverseFlowFraction": 0.1935483870967742,
+        "cells": 3348
+      },
+      "maxMach": 0.07915977808365414,
+      "maxRhoError": 0.00681036151945591
+    },
+    {
+      "steps": 5040,
+      "flowTimes": 0.8290243081516959,
+      "wake": {
+        "meanSpeedRatio": 0.669540967020665,
+        "reverseFlowFraction": 0.19683393070489844,
+        "cells": 3348
+      },
+      "maxMach": 0.07929528546744913,
+      "maxRhoError": 0.006809944286942482
+    },
+    {
+      "steps": 5120,
+      "flowTimes": 0.8421834241541017,
+      "wake": {
+        "meanSpeedRatio": 0.6651833485899338,
+        "reverseFlowFraction": 0.19982078853046595,
+        "cells": 3348
+      },
+      "maxMach": 0.07943211637537712,
+      "maxRhoError": 0.006809588521718979
+    },
+    {
+      "steps": 5200,
+      "flowTimes": 0.8553425401565076,
+      "wake": {
+        "meanSpeedRatio": 0.660827051259577,
+        "reverseFlowFraction": 0.2019115890083632,
+        "cells": 3348
+      },
+      "maxMach": 0.07956613139468778,
+      "maxRhoError": 0.006809215992689133
+    },
+    {
+      "steps": 5280,
+      "flowTimes": 0.8685016561589134,
+      "wake": {
+        "meanSpeedRatio": 0.6564801698283503,
+        "reverseFlowFraction": 0.20400238948626045,
+        "cells": 3348
+      },
+      "maxMach": 0.07969260826064456,
+      "maxRhoError": 0.006808888167142868
+    },
+    {
+      "steps": 5360,
+      "flowTimes": 0.8816607721613192,
+      "wake": {
+        "meanSpeedRatio": 0.6521374235193848,
+        "reverseFlowFraction": 0.2072879330943847,
+        "cells": 3348
+      },
+      "maxMach": 0.07980849922443332,
+      "maxRhoError": 0.0068086013197898865
+    },
+    {
+      "steps": 5440,
+      "flowTimes": 0.894819888163725,
+      "wake": {
+        "meanSpeedRatio": 0.6478091637468154,
+        "reverseFlowFraction": 0.20758661887694146,
+        "cells": 3348
+      },
+      "maxMach": 0.07991237123551188,
+      "maxRhoError": 0.006808338686823845
+    },
+    {
+      "steps": 5520,
+      "flowTimes": 0.9079790041661309,
+      "wake": {
+        "meanSpeedRatio": 0.6434897684122537,
+        "reverseFlowFraction": 0.21176821983273597,
+        "cells": 3348
+      },
+      "maxMach": 0.08000520107496936,
+      "maxRhoError": 0.006808113306760788
+    },
+    {
+      "steps": 5600,
+      "flowTimes": 0.9211381201685367,
+      "wake": {
+        "meanSpeedRatio": 0.6391820765188773,
+        "reverseFlowFraction": 0.21356033452807646,
+        "cells": 3348
+      },
+      "maxMach": 0.08008820103863712,
+      "maxRhoError": 0.006807858124375343
+    },
+    {
+      "steps": 5680,
+      "flowTimes": 0.9342972361709425,
+      "wake": {
+        "meanSpeedRatio": 0.6348879401816956,
+        "reverseFlowFraction": 0.2168458781362007,
+        "cells": 3348
+      },
+      "maxMach": 0.08016423081879613,
+      "maxRhoError": 0.006807656958699226
+    },
+    {
+      "steps": 5760,
+      "flowTimes": 0.9474563521733483,
+      "wake": {
+        "meanSpeedRatio": 0.6306053156288716,
+        "reverseFlowFraction": 0.22102747909199522,
+        "cells": 3348
+      },
+      "maxMach": 0.08022932511735134,
+      "maxRhoError": 0.006807463243603706
+    },
+    {
+      "steps": 5840,
+      "flowTimes": 0.9606154681757542,
+      "wake": {
+        "meanSpeedRatio": 0.6263380512728768,
+        "reverseFlowFraction": 0.22252090800477897,
+        "cells": 3348
+      },
+      "maxMach": 0.08028011532437804,
+      "maxRhoError": 0.006807273253798485
+    },
+    {
+      "steps": 5920,
+      "flowTimes": 0.97377458417816,
+      "wake": {
+        "meanSpeedRatio": 0.6220834504818978,
+        "reverseFlowFraction": 0.22610513739545998,
+        "cells": 3348
+      },
+      "maxMach": 0.08031349318682332,
+      "maxRhoError": 0.006807096302509308
+    },
+    {
+      "steps": 6000,
+      "flowTimes": 0.9869337001805658,
+      "wake": {
+        "meanSpeedRatio": 0.617844465408561,
+        "reverseFlowFraction": 0.22879330943847073,
+        "cells": 3348
+      },
+      "maxMach": 0.08032740929793877,
+      "maxRhoError": 0.006806943565607071
+    },
+    {
+      "steps": 6080,
+      "flowTimes": 1.0000928161829716,
+      "wake": {
+        "meanSpeedRatio": 0.6136195076043914,
+        "reverseFlowFraction": 0.23178016726403824,
+        "cells": 3348
+      },
+      "maxMach": 0.08032294503191234,
+      "maxRhoError": 0.006806742399930954
+    }
+  ],
+  "uniformFieldCheck": true,
+  "solidZeroCheck": true,
+  "claim": "One flow-through-time transient sensitivity check. Not convergence or physical validation."
+}

@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "grid": [
+        960,
+        288
+      ],
+      "Re": 2000,
+      "U": 0.04,
+      "nu": 0.007295322875976563,
+      "steps": 640,
+      "maxMach": 0.1295210449509783,
+      "maxDensityError": 0.018764076754450798
+    },
+    {
+      "grid": [
+        1440,
+        432
+      ],
+      "Re": 1000,
+      "U": 0.03,
+      "nu": 0.016414476470947265,
+      "steps": 320,
+      "maxMach": 0.09426826807697619,
+      "maxDensityError": 0.025616265833377838
+    },
+    {
+      "grid": [
+        480,
+        144
+      ],
+      "Re": 100,
+      "U": 0.015,
+      "nu": 0.027357460784912108,
+      "steps": 640,
+      "maxMach": 0.03915518222020459,
+      "maxDensityError": 0.00695403479039669
+    }
+  ],
+  "claim": "Short stability checks only. Longer runs at every control combination are not verified."
+}

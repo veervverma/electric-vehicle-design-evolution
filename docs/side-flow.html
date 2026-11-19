@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>W11 · 2D Flow Studio</title><link rel="stylesheet" href="side-flow.css?v=integrated1"></head>
+<title>W11 · 2D Flow Studio</title><link rel="stylesheet" href="side-flow.css?v=20261118-fine"></head>
 <body>
 <script>if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embedded');</script><header><a href="wind-tunnel.html">← 3D W11 LAB</a><span>VEER VERMA · FLOW STUDIES</span></header>
 <main><div class="title"><div><p class="eyebrow">COMPUTED IN YOUR BROWSER</p><h1>Air around the W11.</h1><p>A side-view flow experiment, inspired by the Matheorems reference.</p></div><span id="state" role="status">Loading W11 outline…</span></div>
@@ -9,21 +9,25 @@
   <div class="equations"><span>INCOMPRESSIBLE NAVIER–STOKES · LOW-MACH APPROXIMATION</span><div>∂<b>u</b>/∂t + (<b>u</b> · ∇)<b>u</b> = −∇p/ρ + ν∇²<b>u</b><em>∇ · <b>u</b> = 0</em></div></div>
   <canvas id="flow" aria-label="Live computed two-dimensional flow around a projected W11 silhouette"></canvas>
   <div class="legend"><span id="legend-label">SPEED / INLET SPEED</span><i></i><span>0</span><span>0.75</span><span>1.5+</span></div>
-  <div class="stats"><span>GRID <b>480 × 144</b></span><span>ITERATION <b id="iteration">0</b></span><span>Re <b id="re">—</b></span><span>MAX Ma <b id="mach">—</b></span><span>MAX Δρ/ρ <b id="rho">—</b></span></div>
+  <div class="stats"><span>GRID <b id="grid-readout">960 × 288</b></span><span>ITERATION <b id="iteration">0</b></span><span>Re <b id="re">—</b></span><span>FLOW TIMES <b id="flow-times">0</b></span><span>ν <b id="viscosity-readout">—</b></span><span>MAX Ma <b id="mach">—</b></span><span>MAX Δρ/ρ <b id="rho">—</b></span></div>
  </div>
- <aside><h2>Flow controls</h2>
+ <aside><h2>Fine-grid flow controls</h2>
+ <label>Solver grid<select id="grid"><option value="480">Coarse · 480 × 144</option><option value="960" selected>Fine · 960 × 288 (4× cells)</option><option value="1440">Ultra · 1440 × 432 (9× cells)</option></select></label>
+ <label>Simulated Reynolds number <output id="target-re-out">1,000</output><input id="target-re" type="range" min="100" max="2000" step="50" value="1000"></label>
  <label>Particle density <output id="density-out">70%</output><input id="density" type="range" min="1" max="100" value="70"></label>
  <label>Trail length <output id="trail-out">65%</output><input id="trail" type="range" min="5" max="95" value="65"></label>
- <label>Inlet speed <output id="speed-out">0.045 lu/step</output><input id="speed" type="range" min="20" max="60" step="1" value="45"></label>
- <label>Kinematic viscosity <output id="viscosity-out">0.045 lu²/step</output><input id="viscosity" type="range" min="35" max="120" step="1" value="45"></label>
- <label>Solver steps / update <output id="rate-out">24</output><input id="rate" type="range" min="4" max="64" step="4" value="24"></label>
- <label>Color field<select id="field"><option value="speed">Speed · purple to yellow</option><option value="vorticity">Vorticity · blue / red</option><option value="pressure">Relative pressure · blue / red</option></select></label>
+ <label>Lattice inlet speed <output id="speed-out">0.030 lu/step</output><input id="speed" type="range" min="15" max="40" step="1" value="30"></label>
+ <label>Solver steps / update <output id="rate-out">8</output><input id="rate" type="range" min="4" max="32" step="4" value="8"></label>
+ <label>Color field<select id="field"><option value="speed">Speed · purple to yellow</option><option value="vorticity">Vorticity · blue / red</option><option value="pressure">Relative pressure · blue / red</option><option value="streamwise">Streamwise speed · reverse flow</option></select></label>
  <label class="check"><input type="checkbox" id="particles" checked> Show particle trails</label>
+ <label class="check"><input type="checkbox" id="vectors" checked> Wake velocity arrows</label>
  <div class="buttons"><button id="pause">Pause</button><button id="reset">Reset flow</button></div>
  <p class="control-note">Particles are restricted to the lower half: car and wake. The upper velocity color field is retained.</p>
- <p class="control-note"><b>Why a smooth wake?</b> Default Re ≈ 182, a coarse 2D projection and numerical diffusion limit wake detail. At default speed, one car-length flow time takes ≈4,050 solver steps. Allow several flow times. Vorticity reveals shear and rotation; it does not by itself prove an eddy. This view does not resolve a real F1 car’s turbulent 3D wake.</p>
+ <p class="control-note">ν = U × car length in cells / Re. Viscosity is recalculated when the grid changes, so refinement preserves the requested Re. Particle density does not change the fluid grid.</p>
+ <details class="reference"><summary>Full-scale Reynolds comparison</summary><label>Reference speed (km/h)<input id="physical-speed" type="number" min="1" max="400" value="300"></label><p>Air: ρ = 1.225 kg/m³; μ = 1.7894 × 10⁻⁵ Pa·s. Source-model length sets L.</p><p>Reference Re: <b id="physical-re">—</b></p><p id="re-gap">Calculating…</p><p>This comparison does not set the solver to full-scale conditions. The browser experiment remains a reduced-Re 2D study.</p></details>
+ <p class="control-note">No artificial vortices are added. Allow several car-length flow times for wake development. Finer grids cost more computation. Grid sensitivity and a stability check do not establish force accuracy.</p>
  </aside>
 </section>
-<section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at reduced Reynolds number. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
+<section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 two-relaxation-time lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at a chosen reduced Reynolds number, with selectable independently rasterized grids. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
 <footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
-</main><script type="module" src="side-flow.js?v=wake-focus1"></script></body></html>
+</main><script type="module" src="side-flow.js?v=20261118-fine"></script></body></html>
