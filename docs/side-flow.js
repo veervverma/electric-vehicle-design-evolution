@@ -12,12 +12,18 @@ let geo,ux,uy,rho,image,mask,latest,running=true,busy=false,failed=false,last=pe
 const FLOW_VIEW={x:41.6,y:50.88,width:310.4,height:93.12};
 const MAX_PARTICLES=18000,px=new Float32Array(MAX_PARTICLES),py=new Float32Array(MAX_PARTICLES),age=new Uint16Array(MAX_PARTICLES);
 function random(){seed=(Math.imul(seed,1664525)+1013904223)|0;return (seed>>>0)/4294967296;}
-function particleCeiling(){return geo.ny-FLOW_VIEW.y-FLOW_VIEW.height/2;}
+function particleBand(){
+ return geo.particle_band_m?geo.particle_band_m.map(z=>z/geo.dx_m):[1,geo.ny-FLOW_VIEW.y-FLOW_VIEW.height/2];
+}
 function spawn(i){
- // Seed only the visible car/wake band; upper-half markers are intentionally omitted.
- for(let k=0;k<40;k++){
-  px[i]=FLOW_VIEW.x+1+random()*(FLOW_VIEW.width-2);
-  py[i]=1+random()*(particleCeiling()-2);
+ const regions=geo.seed_regions_m;
+ const band=particleBand();
+ for(let k=0;k<60;k++){
+  if(regions){
+   const r=regions[Math.floor(random()*regions.length)];
+   px[i]=(r[0]-geo.xmin_m+random()*(r[1]-r[0]))/geo.dx_m;
+   py[i]=(r[2]+random()*(r[3]-r[2]))/geo.dx_m;
+  }else{px[i]=FLOW_VIEW.x+1+random()*(FLOW_VIEW.width-2);py[i]=band[0]+random()*(band[1]-band[0]);}
   if(!mask[Math.floor(py[i])*geo.nx+Math.floor(px[i])])break;
  }
  age[i]=Math.floor(random()*120);
@@ -59,6 +65,7 @@ worker.onmessage=({data})=>{
  updatePhysicalReference();
  $('#mach').textContent=data.maxMach.toFixed(3);$('#rho').textContent=(data.maxRhoError*100).toFixed(2)+'%';
  $('#state').textContent=(data.flowTimes<3?'Developing wake':'Live 2D wake')+' · '+data.flowTimes.toFixed(2)+' car-length flow times';
+ $('#phase-note').textContent=(data.maxRhoError>.05?'Startup / density variation above 5%: interpret the developing field cautiously. ':'')+(data.flowTimes<3?'Flow still developing: ':'Flow age: ')+data.flowTimes.toFixed(2)+' car-length flow times. Reduced-Re 2D study.';
  drawHeat();request();
 };
 window.addEventListener('message',event=>{
@@ -84,10 +91,10 @@ function animate(now){
    const count=Math.round(MAX_PARTICLES*Number($('#density').value)/100),sx=trails.width/geo.nx,sy=trails.height/geo.ny;
    tctx.strokeStyle='rgba(255,253,235,.68)';tctx.lineWidth=1;tctx.beginPath();
    for(let i=0;i<count;i++){
-    let v=sample(px[i],py[i]);if(!v||py[i]>=particleCeiling()||age[i]++>210){spawn(i);continue;}
+    const band=particleBand();let v=sample(px[i],py[i]);if(!v||py[i]<band[0]||py[i]>=band[1]||age[i]++>210){spawn(i);continue;}
     const step=dt*340*(geo.nx/480),x=px[i],y=py[i],nx=x+v[0]*step,ny=y+v[1]*step;
     // Check the entire short segment before drawing it.
-    if(ny>=particleCeiling()||!sample((x+nx)*.5,(y+ny)*.5)||!sample(nx,ny)){spawn(i);continue;}
+    if(ny<band[0]||ny>=band[1]||!sample((x+nx)*.5,(y+ny)*.5)||!sample(nx,ny)){spawn(i);continue;}
     px[i]=nx;py[i]=ny;tctx.moveTo(x*sx,(geo.ny-y)*sy);tctx.lineTo(nx*sx,(geo.ny-ny)*sy);
    }
    tctx.stroke();
@@ -97,7 +104,8 @@ function animate(now){
  ctx.imageSmoothingEnabled=true;ctx.drawImage(heat,viewX,viewY,viewW,viewH,0,0,canvas.width,canvas.height);
  if($('#particles').checked){
   // Clip historical trails as well: no stale upper-half dots after advection.
-  ctx.save();ctx.beginPath();ctx.rect(0,canvas.height/2,canvas.width,canvas.height/2);ctx.clip();
+  ctx.save();
+  if(!geo.region){ctx.beginPath();ctx.rect(0,canvas.height/2,canvas.width,canvas.height/2);ctx.clip();}
   ctx.drawImage(trails,viewX*trails.width/geo.nx,viewY*trails.height/geo.ny,viewW*trails.width/geo.nx,viewH*trails.height/geo.ny,0,0,canvas.width,canvas.height);ctx.restore();
  }
  // Wake arrows are sampled from the solved velocity, including any reverse flow.
@@ -105,7 +113,8 @@ function animate(now){
   const stride=Math.max(8,Math.round(geo.nx/48));
   ctx.strokeStyle='rgba(240,252,255,.8)';ctx.lineWidth=1.1;
   const map=(x,y)=>[(x-viewX)*canvas.width/viewW,(geo.ny-y-viewY)*canvas.height/viewH];
-  for(let y=stride;y<1.35/geo.dx_m;y+=stride)for(let x=Math.ceil((3.1-geo.xmin_m)/geo.dx_m);x<(6-geo.xmin_m)/geo.dx_m;x+=stride){
+  const box=geo.vector_box_m||[3.1,6,.03,1.35];
+  for(let y=Math.max(stride,Math.ceil(box[2]/geo.dx_m));y<box[3]/geo.dx_m;y+=stride)for(let x=Math.ceil((box[0]-geo.xmin_m)/geo.dx_m);x<(box[1]-geo.xmin_m)/geo.dx_m;x+=stride){
    const v=sample(x,y);if(!v)continue;
    const a=map(x,y),b=map(x+v[0]/latest.U*stride*.65,y+v[1]/latest.U*stride*.65);
    const angle=Math.atan2(b[1]-a[1],b[0]-a[0]);if(Math.hypot(b[0]-a[0],b[1]-a[1])<2)continue;
@@ -119,6 +128,16 @@ function animate(now){
  for(const i of geo.solid_indices){const x=i%geo.nx,y=Math.floor(i/geo.nx);if(!mask[i+geo.nx]||!mask[i-geo.nx]||!mask[i-1]||!mask[i+1])ctx.fillRect((x-viewX)*canvas.width/viewW,(geo.ny-1-y-viewY)*canvas.height/viewH,canvas.width/viewW,1);}
  ctx.fillStyle='#17131d';ctx.fillRect(0,canvas.height-3,canvas.width,3);
  ctx.fillStyle='rgba(255,255,255,.8)';ctx.font='12px monospace';ctx.fillText('FLOW →',18,24);
+ if(geo.labels){
+  ctx.font='14px system-ui';
+  for(const label of geo.labels){
+   const x=((label.x-geo.xmin_m)/geo.dx_m-viewX)*canvas.width/viewW;
+   const y=(geo.ny-label.z/geo.dx_m-viewY)*canvas.height/viewH;
+   const width=ctx.measureText(label.text).width;
+   ctx.fillStyle='rgba(12,12,20,.86)';ctx.fillRect(x-5,y-16,width+10,23);
+   ctx.fillStyle='#fff1cf';ctx.fillText(label.text,x,y);
+  }
+ }
 }
 function reset(){failed=false;tctx.clearRect(0,0,trails.width,trails.height);for(let i=0;i<MAX_PARTICLES;i++)spawn(i);busy=true;worker.postMessage({type:'init',epoch:++epoch,geometry:geo,re:Number($('#target-re').value),U:Number($('#speed').value)/1000,steps:0});}
 $('#pause').onclick=()=>{running=!running;$('#pause').textContent=running?'Pause':'Resume';if(running)request();};
@@ -140,19 +159,37 @@ for(const name of ['density','trail','speed','target-re','rate']){
 }
 $('#physical-speed').oninput=updatePhysicalReference;
 $('#grid').onchange=()=>loadGrid();
+function setRegion(region){
+ if(!['exterior','underfloor','cooling'].includes(region))return;
+ $('#region').value=region;loadGrid();
+ if(parent!==window)parent.postMessage({type:'w11-region-changed',region},location.origin);
+}
+$('#region').onchange=()=>setRegion($('#region').value);
+window.addEventListener('message',event=>{
+ if(event.source!==parent||event.origin!==location.origin||event.data?.type!=='w11-flow-region')return;
+ if(event.data.region!==$('#region').value)setRegion(event.data.region);
+});
 async function loadGrid(){
  const ticket=++gridRequest;loadingGrid=true;$('#state').textContent='Loading fine W11 geometry…';
  try{
-  const response=await fetch('w11-side-mask-'+$('#grid').value+'.json');
+  const response=await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-mask-')+$('#grid').value+'.json');
   if(!response.ok)throw Error('Selected W11 grid unavailable');
   const loaded=await response.json();if(ticket!==gridRequest)return;
-  geo=loaded;mask=new Uint8Array(geo.nx*geo.ny);geo.solid_indices.forEach(i=>mask[i]=1);
-  const scale=geo.nx/480;Object.assign(FLOW_VIEW,{x:41.6*scale,y:50.88*scale,width:310.4*scale,height:93.12*scale});
+  geo=loaded;canvas.setAttribute('aria-label',(geo.title||'Exterior side projection')+' · calculated 2D airflow');mask=new Uint8Array(geo.nx*geo.ny);geo.solid_indices.forEach(i=>mask[i]=1);
+  const scale=geo.nx/480;
+  if(geo.view_m){
+   const v=geo.view_m;Object.assign(FLOW_VIEW,{x:(v.xmin-geo.xmin_m)/geo.dx_m,y:geo.ny-v.zmax/geo.dx_m,width:(v.xmax-v.xmin)/geo.dx_m,height:(v.zmax-v.zmin)/geo.dx_m});
+  }else Object.assign(FLOW_VIEW,{x:41.6*scale,y:50.88*scale,width:310.4*scale,height:93.12*scale});
+  $('#region-note').textContent=geo.provenance?geo.provenance+' '+geo.limitation:'Exterior side projection: depth-separated parts overlap; this cannot show internal passages.';
+  $('#axis-note').textContent=geo.axis_note||'Side projection · computed exterior flow · particles shown in the lower half.';
+  $('#vectors').parentElement.lastChild.textContent=geo.region?' Passage velocity arrows':' Wake velocity arrows';
   heat.width=geo.nx;heat.height=geo.ny;image=hctx.createImageData(geo.nx,geo.ny);
   canvas.width=1920;canvas.height=576;trails.width=1920;trails.height=576;
   latest=null;ux=null;uy=null;rho=null;loadingGrid=false;updatePhysicalReference();reset();
  }catch(e){loadingGrid=false;failed=true;$('#state').textContent=e.message;}
 }
 $('#field').onchange=drawHeat;
+const initialRegion=new URLSearchParams(location.search).get('region');
+if(['underfloor','cooling'].includes(initialRegion))$('#region').value=initialRegion;
 await loadGrid();
 requestAnimationFrame(animate);

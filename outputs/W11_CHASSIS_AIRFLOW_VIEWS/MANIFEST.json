@@ -1,0 +1,52 @@
+[
+  {
+    "path": "GEOMETRY/W11_SOURCE_SHELL_METRES_NOT_PRINT_SIZE.stl",
+    "sha256": "7a5a5691efb85e7400531e0150e45069c85ecbd9796f8881d936a67e0594ff37",
+    "bytes": 3000084
+  },
+  {
+    "path": "PASSAGE_CHECKS.json",
+    "sha256": "9151cd5aa40305e37332580054bf60a6fbd6c24fc488972cd20debfa14a7932c",
+    "bytes": 1423
+  },
+  {
+    "path": "README.md",
+    "sha256": "14904cafac7f51dffd6a88f3584f832d6a9625477491a08c8cb8a351ba757b16",
+    "bytes": 3816
+  },
+  {
+    "path": "REFERENCE_LICENSE_AND_ATTRIBUTION.txt",
+    "sha256": "f4199e8f6f7e64f0fd0e44d58e17a17733dd26ed7758dfc3628c5793a5ec9d1e",
+    "bytes": 562
+  },
+  {
+    "path": "w11-cooling-mask-1440.json",
+    "sha256": "3939666d081f03a97236b18481710347cab68862816e49cce9fc66a033da6a48",
+    "bytes": 414904
+  },
+  {
+    "path": "w11-cooling-mask-480.json",
+    "sha256": "a2d1f69d524632f702efd6f4e1055d8ddd48b42c6b8b3ce3e986da13ce4756a3",
+    "bytes": 40672
+  },
+  {
+    "path": "w11-cooling-mask-960.json",
+    "sha256": "ebc660e6f2741b417a6d07e9572eee8b140325dbf7bf542d9be793a5ac9f5958",
+    "bytes": 183847
+  },
+  {
+    "path": "w11-underfloor-mask-1440.json",
+    "sha256": "ed0f0a8336a2d08feff2ba234b50aec9741b305d3e48b13f3b58c9a96ecf3ea0",
+    "bytes": 69670
+  },
+  {
+    "path": "w11-underfloor-mask-480.json",
+    "sha256": "97627885b22e4e018e903d609322295fee5191368ee2fc46f91935b9ab613a9d",
+    "bytes": 7538
+  },
+  {
+    "path": "w11-underfloor-mask-960.json",
+    "sha256": "8bcf58419e4da7d9a62d9d17bb80d89a1f7d13690c7cd2124bafe38ae1a4e002",
+    "bytes": 30648
+  }
+]

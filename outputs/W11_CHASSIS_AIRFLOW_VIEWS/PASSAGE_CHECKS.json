@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "region": "underfloor",
+      "nx": 480,
+      "ny": 144,
+      "steps": 960,
+      "re": 1000,
+      "maxMach": 0.09637538161032837,
+      "maxDensityError": 0.005437765270471573,
+      "passageSampleFluidCells": 96,
+      "passageMeanSpeedRatio": 0.5754763851772497,
+      "solidVelocityZero": true
+    },
+    {
+      "region": "cooling",
+      "nx": 480,
+      "ny": 144,
+      "steps": 960,
+      "re": 1000,
+      "maxMach": 0.1212334343961837,
+      "maxDensityError": 0.012318918481469154,
+      "passageSampleFluidCells": 384,
+      "passageMeanSpeedRatio": 0.9764005423048238,
+      "solidVelocityZero": true
+    },
+    {
+      "region": "underfloor",
+      "nx": 960,
+      "ny": 288,
+      "steps": 320,
+      "re": 1000,
+      "maxMach": 0.13608650770244887,
+      "maxDensityError": 0.025807704776525497,
+      "passageSampleFluidCells": 370,
+      "passageMeanSpeedRatio": 0.8103198999453204,
+      "solidVelocityZero": true
+    },
+    {
+      "region": "cooling",
+      "nx": 960,
+      "ny": 288,
+      "steps": 320,
+      "re": 1000,
+      "maxMach": 0.12601963458970775,
+      "maxDensityError": 0.06867051869630814,
+      "passageSampleFluidCells": 1536,
+      "passageMeanSpeedRatio": 0.7685940562352367,
+      "solidVelocityZero": true
+    }
+  ],
+  "claim": "Short finite-flow and solid-mask smoke checks, not settled passage flux, radiator validation or full-scale CFD."
+}

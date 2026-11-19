@@ -9,3 +9,6 @@ html.embedded aside { padding-top:24px; }
 
 .reference{color:#c1b4c8;font:10px/1.65 system-ui;margin-top:16px}.reference summary{cursor:pointer;color:#ffcc64}.reference input{width:100%;padding:8px;background:#100e18;color:white;border:1px solid #ffffff33}.reference p{font-size:10px}html.embedded .studio{min-height:850px}
 html.embedded .scene { justify-content:flex-start; }
+
+.axis-note{font-size:10px;color:#d4c2df;padding:8px 18px;margin:0;line-height:1.6}
+#region-note{padding:9px;border-left:2px solid #ffcc64;background:#100e1880}
