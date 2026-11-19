@@ -569,7 +569,7 @@ function sourceView(view) {
   });
   if(view==='underfloor'){
     setMode('focus');
-    cameraGoal={position:new THREE.Vector3(170,-190,280),target:new THREE.Vector3(0,7,0)};
+    cameraGoal={position:new THREE.Vector3(130,-140,220),target:new THREE.Vector3(0,7,0)};
     tunnelGroup.visible=false;
     document.querySelector('#status-detail').textContent='ORIGINAL W11 UNDERSIDE · legacy external flow · NOT validated CFD';
   }else if(view==='cooling'){
@@ -578,3 +578,6 @@ function sourceView(view) {
   }else{setMode('all');setCamera('iso');tunnelGroup.visible=document.querySelector('#tunnel').checked;}
 }
 window.addEventListener('w11-source-view',event=>sourceView(event.detail));
+
+const undersideLight=new THREE.DirectionalLight(0xe4f3ff,5); undersideLight.position.set(0,-120,70);scene.add(undersideLight);
+scene.fog.density=.001;
