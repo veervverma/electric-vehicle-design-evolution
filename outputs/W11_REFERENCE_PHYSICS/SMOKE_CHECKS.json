@@ -1,0 +1,20 @@
+[
+  {
+    "angle": 4,
+    "re": 400,
+    "steps": 1200,
+    "solidCells": 750,
+    "maxMach": 0.06695268406927392,
+    "maxDensityDeviation": 0.0017838124185800552,
+    "solidVelocityZero": true
+  },
+  {
+    "angle": 20,
+    "re": 400,
+    "steps": 1200,
+    "solidCells": 751,
+    "maxMach": 0.09210802212611124,
+    "maxDensityDeviation": 0.004082588478922844,
+    "solidVelocityZero": true
+  }
+]

@@ -1,8 +1,11 @@
+import {buildWing} from './reference-wing.js?v=20261124';
 const $=s=>document.querySelector(s),canvas=$('#flow'),ctx=canvas.getContext('2d',{alpha:false});
 const heat=document.createElement('canvas'),hctx=heat.getContext('2d');
 const trails=document.createElement('canvas'),tctx=trails.getContext('2d');
 const worker=new Worker('side-flow-worker.js?v=20261118-trt');
 let epoch=0;
+const wingDemo=new URLSearchParams(location.search).has('wing');
+let wingAngle=4,wingInverted=false,pressureArrows=false,probe=null;
 if(new URLSearchParams(location.search).has('embed')){
  const sendHeight=()=>parent.postMessage({type:'w11-flow-height',height:Math.ceil(document.body.scrollHeight)},location.origin);
  new ResizeObserver(sendHeight).observe(document.body);
@@ -124,6 +127,28 @@ function animate(now){
    ctx.lineTo(b[0]-5*Math.cos(angle+.5),b[1]-5*Math.sin(angle+.5));ctx.stroke();
   }
  }
+ // Qualitative pressure-force direction from adjacent fluid samples, not integrated loads.
+ if(pressureArrows){
+  const jump=Math.max(2,Math.round(geo.nx/180));
+  for(let y=2;y<geo.ny-2;y+=jump)for(let x=2;x<geo.nx-2;x+=jump){
+   const i=y*geo.nx+x;if(mask[i])continue;
+   const gx=mask[i+1]-mask[i-1],gy=mask[i+geo.nx]-mask[i-geo.nx];const norm=Math.hypot(gx,gy);if(!norm)continue;
+   const cp=(rho[i]-1)/(.5*3*latest.U*latest.U);if(Math.abs(cp)<.08)continue;
+   const ax=(x-viewX)*canvas.width/viewW,ay=(geo.ny-y-viewY)*canvas.height/viewH;
+   if(ax<0||ax>canvas.width||ay<0||ay>canvas.height)continue;
+   const len=Math.min(26,4+Math.abs(cp)*7),sgn=Math.sign(cp),bx=ax+sgn*gx/norm*len,by=ay-sgn*gy/norm*len,a=Math.atan2(by-ay,bx-ax);
+   ctx.strokeStyle=cp>0?'#ff786b':'#70d8ff';ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.lineTo(bx-5*Math.cos(a-.55),by-5*Math.sin(a-.55));ctx.moveTo(bx,by);ctx.lineTo(bx-5*Math.cos(a+.55),by-5*Math.sin(a+.55));ctx.stroke();
+  }
+ }
+ if(probe){
+  const x=Math.floor(probe[0]),y=Math.floor(probe[1]),i=y*geo.nx+x;
+  if(i>geo.nx&&i<mask.length-geo.nx&&!mask[i]){
+   const speed=Math.hypot(ux[i],uy[i])/latest.U,cp=(rho[i]-1)/(.5*3*latest.U*latest.U),ideal=1-speed*speed;
+   const text='PROBE · |u|/U '+speed.toFixed(2)+' · Cp (solver) '+cp.toFixed(2)+' · 1−(|u|/U)² '+ideal.toFixed(2)+' (ideal comparison only)';
+   $('#probe-readout').textContent=text;
+   const xx=(probe[0]-viewX)*canvas.width/viewW,yy=(geo.ny-probe[1]-viewY)*canvas.height/viewH;ctx.strokeStyle='#9cffad';ctx.lineWidth=2;ctx.beginPath();ctx.arc(xx,yy,7,0,7);ctx.stroke();
+  }
+ }
  // Resolve silhouette edges directly from the W11 mask.
  ctx.fillStyle='#9094a3';
  for(const i of geo.solid_indices){const x=i%geo.nx,y=Math.floor(i/geo.nx);if(!mask[i+geo.nx]||!mask[i-geo.nx]||!mask[i-1]||!mask[i+1])ctx.fillRect((x-viewX)*canvas.width/viewW,(geo.ny-1-y-viewY)*canvas.height/viewH,canvas.width/viewW,1);}
@@ -173,11 +198,11 @@ window.addEventListener('message',event=>{
 async function loadGrid(){
  const ticket=++gridRequest;loadingGrid=true;$('#state').textContent='Loading fine W11 geometry…';
  try{
-  const response=await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-projection-')+$('#grid').value+'.json');
-  if(!response.ok)throw Error('Selected W11 grid unavailable');
-  const loaded=await response.json();if(ticket!==gridRequest)return;
+  const response=wingDemo?null:await fetch(($('#region').value==='exterior'?'w11-side-mask-':'w11-'+$('#region').value+'-projection-')+$('#grid').value+'.json');
+  if(response&&!response.ok)throw Error('Selected W11 grid unavailable');
+  const loaded=wingDemo?buildWing(Number($('#grid').value),wingAngle,wingInverted):await response.json();if(ticket!==gridRequest)return;
   geo=loaded;
-  if(journey){
+  if(journey&&!wingDemo){
    const top=$('#region').value==='cooling';
    geo={...geo,view_m:{xmin:-3.7,xmax:6.3,zmin:top?.75:0,zmax:top?3.75:3},
     particle_band_m:top?[.76,3.74]:[.005,1.35],
@@ -196,9 +221,13 @@ async function loadGrid(){
   $('#vectors').parentElement.lastChild.textContent=geo.region?' Region velocity arrows':' Wake velocity arrows';
   heat.width=geo.nx;heat.height=geo.ny;image=hctx.createImageData(geo.nx,geo.ny);
   canvas.width=1920;canvas.height=576;trails.width=1920;trails.height=576;
-  latest=null;ux=null;uy=null;rho=null;loadingGrid=false;updatePhysicalReference();reset();
+  probe=null;latest=null;ux=null;uy=null;rho=null;loadingGrid=false;updatePhysicalReference();reset();
  }catch(e){loadingGrid=false;failed=true;$('#state').textContent=e.message;}
 }
+canvas.addEventListener('click',event=>{
+ if(!geo||!ux)return;const rect=canvas.getBoundingClientRect();const x=FLOW_VIEW.x+(event.clientX-rect.left)/rect.width*FLOW_VIEW.width,y=geo.ny-(FLOW_VIEW.y+(event.clientY-rect.top)/rect.height*FLOW_VIEW.height);
+ const i=Math.floor(y)*geo.nx+Math.floor(x);if(mask[i]){$('#probe-readout').textContent='Solid obstacle: click a fluid cell outside the car / wing.';probe=null;}else probe=[x,y];
+});
 $('#field').onchange=drawHeat;
 window.addEventListener('message',event=>{
  if(event.source!==parent||event.origin!==location.origin||event.data?.type!=='w11-journey-control')return;
@@ -208,8 +237,12 @@ window.addEventListener('message',event=>{
  else if(name==='field'){$('#field').value=value;drawHeat();}
  else if(name==='running'){running=Boolean(value);$('#pause').textContent=running?'Pause':'Resume';if(running)request();}
  else if(name==='reset')reset();
+ else if(name==='arrows')pressureArrows=Boolean(value);
+ else if(name==='wing-angle'&&wingDemo){wingAngle=Number(value);loadGrid();}
+ else if(name==='wing-inverted'&&wingDemo){wingInverted=Boolean(value);loadGrid();}
 });
 if(journey){$('#density').value=100;$('#density-out').textContent='100%';$('#trail').value=80;$('#trail-out').textContent='80%';$('#grid').value='480';}
+if(wingDemo){$('#target-re').value=400;$('#target-re-out').textContent='400';}
 const initialRegion=new URLSearchParams(location.search).get('region');
 if(['underfloor','cooling'].includes(initialRegion))$('#region').value=initialRegion;
 await loadGrid();

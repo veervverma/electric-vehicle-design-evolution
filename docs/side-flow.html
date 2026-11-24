@@ -10,7 +10,7 @@
   <canvas id="flow" aria-label="Live computed two-dimensional flow around a projected W11 silhouette"></canvas>
   <p id="axis-note" class="axis-note"></p>
   <div class="legend"><span id="legend-label">SPEED / INLET SPEED</span><i></i><span>0</span><span>0.75</span><span>1.5+</span></div>
-  <p id="phase-note" class="axis-note" role="status">Initializing section…</p>
+  <p id="probe-readout" class="axis-note">Click the fluid to probe local speed and pressure. Red arrows = positive-pressure push; blue = suction direction. Qualitative, not integrated forces.</p><p id="phase-note" class="axis-note" role="status">Initializing section…</p>
   <div class="stats"><span>GRID <b id="grid-readout">960 × 288</b></span><span>ITERATION <b id="iteration">0</b></span><span>Re <b id="re">—</b></span><span>FLOW TIMES <b id="flow-times">0</b></span><span>ν <b id="viscosity-readout">—</b></span><span>MAX Ma <b id="mach">—</b></span><span>MAX Δρ/ρ <b id="rho">—</b></span></div>
  </div>
  <aside><h2>Flow region and controls</h2>
@@ -34,4 +34,4 @@
 </section>
 <section class="notes"><div><h2>What is being solved?</h2><p>A live D2Q9 two-relaxation-time lattice-Boltzmann calculation approximates low-Mach Navier–Stokes flow. White tracers follow the computed velocity; colors show speed, vorticity, or relative pressure. The projected car uses the supplied W11 mesh.</p></div><div><h2>How to interpret it</h2><p>This is an educational 2D experiment at a chosen reduced Reynolds number, with selectable independently rasterized grids. A side projection merges parts that sit at different depths and cannot represent 3D underfloor flow. No full-scale downforce or drag is inferred. Top and road rows impose freestream velocity; the outlet uses zero-gradient extrapolation.</p></div></section>
 <footer><a href="https://x.com/matheorems/status/2121255501283647778">Visual reference: Matheorems</a><span>Reference preview and caption inspected; video playback unavailable.</span><a href="https://sketchfab.com/3d-models/mercedec-f1-2020-0d97207d829441ba95952598f84e8d63">W11 mesh: Kevin Love SketchFab / Tyler_Kevin · CC BY 4.0</a></footer>
-</main><script type="module" src="side-flow.js?v=20261118-journey1"></script></body></html>
+</main><script type="module" src="side-flow.js?v=20261124-refs1"></script></body></html>
